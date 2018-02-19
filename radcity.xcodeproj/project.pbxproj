@@ -28,6 +28,7 @@
 		DA8FA065203AD28500BEA495 /* ControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA058203AD28500BEA495 /* ControllerHome.swift */; };
 		DA8FA066203AD28500BEA495 /* Arch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA05A203AD28500BEA495 /* Arch.swift */; };
 		DA8FA067203AD28500BEA495 /* ArchHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA05B203AD28500BEA495 /* ArchHome.swift */; };
+		DA8FA069203B1FB200BEA495 /* ControllerTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA068203B1FB200BEA495 /* ControllerTransitionProtocol.swift */; };
 		DAE5F66C203737380023E75B /* .codebeatsettings in Resources */ = {isa = PBXBuildFile; fileRef = DAE5F66B203737380023E75B /* .codebeatsettings */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		DA8FA058203AD28500BEA495 /* ControllerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerHome.swift; sourceTree = "<group>"; };
 		DA8FA05A203AD28500BEA495 /* Arch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arch.swift; sourceTree = "<group>"; };
 		DA8FA05B203AD28500BEA495 /* ArchHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchHome.swift; sourceTree = "<group>"; };
+		DA8FA068203B1FB200BEA495 /* ControllerTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerTransitionProtocol.swift; sourceTree = "<group>"; };
 		DAE5F65620370A930023E75B /* radcity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radcity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE5F66B203737380023E75B /* .codebeatsettings */ = {isa = PBXFileReference; lastKnownFileType = text; path = .codebeatsettings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +150,7 @@
 				DA8FA053203AD28500BEA495 /* ControllerParent+Transitions.swift */,
 				DA8FA054203AD28500BEA495 /* AppDelegate.swift */,
 				DA8FA055203AD28500BEA495 /* ControllerTransition.swift */,
+				DA8FA068203B1FB200BEA495 /* ControllerTransitionProtocol.swift */,
 				DA8FA056203AD28500BEA495 /* ControllerParent.swift */,
 			);
 			path = Abstract;
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8FA069203B1FB200BEA495 /* ControllerTransitionProtocol.swift in Sources */,
 				DA8FA067203AD28500BEA495 /* ArchHome.swift in Sources */,
 				DA8FA061203AD28500BEA495 /* ControllerParent+Transitions.swift in Sources */,
 				DA8FA064203AD28500BEA495 /* ControllerParent.swift in Sources */,
