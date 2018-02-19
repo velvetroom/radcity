@@ -32,6 +32,7 @@ extension ControllerParent
     {
         guard
             
+            let currentView:ViewTransitionableProtocol = self.currentView,
             let newView:ViewTransitionableProtocol = controller.view as? ViewTransitionableProtocol
             
         else
@@ -39,19 +40,20 @@ extension ControllerParent
             return
         }
         
-        currentController.removeFromParentViewController()
+        self.currentController?.removeFromParentViewController()
         
         self.addChildViewController(controller)
         controller.beginAppearanceTransition(true, animated:true)
-        currentController.beginAppearanceTransition(false, animated:true)
+        self.currentController?.beginAppearanceTransition(false, animated:true)
         
-        view.slide(
+        self.viewParent?.slide(
             currentView:currentView,
             newView:newView,
             left:left)
-        {
+        { [weak self] in
+            
             controller.endAppearanceTransition()
-            currentController.endAppearanceTransition()
+            self?.currentController?.endAppearanceTransition()
         }
     }
     
@@ -95,7 +97,6 @@ extension ControllerParent
         
         guard
             
-            let view:ViewParent = self.view as? ViewParent,
             let newView:ViewTransitionableProtocol = controller.view as? ViewTransitionableProtocol
             
         else
@@ -103,7 +104,7 @@ extension ControllerParent
             return
         }
         
-        view.mainView(view:newView)
+        self.viewParent?.mainView(view:newView)
     }
     
     func push(
@@ -115,8 +116,7 @@ extension ControllerParent
     {
         guard
             
-            let view:ViewParent = self.view as? ViewParent,
-            let currentController:UIViewController = self.childViewControllers.last,
+            let viewParent:ViewParent = self.viewParent,
             let newView:ViewTransitionableProtocol = controller.view as? ViewTransitionableProtocol
             
         else
@@ -124,8 +124,8 @@ extension ControllerParent
             return
         }
         
-        let width:CGFloat = view.bounds.maxX
-        let height:CGFloat = view.bounds.maxY
+        let width:CGFloat = viewParent.bounds.maxX
+        let height:CGFloat = viewParent.bounds.maxY
         let left:CGFloat = width * horizontal.rawValue
         let top:CGFloat = height * vertical.rawValue
         
@@ -135,18 +135,20 @@ extension ControllerParent
             true,
             animated:true)
         
-        currentController.beginAppearanceTransition(
+        self.currentController?.beginAppearanceTransition(
             false,
             animated:true)
         
-        view.push(
+        viewParent.push(
             newView:newView,
             left:left,
             top:top,
             background:background)
-        {
+        { [weak self] in
+            
             controller.endAppearanceTransition()
-            currentController.endAppearanceTransition()
+            self?.currentController?.endAppearanceTransition()
+            
             completion?()
         }
     }
@@ -155,8 +157,6 @@ extension ControllerParent
     {
         guard
             
-            let view:ViewParent = self.view as? ViewParent,
-            let currentController:UIViewController = self.childViewControllers.last,
             let newView:ViewTransitionableProtocol = controller.view as? ViewTransitionableProtocol
             
         else
@@ -170,11 +170,11 @@ extension ControllerParent
             true,
             animated:true)
         
-        currentController.beginAppearanceTransition(
+        self.currentController?.beginAppearanceTransition(
             false,
             animated:true)
         
-        view.animateOver(newView:newView)
+        self.viewParent?.animateOver(newView:newView)
         {
             controller.endAppearanceTransition()
             currentController.endAppearanceTransition()
@@ -185,8 +185,6 @@ extension ControllerParent
     {
         guard
             
-            let view:ViewParent = self.view as? ViewParent,
-            let currentController:UIViewController = self.childViewControllers.last,
             let newView:ViewTransitionableProtocol = controller.view as? ViewTransitionableProtocol
             
         else
@@ -200,14 +198,14 @@ extension ControllerParent
             true,
             animated:true)
         
-        currentController.beginAppearanceTransition(
+        self.currentController?.beginAppearanceTransition(
             false,
             animated:true)
         
-        view.centreOver(newView:newView)
+        self.viewParent?.centreOver(newView:newView)
         
         controller.endAppearanceTransition()
-        currentController.endAppearanceTransition()
+        self.currentController?.endAppearanceTransition()
     }
     
     func removeBetweenFirstAndLast()
@@ -239,7 +237,6 @@ extension ControllerParent
             
             guard
                 
-                let view:ViewParent = self.view as? ViewParent,
                 let currentView:ViewTransitionableProtocol = currentController.view as? ViewTransitionableProtocol
                 
             else
@@ -255,7 +252,7 @@ extension ControllerParent
                 true,
                 animated:true)
             
-            view.pop(
+            self.viewParent?.pop(
                 currentView:currentView,
                 left:left,
                 top:top)
@@ -295,8 +292,7 @@ extension ControllerParent
     {
         guard
             
-            let view:ViewParent = self.view as? ViewParent,
-            let currentController:UIViewController = self.childViewControllers.last
+            let currentController:UIViewController = self.currentController
             
         else
         {
@@ -322,7 +318,7 @@ extension ControllerParent
             true,
             animated:true)
         
-        view.dismissAnimateOver(currentView:currentController.view)
+        self.viewParent?.dismissAnimateOver(currentView:currentController.view)
         {
             currentController.endAppearanceTransition()
             previousController.endAppearanceTransition()
