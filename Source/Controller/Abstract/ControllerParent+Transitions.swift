@@ -41,7 +41,6 @@ extension ControllerParent
         }
         
         self.currentController?.removeFromParentViewController()
-        
         self.addChildViewController(controller)
         controller.beginAppearanceTransition(true, animated:true)
         self.currentController?.beginAppearanceTransition(false, animated:true)
@@ -66,11 +65,7 @@ extension ControllerParent
             controllers -= 1
             
             let controller:UIViewController = self.childViewControllers[controllers]
-            
-            controller.beginAppearanceTransition(
-                false,
-                animated:false)
-            
+            controller.beginAppearanceTransition(false, animated:false)
             controller.view.removeFromSuperview()
             controller.endAppearanceTransition()
             controller.removeFromParentViewController()
@@ -130,14 +125,8 @@ extension ControllerParent
         let top:CGFloat = height * vertical.rawValue
         
         self.addChildViewController(controller)
-        
-        controller.beginAppearanceTransition(
-            true,
-            animated:true)
-        
-        self.currentController?.beginAppearanceTransition(
-            false,
-            animated:true)
+        controller.beginAppearanceTransition(true, animated:true)
+        self.currentController?.beginAppearanceTransition(false, animated:true)
         
         viewParent.push(
             newView:newView,
@@ -165,14 +154,8 @@ extension ControllerParent
         }
         
         self.addChildViewController(controller)
-        
-        controller.beginAppearanceTransition(
-            true,
-            animated:true)
-        
-        self.currentController?.beginAppearanceTransition(
-            false,
-            animated:true)
+        controller.beginAppearanceTransition(true, animated:true)
+        self.currentController?.beginAppearanceTransition(false, animated:true)
         
         self.viewParent?.animateOver(newView:newView)
         {
@@ -193,15 +176,8 @@ extension ControllerParent
         }
         
         self.addChildViewController(controller)
-        
-        controller.beginAppearanceTransition(
-            true,
-            animated:true)
-        
-        self.currentController?.beginAppearanceTransition(
-            false,
-            animated:true)
-        
+        controller.beginAppearanceTransition(true, animated:true)
+        self.currentController?.beginAppearanceTransition(false, animated:true)
         self.viewParent?.centreOver(newView:newView)
         
         controller.endAppearanceTransition()
@@ -244,13 +220,8 @@ extension ControllerParent
                 return
             }
             
-            currentController.beginAppearanceTransition(
-                false,
-                animated:true)
-            
-            previousController.beginAppearanceTransition(
-                true,
-                animated:true)
+            currentController.beginAppearanceTransition(false, animated:true)
+            previousController.beginAppearanceTransition(true, animated:true)
             
             self.viewParent?.pop(
                 currentView:currentView,
@@ -292,17 +263,7 @@ extension ControllerParent
     {
         guard
             
-            let currentController:UIViewController = self.currentController
-            
-        else
-        {
-            return
-        }
-        
-        currentController.removeFromParentViewController()
-        
-        guard
-            
+            let currentController:UIViewController = self.currentController,
             let previousController:UIViewController = self.childViewControllers.last
             
         else
@@ -310,13 +271,9 @@ extension ControllerParent
             return
         }
         
-        currentController.beginAppearanceTransition(
-            false,
-            animated:true)
-        
-        previousController.beginAppearanceTransition(
-            true,
-            animated:true)
+        currentController.removeFromParentViewController()
+        currentController.beginAppearanceTransition(false, animated:true)
+        previousController.beginAppearanceTransition(true, animated:true)
         
         self.viewParent?.dismissAnimateOver(currentView:currentController.view)
         {
