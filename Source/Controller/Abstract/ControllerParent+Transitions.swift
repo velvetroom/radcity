@@ -72,6 +72,39 @@ extension ControllerParent
         }
     }
     
+    private func popController(
+        index:Int,
+        left:CGFloat,
+        top:CGFloat)
+    {
+        let currentController:UIViewController = self.childViewControllers[index]
+        let previousController:UIViewController = self.childViewControllers[index - 1]
+        currentController.removeFromParentViewController()
+        
+        guard
+            
+            let currentView:ViewTransitionableProtocol = currentController.view as? ViewTransitionableProtocol
+            
+        else
+        {
+            return
+        }
+        
+        currentController.beginAppearanceTransition(false, animated:true)
+        previousController.beginAppearanceTransition(true, animated:true)
+        
+        self.viewParent?.pop(
+            currentView:currentView,
+            left:left,
+            top:top)
+        {
+            previousController.endAppearanceTransition()
+            currentController.endAppearanceTransition()
+            
+            completion?()
+        }
+    }
+    
     //MARK: internal
     
     func slideTo(
@@ -207,32 +240,12 @@ extension ControllerParent
         
         if controllers > 1
         {
-            let currentController:UIViewController = self.childViewControllers[controllers - 1]
-            let previousController:UIViewController = self.childViewControllers[controllers - 2]
-            currentController.removeFromParentViewController()
+            let index:Int = controllers - 1
             
-            guard
-                
-                let currentView:ViewTransitionableProtocol = currentController.view as? ViewTransitionableProtocol
-                
-            else
-            {
-                return
-            }
-            
-            currentController.beginAppearanceTransition(false, animated:true)
-            previousController.beginAppearanceTransition(true, animated:true)
-            
-            self.viewParent?.pop(
-                currentView:currentView,
+            self.popController(
+                index:index,
                 left:left,
                 top:top)
-            {
-                previousController.endAppearanceTransition()
-                currentController.endAppearanceTransition()
-                
-                completion?()
-            }
         }
     }
     
