@@ -10,6 +10,14 @@ extension ControllerParent
         }
     }
     
+    private var currentController:UIViewController?
+    {
+        get
+        {
+            return self.childViewControllers.last
+        }
+    }
+    
     //MARK: private
     
     private func slide(controller:UIViewController, left:CGFloat)
