@@ -102,8 +102,5 @@ class Controller<A>:UIViewController where A.M:Model<A>
     override func viewDidAppear(_ animated:Bool)
     {
         super.viewDidAppear(animated)
-        
-        let analytics:Analytics = Analytics()
-        analytics.setScreen(controller:self)
     }
 }
