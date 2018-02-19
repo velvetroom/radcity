@@ -40,26 +40,7 @@
 		DA8F9FFA203ABC8C00BEA495 /* Arch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F78203ABC8C00BEA495 /* Arch.swift */; };
 		DA8F9FFB203ABC8C00BEA495 /* ArchHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F79203ABC8C00BEA495 /* ArchHome.swift */; };
 		DA8F9FFC203ABC8C00BEA495 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F7C203ABC8C00BEA495 /* Model.swift */; };
-		DA8F9FFD203ABC8C00BEA495 /* HomeFilterOrderFavourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F7E203ABC8C00BEA495 /* HomeFilterOrderFavourites.swift */; };
-		DA8F9FFE203ABC8C00BEA495 /* HomeFilterOptionsOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F7F203ABC8C00BEA495 /* HomeFilterOptionsOrder.swift */; };
-		DA8F9FFF203ABC8C00BEA495 /* HomeFilterOrderDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F80203ABC8C00BEA495 /* HomeFilterOrderDate.swift */; };
 		DA8FA000203ABC8C00BEA495 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F81203ABC8C00BEA495 /* Home.swift */; };
-		DA8FA001203ABC8C00BEA495 /* HomeFilterOptionsShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F82203ABC8C00BEA495 /* HomeFilterOptionsShow.swift */; };
-		DA8FA002203ABC8C00BEA495 /* Home+Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F83203ABC8C00BEA495 /* Home+Recipes.swift */; };
-		DA8FA003203ABC8C00BEA495 /* HomeFilterShowFavourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F84203ABC8C00BEA495 /* HomeFilterShowFavourites.swift */; };
-		DA8FA004203ABC8C00BEA495 /* Home+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F85203ABC8C00BEA495 /* Home+Factory.swift */; };
-		DA8FA005203ABC8C00BEA495 /* Home+Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F86203ABC8C00BEA495 /* Home+Favourites.swift */; };
-		DA8FA006203ABC8C00BEA495 /* HomeFilterStateHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F87203ABC8C00BEA495 /* HomeFilterStateHidden.swift */; };
-		DA8FA007203ABC8C00BEA495 /* HomeFilterShowProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F88203ABC8C00BEA495 /* HomeFilterShowProtocol.swift */; };
-		DA8FA008203ABC8C00BEA495 /* HomeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F89203ABC8C00BEA495 /* HomeFilter.swift */; };
-		DA8FA009203ABC8C00BEA495 /* Home+Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F8A203ABC8C00BEA495 /* Home+Filter.swift */; };
-		DA8FA00A203ABC8C00BEA495 /* Home+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F8B203ABC8C00BEA495 /* Home+Settings.swift */; };
-		DA8FA00B203ABC8C00BEA495 /* HomeFilterStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F8C203ABC8C00BEA495 /* HomeFilterStateProtocol.swift */; };
-		DA8FA00C203ABC8C00BEA495 /* HomeFilterOptionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F8D203ABC8C00BEA495 /* HomeFilterOptionsProtocol.swift */; };
-		DA8FA00D203ABC8C00BEA495 /* HomeFilterShowAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F8E203ABC8C00BEA495 /* HomeFilterShowAll.swift */; };
-		DA8FA00E203ABC8C00BEA495 /* HomeFilterStateVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F8F203ABC8C00BEA495 /* HomeFilterStateVisible.swift */; };
-		DA8FA00F203ABC8C00BEA495 /* HomeFilterKeyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F90203ABC8C00BEA495 /* HomeFilterKeyword.swift */; };
-		DA8FA010203ABC8C00BEA495 /* HomeFilterOrderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F91203ABC8C00BEA495 /* HomeFilterOrderProtocol.swift */; };
 		DA8FA011203ABC8C00BEA495 /* MenuItemGenericProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F93203ABC8C00BEA495 /* MenuItemGenericProtocol+Default.swift */; };
 		DA8FA012203ABC8C00BEA495 /* MenuItemGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F94203ABC8C00BEA495 /* MenuItemGeneric.swift */; };
 		DA8FA013203ABC8C00BEA495 /* Menu+OrderUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F95203ABC8C00BEA495 /* Menu+OrderUser.swift */; };
@@ -152,26 +133,7 @@
 		DA8F9F78203ABC8C00BEA495 /* Arch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arch.swift; sourceTree = "<group>"; };
 		DA8F9F79203ABC8C00BEA495 /* ArchHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchHome.swift; sourceTree = "<group>"; };
 		DA8F9F7C203ABC8C00BEA495 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		DA8F9F7E203ABC8C00BEA495 /* HomeFilterOrderFavourites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilterOrderFavourites.swift; sourceTree = "<group>"; };
-		DA8F9F7F203ABC8C00BEA495 /* HomeFilterOptionsOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilterOptionsOrder.swift; sourceTree = "<group>"; };
-		DA8F9F80203ABC8C00BEA495 /* HomeFilterOrderDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilterOrderDate.swift; sourceTree = "<group>"; };
 		DA8F9F81203ABC8C00BEA495 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		DA8F9F82203ABC8C00BEA495 /* HomeFilterOptionsShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilterOptionsShow.swift; sourceTree = "<group>"; };
-		DA8F9F83203ABC8C00BEA495 /* Home+Recipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Home+Recipes.swift"; sourceTree = "<group>"; };
-		DA8F9F84203ABC8C00BEA495 /* HomeFilterShowFavourites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilterShowFavourites.swift; sourceTree = "<group>"; };
-		DA8F9F85203ABC8C00BEA495 /* Home+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Home+Factory.swift"; sourceTree = "<group>"; };
-		DA8F9F86203ABC8C00BEA495 /* Home+Favourites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Home+Favourites.swift"; sourceTree = "<group>"; };
-		DA8F9F87203ABC8C00BEA495 /* HomeFilterStateHidden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilterStateHidden.swift; sourceTree = "<group>"; };
-		DA8F9F88203ABC8C00BEA495 /* HomeFilterShowProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilterShowProtocol.swift; sourceTree = "<group>"; };
-		DA8F9F89203ABC8C00BEA495 /* HomeFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilter.swift; sourceTree = "<group>"; };
-		DA8F9F8A203ABC8C00BEA495 /* Home+Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Home+Filter.swift"; sourceTree = "<group>"; };
-		DA8F9F8B203ABC8C00BEA495 /* Home+Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Home+Settings.swift"; sourceTree = "<group>"; };
-		DA8F9F8C203ABC8C00BEA495 /* HomeFilterStateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilterStateProtocol.swift; sourceTree = "<group>"; };
-		DA8F9F8D203ABC8C00BEA495 /* HomeFilterOptionsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilterOptionsProtocol.swift; sourceTree = "<group>"; };
-		DA8F9F8E203ABC8C00BEA495 /* HomeFilterShowAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilterShowAll.swift; sourceTree = "<group>"; };
-		DA8F9F8F203ABC8C00BEA495 /* HomeFilterStateVisible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilterStateVisible.swift; sourceTree = "<group>"; };
-		DA8F9F90203ABC8C00BEA495 /* HomeFilterKeyword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilterKeyword.swift; sourceTree = "<group>"; };
-		DA8F9F91203ABC8C00BEA495 /* HomeFilterOrderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilterOrderProtocol.swift; sourceTree = "<group>"; };
 		DA8F9F93203ABC8C00BEA495 /* MenuItemGenericProtocol+Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MenuItemGenericProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA8F9F94203ABC8C00BEA495 /* MenuItemGeneric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemGeneric.swift; sourceTree = "<group>"; };
 		DA8F9F95203ABC8C00BEA495 /* Menu+OrderUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Menu+OrderUser.swift"; sourceTree = "<group>"; };
@@ -352,26 +314,7 @@
 		DA8F9F7D203ABC8C00BEA495 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				DA8F9F7E203ABC8C00BEA495 /* HomeFilterOrderFavourites.swift */,
-				DA8F9F7F203ABC8C00BEA495 /* HomeFilterOptionsOrder.swift */,
-				DA8F9F80203ABC8C00BEA495 /* HomeFilterOrderDate.swift */,
 				DA8F9F81203ABC8C00BEA495 /* Home.swift */,
-				DA8F9F82203ABC8C00BEA495 /* HomeFilterOptionsShow.swift */,
-				DA8F9F83203ABC8C00BEA495 /* Home+Recipes.swift */,
-				DA8F9F84203ABC8C00BEA495 /* HomeFilterShowFavourites.swift */,
-				DA8F9F85203ABC8C00BEA495 /* Home+Factory.swift */,
-				DA8F9F86203ABC8C00BEA495 /* Home+Favourites.swift */,
-				DA8F9F87203ABC8C00BEA495 /* HomeFilterStateHidden.swift */,
-				DA8F9F88203ABC8C00BEA495 /* HomeFilterShowProtocol.swift */,
-				DA8F9F89203ABC8C00BEA495 /* HomeFilter.swift */,
-				DA8F9F8A203ABC8C00BEA495 /* Home+Filter.swift */,
-				DA8F9F8B203ABC8C00BEA495 /* Home+Settings.swift */,
-				DA8F9F8C203ABC8C00BEA495 /* HomeFilterStateProtocol.swift */,
-				DA8F9F8D203ABC8C00BEA495 /* HomeFilterOptionsProtocol.swift */,
-				DA8F9F8E203ABC8C00BEA495 /* HomeFilterShowAll.swift */,
-				DA8F9F8F203ABC8C00BEA495 /* HomeFilterStateVisible.swift */,
-				DA8F9F90203ABC8C00BEA495 /* HomeFilterKeyword.swift */,
-				DA8F9F91203ABC8C00BEA495 /* HomeFilterOrderProtocol.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -631,18 +574,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA8FA00B203ABC8C00BEA495 /* HomeFilterStateProtocol.swift in Sources */,
 				DA8F9FE2203ABC8C00BEA495 /* ControllerParent+Transitions.swift in Sources */,
 				DA8F9FE5203ABC8C00BEA495 /* ControllerParent.swift in Sources */,
 				DA8FA01D203ABC8C00BEA495 /* MenuItemOptions.swift in Sources */,
-				DA8FA005203ABC8C00BEA495 /* Home+Favourites.swift in Sources */,
 				DA8FA021203ABC8C00BEA495 /* ViewBarBack.swift in Sources */,
 				DA8FA01A203ABC8C00BEA495 /* MenuItemNew.swift in Sources */,
-				DA8FA00D203ABC8C00BEA495 /* HomeFilterShowAll.swift in Sources */,
 				DA8FA026203ABC8C00BEA495 /* ViewCollectionCell.swift in Sources */,
-				DA8FA00E203ABC8C00BEA495 /* HomeFilterStateVisible.swift in Sources */,
 				DA8FA025203ABC8C00BEA495 /* ViewAlert+Constants.swift in Sources */,
-				DA8F9FFF203ABC8C00BEA495 /* HomeFilterOrderDate.swift in Sources */,
 				DA8FA03F203ABC8C00BEA495 /* ViewControllableProtocol.swift in Sources */,
 				DA8F9FE8203ABC8C00BEA495 /* ExtensionNotification.swift in Sources */,
 				DA8F9FE0203ABC8C00BEA495 /* Controller+Alert.swift in Sources */,
@@ -655,7 +593,6 @@
 				DA8FA018203ABC8C00BEA495 /* Menu+Factory.swift in Sources */,
 				DA8FA02A203ABC8C00BEA495 /* ViewCollectionReusable.swift in Sources */,
 				DA8F9FFB203ABC8C00BEA495 /* ArchHome.swift in Sources */,
-				DA8FA004203ABC8C00BEA495 /* Home+Factory.swift in Sources */,
 				DA8F9FED203ABC8C00BEA495 /* ExtensionString+Constants.swift in Sources */,
 				DA8FA014203ABC8C00BEA495 /* MenuItemProtocol.swift in Sources */,
 				DA8FA037203ABC8C00BEA495 /* View.swift in Sources */,
@@ -667,33 +604,24 @@
 				DA8FA013203ABC8C00BEA495 /* Menu+OrderUser.swift in Sources */,
 				DA8FA027203ABC8C00BEA495 /* ViewCollection.swift in Sources */,
 				DA8F9FEC203ABC8C00BEA495 /* ExtensionMKPolyline.swift in Sources */,
-				DA8FA006203ABC8C00BEA495 /* HomeFilterStateHidden.swift in Sources */,
 				DA8FA028203ABC8C00BEA495 /* ViewAlert.swift in Sources */,
 				DA8F9FE1203ABC8C00BEA495 /* ControllerParent+Menu.swift in Sources */,
 				DA8FA029203ABC8C00BEA495 /* ViewPushBackground.swift in Sources */,
 				DA8FA02D203ABC8C00BEA495 /* ViewSpinner+Constants.swift in Sources */,
 				DA8FA02E203ABC8C00BEA495 /* ViewGradient.swift in Sources */,
 				DA8F9FF0203ABC8C00BEA495 /* ExtensionMKAnnotationView.swift in Sources */,
-				DA8FA001203ABC8C00BEA495 /* HomeFilterOptionsShow.swift in Sources */,
 				DA8FA023203ABC8C00BEA495 /* ViewBar.swift in Sources */,
-				DA8FA009203ABC8C00BEA495 /* Home+Filter.swift in Sources */,
-				DA8FA008203ABC8C00BEA495 /* HomeFilter.swift in Sources */,
 				DA8FA036203ABC8C00BEA495 /* ViewMenuCell.swift in Sources */,
 				DA8F9FDE203ABC8C00BEA495 /* ControllerParent+Orientation.swift in Sources */,
 				DA8FA03E203ABC8C00BEA495 /* ViewParent+Gesture.swift in Sources */,
 				DA8F9FE4203ABC8C00BEA495 /* ControllerTransition.swift in Sources */,
-				DA8FA010203ABC8C00BEA495 /* HomeFilterOrderProtocol.swift in Sources */,
 				DA8FA033203ABC8C00BEA495 /* ViewMenu+Collection.swift in Sources */,
 				DA8FA02C203ABC8C00BEA495 /* ViewBlur.swift in Sources */,
 				DA8F9FF5203ABC8C00BEA495 /* ExtensionNSManagedObject.swift in Sources */,
-				DA8FA00A203ABC8C00BEA495 /* Home+Settings.swift in Sources */,
 				DA8F9FEA203ABC8C00BEA495 /* ExtensionNSMutableAttributedString.swift in Sources */,
-				DA8F9FFD203ABC8C00BEA495 /* HomeFilterOrderFavourites.swift in Sources */,
 				DA8FA02B203ABC8C00BEA495 /* ViewCollectionFlow.swift in Sources */,
 				DA8FA022203ABC8C00BEA495 /* ViewButtonContinue.swift in Sources */,
-				DA8FA002203ABC8C00BEA495 /* Home+Recipes.swift in Sources */,
 				DA8F9FF9203ABC8C00BEA495 /* ExtensionURL.swift in Sources */,
-				DA8FA007203ABC8C00BEA495 /* HomeFilterShowProtocol.swift in Sources */,
 				DA8FA011203ABC8C00BEA495 /* MenuItemGenericProtocol+Default.swift in Sources */,
 				DA8FA019203ABC8C00BEA495 /* MenuItemCalendar.swift in Sources */,
 				DA8F9FE6203ABC8C00BEA495 /* ControllerHome.swift in Sources */,
@@ -704,7 +632,6 @@
 				DA8FA000203ABC8C00BEA495 /* Home.swift in Sources */,
 				DA8F9FEE203ABC8C00BEA495 /* ExtensionFileManager.swift in Sources */,
 				DA8FA03C203ABC8C00BEA495 /* ViewParent+Transitions.swift in Sources */,
-				DA8F9FFE203ABC8C00BEA495 /* HomeFilterOptionsOrder.swift in Sources */,
 				DA8FA017203ABC8C00BEA495 /* Menu+FactoryUser.swift in Sources */,
 				DA8FA015203ABC8C00BEA495 /* MenuItemHome.swift in Sources */,
 				DA8F9FF6203ABC8C00BEA495 /* ExtensionString.swift in Sources */,
@@ -712,12 +639,10 @@
 				DA8FA038203ABC8C00BEA495 /* ViewParent.swift in Sources */,
 				DA8F9FFC203ABC8C00BEA495 /* Model.swift in Sources */,
 				DA8F9FEB203ABC8C00BEA495 /* ExtensionCGImage.swift in Sources */,
-				DA8FA00C203ABC8C00BEA495 /* HomeFilterOptionsProtocol.swift in Sources */,
 				DA8F9FDF203ABC8C00BEA495 /* ControllerParent+Constants.swift in Sources */,
 				DA8F9FE9203ABC8C00BEA495 /* ExtensionUIColor.swift in Sources */,
 				DA8F9FFA203ABC8C00BEA495 /* Arch.swift in Sources */,
 				DA8FA02F203ABC8C00BEA495 /* ViewBorder.swift in Sources */,
-				DA8FA00F203ABC8C00BEA495 /* HomeFilterKeyword.swift in Sources */,
 				DA8FA031203ABC8C00BEA495 /* ViewGradient+Constants.swift in Sources */,
 				DA8F9FF4203ABC8C00BEA495 /* ExtensionData.swift in Sources */,
 				DA8FA01E203ABC8C00BEA495 /* Menu.swift in Sources */,
@@ -727,7 +652,6 @@
 				DA8FA03B203ABC8C00BEA495 /* ViewTransitionableProtocol.swift in Sources */,
 				DA8F9FF8203ABC8C00BEA495 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA8FA020203ABC8C00BEA495 /* ViewHome.swift in Sources */,
-				DA8FA003203ABC8C00BEA495 /* HomeFilterShowFavourites.swift in Sources */,
 				DA8FA030203ABC8C00BEA495 /* ViewSpinner.swift in Sources */,
 				DA8FA01B203ABC8C00BEA495 /* Menu+Constants.swift in Sources */,
 			);
