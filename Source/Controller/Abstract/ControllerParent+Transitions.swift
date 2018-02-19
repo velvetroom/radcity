@@ -34,6 +34,26 @@ extension ControllerParent
         }
     }
     
+    private func removeUntil(index:Int)
+    {
+        var controllers:Int = self.childViewControllers.count - 1
+        
+        while controllers > index
+        {
+            controllers -= 1
+            
+            let controller:UIViewController = self.childViewControllers[controllers]
+            
+            controller.beginAppearanceTransition(
+                false,
+                animated:false)
+            
+            controller.view.removeFromSuperview()
+            controller.endAppearanceTransition()
+            controller.removeFromParentViewController()
+        }
+    }
+    
     //MARK: internal
     
     func slideTo(
@@ -171,42 +191,12 @@ extension ControllerParent
     
     func removeBetweenFirstAndLast()
     {
-        var controllers:Int = self.childViewControllers.count - 1
-        
-        while controllers > 1
-        {
-            controllers -= 1
-            
-            let controller:UIViewController = self.childViewControllers[controllers]
-            
-            controller.beginAppearanceTransition(
-                false,
-                animated:false)
-            
-            controller.view.removeFromSuperview()
-            controller.endAppearanceTransition()
-            controller.removeFromParentViewController()
-        }
+        self.removeUntil(index:1)
     }
     
     func removeAllButLast()
     {
-        var controllers:Int = self.childViewControllers.count - 1
-        
-        while controllers > 0
-        {
-            controllers -= 1
-            
-            let controller:UIViewController = self.childViewControllers[controllers]
-            
-            controller.beginAppearanceTransition(
-                false,
-                animated:false)
-            
-            controller.view.removeFromSuperview()
-            controller.endAppearanceTransition()
-            controller.removeFromParentViewController()
-        }
+        self.removeUntil(index:0)
     }
     
     func pop(
