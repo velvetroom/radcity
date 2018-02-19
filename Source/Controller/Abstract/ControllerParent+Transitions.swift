@@ -134,11 +134,11 @@ extension ControllerParent
     //MARK: internal
     
     func slideTo(
-        horizontal:ControllerTransition.Horizontal,
+        transition:ControllerTransition,
         controller:UIViewController)
     {
         let viewWidth:CGFloat = -self.view.bounds.maxX
-        let left:CGFloat = viewWidth * horizontal.rawValue
+        let left:CGFloat = viewWidth * transition.horizontal
         
         self.slide(
             controller:controller,
@@ -163,8 +163,7 @@ extension ControllerParent
     
     func push(
         controller:UIViewController,
-        horizontal:ControllerTransition.Horizontal = ControllerTransition.Horizontal.none,
-        vertical:ControllerTransition.Vertical = ControllerTransition.Vertical.none,
+        transition:ControllerTransition,
         background:Bool = true,
         completion:(() -> ())? = nil)
     {
@@ -180,8 +179,8 @@ extension ControllerParent
         
         let width:CGFloat = viewParent.bounds.maxX
         let height:CGFloat = viewParent.bounds.maxY
-        let left:CGFloat = width * horizontal.rawValue
-        let top:CGFloat = height * vertical.rawValue
+        let left:CGFloat = width * transition.horizontal
+        let top:CGFloat = height * transition.vertical
         
         self.pushController
     }
@@ -239,8 +238,7 @@ extension ControllerParent
     }
     
     func pop(
-        horizontal:ControllerTransition.Horizontal = ControllerTransition.Horizontal.none,
-        vertical:ControllerTransition.Vertical = ControllerTransition.Vertical.none,
+        transition:ControllerTransition,
         completion:(() -> ())? = nil)
     {
         let width:CGFloat = self.view.bounds.maxX
