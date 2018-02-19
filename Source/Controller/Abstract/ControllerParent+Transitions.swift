@@ -2,6 +2,14 @@ import UIKit
 
 extension ControllerParent
 {
+    private var viewParent:ViewParent?
+    {
+        get
+        {
+            return self.view as? ViewParent
+        }
+    }
+    
     //MARK: private
     
     private func slide(controller:UIViewController, left:CGFloat)
