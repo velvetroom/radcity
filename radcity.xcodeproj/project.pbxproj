@@ -107,7 +107,6 @@
 		DA8FA03D203ABC8C00BEA495 /* ViewParent+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9FC6203ABC8C00BEA495 /* ViewParent+Constants.swift */; };
 		DA8FA03E203ABC8C00BEA495 /* ViewParent+Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9FC7203ABC8C00BEA495 /* ViewParent+Gesture.swift */; };
 		DA8FA03F203ABC8C00BEA495 /* ViewControllableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9FC8203ABC8C00BEA495 /* ViewControllableProtocol.swift */; };
-		DA8FA040203ABC8C00BEA495 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9FCA203ABC8C00BEA495 /* Info.plist */; };
 		DA8FA041203ABC8C00BEA495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9FCC203ABC8C00BEA495 /* LaunchScreen.storyboard */; };
 		DA8FA042203ABC8C00BEA495 /* LocalizableModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9FCF203ABC8C00BEA495 /* LocalizableModel.strings */; };
 		DA8FA043203ABC8C00BEA495 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9FD1203ABC8C00BEA495 /* InfoPlist.strings */; };
@@ -620,7 +619,6 @@
 				DAE5F66C203737380023E75B /* .codebeatsettings in Resources */,
 				DA8FA045203ABC8C00BEA495 /* LocalizableView.strings in Resources */,
 				DA8FA042203ABC8C00BEA495 /* LocalizableModel.strings in Resources */,
-				DA8FA040203ABC8C00BEA495 /* Info.plist in Resources */,
 				DA8FA048203ABC8C00BEA495 /* README.md in Resources */,
 				DA8FA044203ABC8C00BEA495 /* LocalizableError.strings in Resources */,
 			);
@@ -894,7 +892,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
-				INFOPLIST_FILE = radcity/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.radcity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -909,7 +907,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
-				INFOPLIST_FILE = radcity/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.radcity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
