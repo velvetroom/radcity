@@ -4,19 +4,19 @@ extension ControllerParent
 {
     //MARK: private
     
-    private func factoryDirection(item:MenuItemProtocol) ->  ControllerTransition.Horizontal
+    private func factoryDirection(item:MenuItemProtocol) ->  ControllerTransition
     {
         let order:Menu.Order = item.order
         let current:Menu.Order = self.menu.selected
-        let direction:ControllerTransition.Horizontal
+        let direction:ControllerTransition
         
         if order.rawValue > current.rawValue
         {
-            direction = ControllerTransition.Horizontal.right
+            direction = ControllerTransition.right
         }
         else
         {
-            direction = ControllerTransition.Horizontal.left
+            direction = ControllerTransition.left
         }
         
         return direction
@@ -42,7 +42,7 @@ extension ControllerParent
     
     func menuSelected(item:MenuItemProtocol)
     {
-        let direction:ControllerTransition.Horizontal = self.factoryDirection(item:item)
+        let direction:ControllerTransition = self.factoryDirection(item:item)
         self.menu.selected = item.order
         
         guard
@@ -55,7 +55,7 @@ extension ControllerParent
         }
         
         self.slideTo(
-            horizontal:direction,
+            transition:direction,
             controller:controller)
     }
 }

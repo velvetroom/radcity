@@ -14,7 +14,7 @@ extension ControllerParent
     {
         get
         {
-            return self.currentController.view as? ViewTransitionableProtocol
+            return self.currentController?.view as? ViewTransitionableProtocol
         }
     }
     
