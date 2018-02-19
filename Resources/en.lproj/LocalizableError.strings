@@ -1,0 +1,16 @@
+CloudError_createFailed="Failed creating item in Cloud";
+CloudError_loadItemFailed="Load item failed";
+CloudError_loadItemDataFailed="Incorrect item response from server";
+CloudError_loadListFailed="Failed loading items list";
+CloudError_transactionFailed="Transaction failed";
+StorageError_saveFailed="Save failed";
+StorageError_loadFailed="Load failed";
+StorageError_fileNotFound="File not found";
+StorageError_deleteFailed="Delete failed";
+StorageError_malformedData="Malformed data";
+NewAddIngredientError_ingredientAlreadyAdded="Ingredient already on Recipe";
+NewAddError_validateErrorMinSteps="Recipe should have at least %@ steps";
+NewAddError_validateErrorMinIngredients="Recipe should have at least 1 ingredient";
+NewAddError_validateErrorTitle="Invalid recipe name";
+NewAddError_validateErrorSubtitle="Invalid recipe description";
+NewAddError_validateErrorImage="Invalid recipe image";

@@ -1,0 +1,3 @@
+NSLocationWhenInUseUsageDescription="Start navigating";
+NSPhotoLibraryUsageDescription="Select pictures for recipes";
+NSCameraUsageDescription="Take pictures for recipes";
