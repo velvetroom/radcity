@@ -105,6 +105,32 @@ extension ControllerParent
         }
     }
     
+    private func pushController(
+        controller:UIViewController,
+        newView:ViewTransitionableProtocol,
+        left:CGFloat,
+        top:CGFloat,
+        background:Bool,
+        completion:(() -> ())? = nil)
+    {
+        self.addChildViewController(controller)
+        controller.beginAppearanceTransition(true, animated:true)
+        self.currentController?.beginAppearanceTransition(false, animated:true)
+        
+        viewParent.push(
+            newView:newView,
+            left:left,
+            top:top,
+            background:background)
+        { [weak self] in
+            
+            controller.endAppearanceTransition()
+            self?.currentController?.endAppearanceTransition()
+            
+            completion?()
+        }
+    }
+    
     //MARK: internal
     
     func slideTo(
@@ -157,22 +183,7 @@ extension ControllerParent
         let left:CGFloat = width * horizontal.rawValue
         let top:CGFloat = height * vertical.rawValue
         
-        self.addChildViewController(controller)
-        controller.beginAppearanceTransition(true, animated:true)
-        self.currentController?.beginAppearanceTransition(false, animated:true)
-        
-        viewParent.push(
-            newView:newView,
-            left:left,
-            top:top,
-            background:background)
-        { [weak self] in
-            
-            controller.endAppearanceTransition()
-            self?.currentController?.endAppearanceTransition()
-            
-            completion?()
-        }
+        self.pushController
     }
     
     func animateOver(controller:UIViewController)
