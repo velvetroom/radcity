@@ -10,6 +10,14 @@ extension ControllerParent
         }
     }
     
+    private var currentView:ViewTransitionableProtocol?
+    {
+        get
+        {
+            return self.currentController.view as? ViewTransitionableProtocol
+        }
+    }
+    
     private var currentController:UIViewController?
     {
         get
@@ -24,10 +32,7 @@ extension ControllerParent
     {
         guard
             
-            let view:ViewParent = self.view as? ViewParent,
-            let currentController:UIViewController = self.childViewControllers.last,
-            let newView:ViewTransitionableProtocol = controller.view as? ViewTransitionableProtocol,
-            let currentView:ViewTransitionableProtocol = currentController.view as? ViewTransitionableProtocol
+            let newView:ViewTransitionableProtocol = controller.view as? ViewTransitionableProtocol
             
         else
         {
