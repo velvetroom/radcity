@@ -14,6 +14,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func asdddd(a:Int, b:Int, c:Int, d:Int, e:Int, f:Int, g:Int) {
+        
+    }
 }
 
