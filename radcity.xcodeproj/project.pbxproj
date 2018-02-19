@@ -43,19 +43,12 @@
 		DA8FA000203ABC8C00BEA495 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F81203ABC8C00BEA495 /* Home.swift */; };
 		DA8FA011203ABC8C00BEA495 /* MenuItemGenericProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F93203ABC8C00BEA495 /* MenuItemGenericProtocol+Default.swift */; };
 		DA8FA012203ABC8C00BEA495 /* MenuItemGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F94203ABC8C00BEA495 /* MenuItemGeneric.swift */; };
-		DA8FA013203ABC8C00BEA495 /* Menu+OrderUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F95203ABC8C00BEA495 /* Menu+OrderUser.swift */; };
 		DA8FA014203ABC8C00BEA495 /* MenuItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F96203ABC8C00BEA495 /* MenuItemProtocol.swift */; };
 		DA8FA015203ABC8C00BEA495 /* MenuItemHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F97203ABC8C00BEA495 /* MenuItemHome.swift */; };
-		DA8FA016203ABC8C00BEA495 /* Menu+OrderAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F98203ABC8C00BEA495 /* Menu+OrderAdmin.swift */; };
-		DA8FA017203ABC8C00BEA495 /* Menu+FactoryUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F99203ABC8C00BEA495 /* Menu+FactoryUser.swift */; };
 		DA8FA018203ABC8C00BEA495 /* Menu+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F9A203ABC8C00BEA495 /* Menu+Factory.swift */; };
-		DA8FA019203ABC8C00BEA495 /* MenuItemCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F9B203ABC8C00BEA495 /* MenuItemCalendar.swift */; };
-		DA8FA01A203ABC8C00BEA495 /* MenuItemNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F9C203ABC8C00BEA495 /* MenuItemNew.swift */; };
 		DA8FA01B203ABC8C00BEA495 /* Menu+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F9D203ABC8C00BEA495 /* Menu+Constants.swift */; };
 		DA8FA01C203ABC8C00BEA495 /* MenuItemGenericProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F9E203ABC8C00BEA495 /* MenuItemGenericProtocol.swift */; };
-		DA8FA01D203ABC8C00BEA495 /* MenuItemOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9F9F203ABC8C00BEA495 /* MenuItemOptions.swift */; };
 		DA8FA01E203ABC8C00BEA495 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9FA0203ABC8C00BEA495 /* Menu.swift */; };
-		DA8FA01F203ABC8C00BEA495 /* Menu+FactoryAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9FA1203ABC8C00BEA495 /* Menu+FactoryAdmin.swift */; };
 		DA8FA020203ABC8C00BEA495 /* ViewHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9FA4203ABC8C00BEA495 /* ViewHome.swift */; };
 		DA8FA021203ABC8C00BEA495 /* ViewBarBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9FA6203ABC8C00BEA495 /* ViewBarBack.swift */; };
 		DA8FA022203ABC8C00BEA495 /* ViewButtonContinue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F9FA7203ABC8C00BEA495 /* ViewButtonContinue.swift */; };
@@ -96,6 +89,7 @@
 		DA8FA046203ABC8C00BEA495 /* LocalizableController.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9FD7203ABC8C00BEA495 /* LocalizableController.strings */; };
 		DA8FA047203ABC8C00BEA495 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9FDA203ABC8C00BEA495 /* LICENSE */; };
 		DA8FA048203ABC8C00BEA495 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9FDB203ABC8C00BEA495 /* README.md */; };
+		DA8FA04A203AC98A00BEA495 /* Menu+Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA049203AC98A00BEA495 /* Menu+Order.swift */; };
 		DAE5F66C203737380023E75B /* .codebeatsettings in Resources */ = {isa = PBXBuildFile; fileRef = DAE5F66B203737380023E75B /* .codebeatsettings */; };
 /* End PBXBuildFile section */
 
@@ -136,19 +130,12 @@
 		DA8F9F81203ABC8C00BEA495 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		DA8F9F93203ABC8C00BEA495 /* MenuItemGenericProtocol+Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MenuItemGenericProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA8F9F94203ABC8C00BEA495 /* MenuItemGeneric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemGeneric.swift; sourceTree = "<group>"; };
-		DA8F9F95203ABC8C00BEA495 /* Menu+OrderUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Menu+OrderUser.swift"; sourceTree = "<group>"; };
 		DA8F9F96203ABC8C00BEA495 /* MenuItemProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemProtocol.swift; sourceTree = "<group>"; };
 		DA8F9F97203ABC8C00BEA495 /* MenuItemHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemHome.swift; sourceTree = "<group>"; };
-		DA8F9F98203ABC8C00BEA495 /* Menu+OrderAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Menu+OrderAdmin.swift"; sourceTree = "<group>"; };
-		DA8F9F99203ABC8C00BEA495 /* Menu+FactoryUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Menu+FactoryUser.swift"; sourceTree = "<group>"; };
 		DA8F9F9A203ABC8C00BEA495 /* Menu+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Menu+Factory.swift"; sourceTree = "<group>"; };
-		DA8F9F9B203ABC8C00BEA495 /* MenuItemCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemCalendar.swift; sourceTree = "<group>"; };
-		DA8F9F9C203ABC8C00BEA495 /* MenuItemNew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemNew.swift; sourceTree = "<group>"; };
 		DA8F9F9D203ABC8C00BEA495 /* Menu+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Menu+Constants.swift"; sourceTree = "<group>"; };
 		DA8F9F9E203ABC8C00BEA495 /* MenuItemGenericProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemGenericProtocol.swift; sourceTree = "<group>"; };
-		DA8F9F9F203ABC8C00BEA495 /* MenuItemOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemOptions.swift; sourceTree = "<group>"; };
 		DA8F9FA0203ABC8C00BEA495 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
-		DA8F9FA1203ABC8C00BEA495 /* Menu+FactoryAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Menu+FactoryAdmin.swift"; sourceTree = "<group>"; };
 		DA8F9FA4203ABC8C00BEA495 /* ViewHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHome.swift; sourceTree = "<group>"; };
 		DA8F9FA6203ABC8C00BEA495 /* ViewBarBack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBarBack.swift; sourceTree = "<group>"; };
 		DA8F9FA7203ABC8C00BEA495 /* ViewButtonContinue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewButtonContinue.swift; sourceTree = "<group>"; };
@@ -190,6 +177,7 @@
 		DA8F9FD8203ABC8C00BEA495 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableController.strings; sourceTree = "<group>"; };
 		DA8F9FDA203ABC8C00BEA495 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DA8F9FDB203ABC8C00BEA495 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DA8FA049203AC98A00BEA495 /* Menu+Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Menu+Order.swift"; sourceTree = "<group>"; };
 		DAE5F65620370A930023E75B /* radcity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radcity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE5F66B203737380023E75B /* .codebeatsettings */ = {isa = PBXFileReference; lastKnownFileType = text; path = .codebeatsettings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -324,19 +312,13 @@
 			children = (
 				DA8F9F93203ABC8C00BEA495 /* MenuItemGenericProtocol+Default.swift */,
 				DA8F9F94203ABC8C00BEA495 /* MenuItemGeneric.swift */,
-				DA8F9F95203ABC8C00BEA495 /* Menu+OrderUser.swift */,
 				DA8F9F96203ABC8C00BEA495 /* MenuItemProtocol.swift */,
 				DA8F9F97203ABC8C00BEA495 /* MenuItemHome.swift */,
-				DA8F9F98203ABC8C00BEA495 /* Menu+OrderAdmin.swift */,
-				DA8F9F99203ABC8C00BEA495 /* Menu+FactoryUser.swift */,
+				DA8FA049203AC98A00BEA495 /* Menu+Order.swift */,
 				DA8F9F9A203ABC8C00BEA495 /* Menu+Factory.swift */,
-				DA8F9F9B203ABC8C00BEA495 /* MenuItemCalendar.swift */,
-				DA8F9F9C203ABC8C00BEA495 /* MenuItemNew.swift */,
 				DA8F9F9D203ABC8C00BEA495 /* Menu+Constants.swift */,
 				DA8F9F9E203ABC8C00BEA495 /* MenuItemGenericProtocol.swift */,
-				DA8F9F9F203ABC8C00BEA495 /* MenuItemOptions.swift */,
 				DA8F9FA0203ABC8C00BEA495 /* Menu.swift */,
-				DA8F9FA1203ABC8C00BEA495 /* Menu+FactoryAdmin.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -576,17 +558,15 @@
 			files = (
 				DA8F9FE2203ABC8C00BEA495 /* ControllerParent+Transitions.swift in Sources */,
 				DA8F9FE5203ABC8C00BEA495 /* ControllerParent.swift in Sources */,
-				DA8FA01D203ABC8C00BEA495 /* MenuItemOptions.swift in Sources */,
 				DA8FA021203ABC8C00BEA495 /* ViewBarBack.swift in Sources */,
-				DA8FA01A203ABC8C00BEA495 /* MenuItemNew.swift in Sources */,
 				DA8FA026203ABC8C00BEA495 /* ViewCollectionCell.swift in Sources */,
 				DA8FA025203ABC8C00BEA495 /* ViewAlert+Constants.swift in Sources */,
 				DA8FA03F203ABC8C00BEA495 /* ViewControllableProtocol.swift in Sources */,
 				DA8F9FE8203ABC8C00BEA495 /* ExtensionNotification.swift in Sources */,
 				DA8F9FE0203ABC8C00BEA495 /* Controller+Alert.swift in Sources */,
-				DA8FA016203ABC8C00BEA495 /* Menu+OrderAdmin.swift in Sources */,
 				DA8FA035203ABC8C00BEA495 /* ViewMenu+Synth.swift in Sources */,
 				DA8F9FF2203ABC8C00BEA495 /* ExtensionUIFont.swift in Sources */,
+				DA8FA04A203AC98A00BEA495 /* Menu+Order.swift in Sources */,
 				DA8F9FF7203ABC8C00BEA495 /* ExtensionUIFont+Constants.swift in Sources */,
 				DA8FA032203ABC8C00BEA495 /* ViewMenu+Actions.swift in Sources */,
 				DA8F9FEF203ABC8C00BEA495 /* ExtensionURLResponse.swift in Sources */,
@@ -601,7 +581,6 @@
 				DA8FA034203ABC8C00BEA495 /* ViewMenu.swift in Sources */,
 				DA8FA024203ABC8C00BEA495 /* ViewButtonContinue+Constants.swift in Sources */,
 				DA8F9FE7203ABC8C00BEA495 /* ExtensionDictionary.swift in Sources */,
-				DA8FA013203ABC8C00BEA495 /* Menu+OrderUser.swift in Sources */,
 				DA8FA027203ABC8C00BEA495 /* ViewCollection.swift in Sources */,
 				DA8F9FEC203ABC8C00BEA495 /* ExtensionMKPolyline.swift in Sources */,
 				DA8FA028203ABC8C00BEA495 /* ViewAlert.swift in Sources */,
@@ -623,7 +602,6 @@
 				DA8FA022203ABC8C00BEA495 /* ViewButtonContinue.swift in Sources */,
 				DA8F9FF9203ABC8C00BEA495 /* ExtensionURL.swift in Sources */,
 				DA8FA011203ABC8C00BEA495 /* MenuItemGenericProtocol+Default.swift in Sources */,
-				DA8FA019203ABC8C00BEA495 /* MenuItemCalendar.swift in Sources */,
 				DA8F9FE6203ABC8C00BEA495 /* ControllerHome.swift in Sources */,
 				DA8FA012203ABC8C00BEA495 /* MenuItemGeneric.swift in Sources */,
 				DA8F9FE3203ABC8C00BEA495 /* AppDelegate.swift in Sources */,
@@ -632,7 +610,6 @@
 				DA8FA000203ABC8C00BEA495 /* Home.swift in Sources */,
 				DA8F9FEE203ABC8C00BEA495 /* ExtensionFileManager.swift in Sources */,
 				DA8FA03C203ABC8C00BEA495 /* ViewParent+Transitions.swift in Sources */,
-				DA8FA017203ABC8C00BEA495 /* Menu+FactoryUser.swift in Sources */,
 				DA8FA015203ABC8C00BEA495 /* MenuItemHome.swift in Sources */,
 				DA8F9FF6203ABC8C00BEA495 /* ExtensionString.swift in Sources */,
 				DA8F9FDD203ABC8C00BEA495 /* Controller.swift in Sources */,
@@ -646,7 +623,6 @@
 				DA8FA031203ABC8C00BEA495 /* ViewGradient+Constants.swift in Sources */,
 				DA8F9FF4203ABC8C00BEA495 /* ExtensionData.swift in Sources */,
 				DA8FA01E203ABC8C00BEA495 /* Menu.swift in Sources */,
-				DA8FA01F203ABC8C00BEA495 /* Menu+FactoryAdmin.swift in Sources */,
 				DA8F9FF1203ABC8C00BEA495 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA8F9FF3203ABC8C00BEA495 /* ExtensionUIImage.swift in Sources */,
 				DA8FA03B203ABC8C00BEA495 /* ViewTransitionableProtocol.swift in Sources */,
