@@ -75,7 +75,8 @@ extension ControllerParent
     private func popController(
         index:Int,
         left:CGFloat,
-        top:CGFloat)
+        top:CGFloat,
+        completion:(() -> ())? = nil)
     {
         let currentController:UIViewController = self.childViewControllers[index]
         let previousController:UIViewController = self.childViewControllers[index - 1]
@@ -111,13 +112,13 @@ extension ControllerParent
         left:CGFloat,
         top:CGFloat,
         background:Bool,
-        completion:(() -> ())? = nil)
+        completion:(() -> ())?)
     {
         self.addChildViewController(controller)
         controller.beginAppearanceTransition(true, animated:true)
         self.currentController?.beginAppearanceTransition(false, animated:true)
         
-        viewParent.push(
+        self.viewParent?.push(
             newView:newView,
             left:left,
             top:top,
@@ -182,7 +183,13 @@ extension ControllerParent
         let left:CGFloat = width * transition.horizontal
         let top:CGFloat = height * transition.vertical
         
-        self.pushController
+        self.pushController(
+            controller:controller,
+            newView:newView,
+            left:left,
+            top:top,
+            background:background,
+            completion:completion)
     }
     
     func animateOver(controller:UIViewController)
@@ -201,9 +208,10 @@ extension ControllerParent
         self.currentController?.beginAppearanceTransition(false, animated:true)
         
         self.viewParent?.animateOver(newView:newView)
-        {
+        { [weak self] in
+            
             controller.endAppearanceTransition()
-            currentController.endAppearanceTransition()
+            self?.currentController?.endAppearanceTransition()
         }
     }
     
@@ -243,8 +251,8 @@ extension ControllerParent
     {
         let width:CGFloat = self.view.bounds.maxX
         let height:CGFloat = self.view.bounds.maxY
-        let left:CGFloat = width * horizontal.rawValue
-        let top:CGFloat = height * vertical.rawValue
+        let left:CGFloat = width * transition.horizontal
+        let top:CGFloat = height * transition.vertical
         let controllers:Int = self.childViewControllers.count
         
         if controllers > 1
@@ -254,7 +262,8 @@ extension ControllerParent
             self.popController(
                 index:index,
                 left:left,
-                top:top)
+                top:top,
+                completion:completion)
         }
     }
     

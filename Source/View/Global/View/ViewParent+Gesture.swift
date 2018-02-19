@@ -64,7 +64,7 @@ extension ViewParent:UIGestureRecognizerDelegate
     private func gesturePop()
     {
         self.panRecognizer.isEnabled = true
-        self.controller.pop(horizontal:ControllerTransition.Horizontal.right)
+        self.controller.pop(transition:ControllerTransition.right)
     }
     
     private func gestureRestore()
