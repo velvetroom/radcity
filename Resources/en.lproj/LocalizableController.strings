@@ -1,17 +1,1 @@
-ControllerNewAdd_alertDeleteBuildTitle="Delete Recipe?";
-ControllerNewAdd_alertDeleteBuildCancel="Cancel";
-ControllerNewAdd_alertDeleteBuildDelete="Delete";
-ControllerNewAdd_alertDeleteIngredientTitle="Delete Ingredient?";
-ControllerNewAdd_alertDeleteIngredientCancel="Cancel";
-ControllerNewAdd_alertDeleteIngredientDelete="Delete";
-ControllerNewAdd_alertDeleteStepTitle="Delete Step?";
-ControllerNewAdd_alertDeleteStepCancel="Cancel";
-ControllerNewAdd_alertDeleteStepDelete="Delete";
-ControllerNewAdd_defaultStepText="";
-ControllerNewAdd_defaultStepImage="";
-ControllerNewAdd_stepActionsTitle="Step";
-ControllerNewAdd_stepActionCancel="Cancel";
-ControllerNewAdd_stepActionDelete="Delete";
-ControllerNewAdd_stepTextActionEditText="Edit text";
-ControllerNewAdd_stepImageActionEditText="Edit text";
-ControllerNewAdd_stepImageActionEditImage="Edit image";
+
