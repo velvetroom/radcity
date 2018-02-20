@@ -10,6 +10,7 @@
 		DA4A2781203C01D800F57044 /* ControllerParent+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2780203C01D800F57044 /* ControllerParent+Push.swift */; };
 		DA4A2783203C01F700F57044 /* ControllerParent+Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2782203C01F700F57044 /* ControllerParent+Pop.swift */; };
 		DA4A2785203C073200F57044 /* ControllerTransitionPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2784203C073200F57044 /* ControllerTransitionPush.swift */; };
+		DA4A2787203C0B8600F57044 /* ControllerTransitionPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2786203C0B8600F57044 /* ControllerTransitionPop.swift */; };
 		DA8F9FDC203ABC8C00BEA495 /* versioner.sh in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9F54203ABC8C00BEA495 /* versioner.sh */; };
 		DA8FA041203ABC8C00BEA495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9FCC203ABC8C00BEA495 /* LaunchScreen.storyboard */; };
 		DA8FA042203ABC8C00BEA495 /* LocalizableModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9FCF203ABC8C00BEA495 /* LocalizableModel.strings */; };
@@ -24,7 +25,6 @@
 		DA8FA05E203AD28500BEA495 /* ControllerParent+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA050203AD28500BEA495 /* ControllerParent+Constants.swift */; };
 		DA8FA05F203AD28500BEA495 /* Controller+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA051203AD28500BEA495 /* Controller+Alert.swift */; };
 		DA8FA060203AD28500BEA495 /* ControllerParent+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA052203AD28500BEA495 /* ControllerParent+Menu.swift */; };
-		DA8FA061203AD28500BEA495 /* ControllerParent+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA053203AD28500BEA495 /* ControllerParent+Transitions.swift */; };
 		DA8FA062203AD28500BEA495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA054203AD28500BEA495 /* AppDelegate.swift */; };
 		DA8FA063203AD28500BEA495 /* ControllerTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA055203AD28500BEA495 /* ControllerTransition.swift */; };
 		DA8FA064203AD28500BEA495 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA056203AD28500BEA495 /* ControllerParent.swift */; };
@@ -101,6 +101,7 @@
 		DA4A2780203C01D800F57044 /* ControllerParent+Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Push.swift"; sourceTree = "<group>"; };
 		DA4A2782203C01F700F57044 /* ControllerParent+Pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Pop.swift"; sourceTree = "<group>"; };
 		DA4A2784203C073200F57044 /* ControllerTransitionPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerTransitionPush.swift; sourceTree = "<group>"; };
+		DA4A2786203C0B8600F57044 /* ControllerTransitionPop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerTransitionPop.swift; sourceTree = "<group>"; };
 		DA8F9F54203ABC8C00BEA495 /* versioner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = versioner.sh; sourceTree = "<group>"; };
 		DA8F9FCA203ABC8C00BEA495 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA8F9FCC203ABC8C00BEA495 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -116,7 +117,6 @@
 		DA8FA050203AD28500BEA495 /* ControllerParent+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Constants.swift"; sourceTree = "<group>"; };
 		DA8FA051203AD28500BEA495 /* Controller+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller+Alert.swift"; sourceTree = "<group>"; };
 		DA8FA052203AD28500BEA495 /* ControllerParent+Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Menu.swift"; sourceTree = "<group>"; };
-		DA8FA053203AD28500BEA495 /* ControllerParent+Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Transitions.swift"; sourceTree = "<group>"; };
 		DA8FA054203AD28500BEA495 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA8FA055203AD28500BEA495 /* ControllerTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerTransition.swift; sourceTree = "<group>"; };
 		DA8FA056203AD28500BEA495 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -280,13 +280,13 @@
 				DA8FA050203AD28500BEA495 /* ControllerParent+Constants.swift */,
 				DA8FA051203AD28500BEA495 /* Controller+Alert.swift */,
 				DA8FA052203AD28500BEA495 /* ControllerParent+Menu.swift */,
-				DA8FA053203AD28500BEA495 /* ControllerParent+Transitions.swift */,
 				DA4A2780203C01D800F57044 /* ControllerParent+Push.swift */,
 				DA4A2782203C01F700F57044 /* ControllerParent+Pop.swift */,
 				DA8FA054203AD28500BEA495 /* AppDelegate.swift */,
 				DA8FA06A203B200E00BEA495 /* ControllerTransition+Factory.swift */,
 				DA8FA055203AD28500BEA495 /* ControllerTransition.swift */,
 				DA4A2784203C073200F57044 /* ControllerTransitionPush.swift */,
+				DA4A2786203C0B8600F57044 /* ControllerTransitionPop.swift */,
 				DA8FA056203AD28500BEA495 /* ControllerParent.swift */,
 			);
 			path = Abstract;
@@ -576,7 +576,6 @@
 				DA8FA0EE203B2A0300BEA495 /* MenuItemHome.swift in Sources */,
 				DA8FA0BE203B2A0300BEA495 /* ViewAlert.swift in Sources */,
 				DA4A2781203C01D800F57044 /* ControllerParent+Push.swift in Sources */,
-				DA8FA061203AD28500BEA495 /* ControllerParent+Transitions.swift in Sources */,
 				DA8FA0BF203B2A0300BEA495 /* ViewPushBackground.swift in Sources */,
 				DA8FA0BC203B2A0300BEA495 /* ViewCollectionCell.swift in Sources */,
 				DA8FA0C3203B2A0300BEA495 /* ViewSpinner+Constants.swift in Sources */,
@@ -603,6 +602,7 @@
 				DA8FA0DB203B2A0300BEA495 /* ExtensionMKPolyline.swift in Sources */,
 				DA8FA0D6203B2A0300BEA495 /* ExtensionDictionary.swift in Sources */,
 				DA8FA0E8203B2A0300BEA495 /* ExtensionURL.swift in Sources */,
+				DA4A2787203C0B8600F57044 /* ControllerTransitionPop.swift in Sources */,
 				DA8FA0D4203B2A0300BEA495 /* ViewParent+Gesture.swift in Sources */,
 				DA8FA0C9203B2A0300BEA495 /* ViewMenu+Collection.swift in Sources */,
 				DA8FA0DD203B2A0300BEA495 /* ExtensionFileManager.swift in Sources */,
