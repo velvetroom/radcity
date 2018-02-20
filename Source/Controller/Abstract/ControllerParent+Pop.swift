@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 extension ControllerParent
 {
@@ -20,14 +20,10 @@ extension ControllerParent
         }
     }
     
-    private func popController(
-        index:Int,
-        left:CGFloat,
-        top:CGFloat,
-        completion:(() -> ())? = nil)
+    private func pop(transition:ControllerTransitionPop)
     {
-        let currentController:UIViewController = self.childViewControllers[index]
-        let previousController:UIViewController = self.childViewControllers[index - 1]
+        let currentController:UIViewController = self.childViewControllers[transition.index]
+        let previousController:UIViewController = self.childViewControllers[transition.index - 1]
         currentController.removeFromParentViewController()
         
         guard
@@ -44,13 +40,13 @@ extension ControllerParent
         
         self.viewParent?.pop(
             currentView:currentView,
-            left:left,
-            top:top)
+            left:transition.left,
+            top:transition.top)
         {
             previousController.endAppearanceTransition()
             currentController.endAppearanceTransition()
             
-            completion?()
+            transition.completion?()
         }
     }
     
@@ -80,11 +76,13 @@ extension ControllerParent
         {
             let index:Int = controllers - 1
             
-            self.popController(
-                index:index,
-                left:left,
-                top:top,
-                completion:completion)
+            var transition:ControllerTransitionPop = ControllerTransitionPop()
+            transition.left = left
+            transition.top = top
+            transition.index = index
+            transition.completion = completion
+            
+            self.pop(transition:transition)
         }
     }
     
