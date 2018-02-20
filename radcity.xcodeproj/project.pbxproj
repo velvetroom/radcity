@@ -13,6 +13,7 @@
 		DA268797203C7E3B00C2F7A1 /* ExtensionUIView+LayoutHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA268796203C7E3B00C2F7A1 /* ExtensionUIView+LayoutHorizontal.swift */; };
 		DA268799203C7EF400C2F7A1 /* ExtensionUIView+LayoutWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA268798203C7EF400C2F7A1 /* ExtensionUIView+LayoutWidth.swift */; };
 		DA26879B203C7FED00C2F7A1 /* ExtensionUIView+LayoutHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26879A203C7FED00C2F7A1 /* ExtensionUIView+LayoutHeight.swift */; };
+		DA26879D203C808000C2F7A1 /* ExtensionUIView+LayoutSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26879C203C808000C2F7A1 /* ExtensionUIView+LayoutSize.swift */; };
 		DA4A2781203C01D800F57044 /* ControllerParent+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2780203C01D800F57044 /* ControllerParent+Push.swift */; };
 		DA4A2783203C01F700F57044 /* ControllerParent+Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2782203C01F700F57044 /* ControllerParent+Pop.swift */; };
 		DA4A2785203C073200F57044 /* ControllerTransitionPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2784203C073200F57044 /* ControllerTransitionPush.swift */; };
@@ -115,6 +116,7 @@
 		DA268796203C7E3B00C2F7A1 /* ExtensionUIView+LayoutHorizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionUIView+LayoutHorizontal.swift"; sourceTree = "<group>"; };
 		DA268798203C7EF400C2F7A1 /* ExtensionUIView+LayoutWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionUIView+LayoutWidth.swift"; sourceTree = "<group>"; };
 		DA26879A203C7FED00C2F7A1 /* ExtensionUIView+LayoutHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionUIView+LayoutHeight.swift"; sourceTree = "<group>"; };
+		DA26879C203C808000C2F7A1 /* ExtensionUIView+LayoutSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionUIView+LayoutSize.swift"; sourceTree = "<group>"; };
 		DA4A2780203C01D800F57044 /* ControllerParent+Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Push.swift"; sourceTree = "<group>"; };
 		DA4A2782203C01F700F57044 /* ControllerParent+Pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Pop.swift"; sourceTree = "<group>"; };
 		DA4A2784203C073200F57044 /* ControllerTransitionPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerTransitionPush.swift; sourceTree = "<group>"; };
@@ -451,6 +453,7 @@
 				DA268796203C7E3B00C2F7A1 /* ExtensionUIView+LayoutHorizontal.swift */,
 				DA268798203C7EF400C2F7A1 /* ExtensionUIView+LayoutWidth.swift */,
 				DA26879A203C7FED00C2F7A1 /* ExtensionUIView+LayoutHeight.swift */,
+				DA26879C203C808000C2F7A1 /* ExtensionUIView+LayoutSize.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 				DA8FA0CB203B2A0300BEA495 /* ViewMenu+Synth.swift in Sources */,
 				DA8FA0DF203B2A0300BEA495 /* ExtensionMKAnnotationView.swift in Sources */,
 				DA8FA0E4203B2A0300BEA495 /* ExtensionNSManagedObject.swift in Sources */,
+				DA26879D203C808000C2F7A1 /* ExtensionUIView+LayoutSize.swift in Sources */,
 				DA8FA062203AD28500BEA495 /* AppDelegate.swift in Sources */,
 				DA8FA0CC203B2A0300BEA495 /* ViewMenuCell.swift in Sources */,
 				DA8FA0B9203B2A0300BEA495 /* ViewBar.swift in Sources */,
