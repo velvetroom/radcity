@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA268791203C6E6500C2F7A1 /* ViewBar+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA268790203C6E6500C2F7A1 /* ViewBar+Factory.swift */; };
+		DA268793203C795A00C2F7A1 /* ExtensionUIView+ConstraintsEquals.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA268792203C795A00C2F7A1 /* ExtensionUIView+ConstraintsEquals.swift */; };
 		DA4A2781203C01D800F57044 /* ControllerParent+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2780203C01D800F57044 /* ControllerParent+Push.swift */; };
 		DA4A2783203C01F700F57044 /* ControllerParent+Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2782203C01F700F57044 /* ControllerParent+Pop.swift */; };
 		DA4A2785203C073200F57044 /* ControllerTransitionPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2784203C073200F57044 /* ControllerTransitionPush.swift */; };
@@ -105,6 +106,7 @@
 
 /* Begin PBXFileReference section */
 		DA268790203C6E6500C2F7A1 /* ViewBar+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewBar+Factory.swift"; sourceTree = "<group>"; };
+		DA268792203C795A00C2F7A1 /* ExtensionUIView+ConstraintsEquals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionUIView+ConstraintsEquals.swift"; sourceTree = "<group>"; };
 		DA4A2780203C01D800F57044 /* ControllerParent+Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Push.swift"; sourceTree = "<group>"; };
 		DA4A2782203C01F700F57044 /* ControllerParent+Pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Pop.swift"; sourceTree = "<group>"; };
 		DA4A2784203C073200F57044 /* ControllerTransitionPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerTransitionPush.swift; sourceTree = "<group>"; };
@@ -436,6 +438,7 @@
 				DA8FA0A4203B2A0200BEA495 /* ExtensionUIFont+Constants.swift */,
 				DA8FA0A5203B2A0200BEA495 /* ExtensionUICollectionReusableView.swift */,
 				DA8FA0A6203B2A0200BEA495 /* ExtensionURL.swift */,
+				DA268792203C795A00C2F7A1 /* ExtensionUIView+ConstraintsEquals.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -624,6 +627,7 @@
 				DA8FA0D6203B2A0300BEA495 /* ExtensionDictionary.swift in Sources */,
 				DA8FA0E8203B2A0300BEA495 /* ExtensionURL.swift in Sources */,
 				DA4A2787203C0B8600F57044 /* ControllerTransitionPop.swift in Sources */,
+				DA268793203C795A00C2F7A1 /* ExtensionUIView+ConstraintsEquals.swift in Sources */,
 				DA8FA0D4203B2A0300BEA495 /* ViewParent+Gesture.swift in Sources */,
 				DA8FA0C9203B2A0300BEA495 /* ViewMenu+Collection.swift in Sources */,
 				DA8FA0DD203B2A0300BEA495 /* ExtensionFileManager.swift in Sources */,
