@@ -11,6 +11,11 @@
 		DA4A2783203C01F700F57044 /* ControllerParent+Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2782203C01F700F57044 /* ControllerParent+Pop.swift */; };
 		DA4A2785203C073200F57044 /* ControllerTransitionPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2784203C073200F57044 /* ControllerTransitionPush.swift */; };
 		DA4A2787203C0B8600F57044 /* ControllerTransitionPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2786203C0B8600F57044 /* ControllerTransitionPop.swift */; };
+		DA4A2789203C1BC400F57044 /* ViewParent+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2788203C1BC400F57044 /* ViewParent+Push.swift */; };
+		DA4A278B203C1BEF00F57044 /* ViewParent+Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A278A203C1BEF00F57044 /* ViewParent+Pop.swift */; };
+		DA4A278D203C1F1D00F57044 /* ViewParentSlideTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A278C203C1F1D00F57044 /* ViewParentSlideTransition.swift */; };
+		DA4A278F203C2A9C00F57044 /* ViewParentPushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A278E203C2A9C00F57044 /* ViewParentPushTransition.swift */; };
+		DA4A2791203C311400F57044 /* ViewParentPopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2790203C311400F57044 /* ViewParentPopTransition.swift */; };
 		DA8F9FDC203ABC8C00BEA495 /* versioner.sh in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9F54203ABC8C00BEA495 /* versioner.sh */; };
 		DA8FA041203ABC8C00BEA495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9FCC203ABC8C00BEA495 /* LaunchScreen.storyboard */; };
 		DA8FA042203ABC8C00BEA495 /* LocalizableModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9FCF203ABC8C00BEA495 /* LocalizableModel.strings */; };
@@ -102,6 +107,11 @@
 		DA4A2782203C01F700F57044 /* ControllerParent+Pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Pop.swift"; sourceTree = "<group>"; };
 		DA4A2784203C073200F57044 /* ControllerTransitionPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerTransitionPush.swift; sourceTree = "<group>"; };
 		DA4A2786203C0B8600F57044 /* ControllerTransitionPop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerTransitionPop.swift; sourceTree = "<group>"; };
+		DA4A2788203C1BC400F57044 /* ViewParent+Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewParent+Push.swift"; sourceTree = "<group>"; };
+		DA4A278A203C1BEF00F57044 /* ViewParent+Pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewParent+Pop.swift"; sourceTree = "<group>"; };
+		DA4A278C203C1F1D00F57044 /* ViewParentSlideTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewParentSlideTransition.swift; sourceTree = "<group>"; };
+		DA4A278E203C2A9C00F57044 /* ViewParentPushTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewParentPushTransition.swift; sourceTree = "<group>"; };
+		DA4A2790203C311400F57044 /* ViewParentPopTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewParentPopTransition.swift; sourceTree = "<group>"; };
 		DA8F9F54203ABC8C00BEA495 /* versioner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = versioner.sh; sourceTree = "<group>"; };
 		DA8F9FCA203ABC8C00BEA495 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA8F9FCC203ABC8C00BEA495 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -389,9 +399,14 @@
 				DA8FA08D203B2A0200BEA495 /* ViewMain.swift */,
 				DA8FA08E203B2A0200BEA495 /* ViewTransitionableProtocol.swift */,
 				DA8FA08F203B2A0200BEA495 /* ViewParent+Transitions.swift */,
+				DA4A2788203C1BC400F57044 /* ViewParent+Push.swift */,
+				DA4A278A203C1BEF00F57044 /* ViewParent+Pop.swift */,
 				DA8FA090203B2A0200BEA495 /* ViewParent+Constants.swift */,
 				DA8FA091203B2A0200BEA495 /* ViewParent+Gesture.swift */,
 				DA8FA092203B2A0200BEA495 /* ViewControllableProtocol.swift */,
+				DA4A278C203C1F1D00F57044 /* ViewParentSlideTransition.swift */,
+				DA4A278E203C2A9C00F57044 /* ViewParentPushTransition.swift */,
+				DA4A2790203C311400F57044 /* ViewParentPopTransition.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -570,6 +585,7 @@
 			files = (
 				DA8FA0E1203B2A0300BEA495 /* ExtensionUIFont.swift in Sources */,
 				DA8FA0EF203B2A0300BEA495 /* Menu+Factory.swift in Sources */,
+				DA4A2789203C1BC400F57044 /* ViewParent+Push.swift in Sources */,
 				DA8FA067203AD28500BEA495 /* ArchHome.swift in Sources */,
 				DA8FA0D0203B2A0300BEA495 /* ViewMain.swift in Sources */,
 				DA8FA0C0203B2A0300BEA495 /* ViewCollectionReusable.swift in Sources */,
@@ -596,6 +612,7 @@
 				DA8FA064203AD28500BEA495 /* ControllerParent.swift in Sources */,
 				DA8FA0DA203B2A0300BEA495 /* ExtensionCGImage.swift in Sources */,
 				DA8FA05F203AD28500BEA495 /* Controller+Alert.swift in Sources */,
+				DA4A278F203C2A9C00F57044 /* ViewParentPushTransition.swift in Sources */,
 				DA8FA0E6203B2A0300BEA495 /* ExtensionUIFont+Constants.swift in Sources */,
 				DA8FA0D3203B2A0300BEA495 /* ViewParent+Constants.swift in Sources */,
 				DA8FA060203AD28500BEA495 /* ControllerParent+Menu.swift in Sources */,
@@ -618,6 +635,7 @@
 				DA8FA0EC203B2A0300BEA495 /* MenuItemGeneric.swift in Sources */,
 				DA8FA0F3203B2A0300BEA495 /* Menu+Order.swift in Sources */,
 				DA8FA0C2203B2A0300BEA495 /* ViewBlur.swift in Sources */,
+				DA4A278D203C1F1D00F57044 /* ViewParentSlideTransition.swift in Sources */,
 				DA4A2785203C073200F57044 /* ControllerTransitionPush.swift in Sources */,
 				DA8FA0D1203B2A0300BEA495 /* ViewTransitionableProtocol.swift in Sources */,
 				DA8FA0E7203B2A0300BEA495 /* ExtensionUICollectionReusableView.swift in Sources */,
@@ -641,10 +659,12 @@
 				DA8FA0EA203B2A0300BEA495 /* Home.swift in Sources */,
 				DA8FA0BD203B2A0300BEA495 /* ViewCollection.swift in Sources */,
 				DA8FA0D8203B2A0300BEA495 /* ExtensionUIColor.swift in Sources */,
+				DA4A2791203C311400F57044 /* ViewParentPopTransition.swift in Sources */,
 				DA8FA05C203AD28500BEA495 /* Controller.swift in Sources */,
 				DA8FA0C8203B2A0300BEA495 /* ViewMenu+Actions.swift in Sources */,
 				DA8FA05E203AD28500BEA495 /* ControllerParent+Constants.swift in Sources */,
 				DA8FA0B8203B2A0300BEA495 /* ViewButtonContinue.swift in Sources */,
+				DA4A278B203C1BEF00F57044 /* ViewParent+Pop.swift in Sources */,
 				DA8FA0E0203B2A0300BEA495 /* ExtensionNSLayoutConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
