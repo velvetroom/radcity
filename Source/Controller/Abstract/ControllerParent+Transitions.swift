@@ -28,7 +28,9 @@ extension ControllerParent
     
     //MARK: private
     
-    private func slide(controller:UIViewController, left:CGFloat)
+    private func slide(
+        controller:UIViewController,
+        left:CGFloat)
     {
         guard
             

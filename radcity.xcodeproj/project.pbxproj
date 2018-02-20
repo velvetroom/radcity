@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA4A2781203C01D800F57044 /* ControllerParent+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2780203C01D800F57044 /* ControllerParent+Push.swift */; };
 		DA8F9FDC203ABC8C00BEA495 /* versioner.sh in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9F54203ABC8C00BEA495 /* versioner.sh */; };
 		DA8FA041203ABC8C00BEA495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9FCC203ABC8C00BEA495 /* LaunchScreen.storyboard */; };
 		DA8FA042203ABC8C00BEA495 /* LocalizableModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9FCF203ABC8C00BEA495 /* LocalizableModel.strings */; };
@@ -95,6 +96,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA4A2780203C01D800F57044 /* ControllerParent+Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Push.swift"; sourceTree = "<group>"; };
 		DA8F9F54203ABC8C00BEA495 /* versioner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = versioner.sh; sourceTree = "<group>"; };
 		DA8F9FCA203ABC8C00BEA495 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA8F9FCC203ABC8C00BEA495 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				DA8FA051203AD28500BEA495 /* Controller+Alert.swift */,
 				DA8FA052203AD28500BEA495 /* ControllerParent+Menu.swift */,
 				DA8FA053203AD28500BEA495 /* ControllerParent+Transitions.swift */,
+				DA4A2780203C01D800F57044 /* ControllerParent+Push.swift */,
 				DA8FA054203AD28500BEA495 /* AppDelegate.swift */,
 				DA8FA06A203B200E00BEA495 /* ControllerTransition+Factory.swift */,
 				DA8FA055203AD28500BEA495 /* ControllerTransition.swift */,
@@ -566,6 +569,7 @@
 				DA8FA0C0203B2A0300BEA495 /* ViewCollectionReusable.swift in Sources */,
 				DA8FA0EE203B2A0300BEA495 /* MenuItemHome.swift in Sources */,
 				DA8FA0BE203B2A0300BEA495 /* ViewAlert.swift in Sources */,
+				DA4A2781203C01D800F57044 /* ControllerParent+Push.swift in Sources */,
 				DA8FA061203AD28500BEA495 /* ControllerParent+Transitions.swift in Sources */,
 				DA8FA0BF203B2A0300BEA495 /* ViewPushBackground.swift in Sources */,
 				DA8FA0BC203B2A0300BEA495 /* ViewCollectionCell.swift in Sources */,
