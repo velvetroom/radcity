@@ -1,6 +1,6 @@
 import UIKit
 
-struct ViewParentTransition
+struct ViewParentSlideTransition
 {
     var left:CGFloat
     var completion:(() -> ())?
