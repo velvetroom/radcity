@@ -54,23 +54,8 @@ final class ViewAlert:UIView
         self.backgroundColor = color
         self.translatesAutoresizingMaskIntoConstraints = false
         
-        let label:UILabel = UILabel()
-        label.isUserInteractionEnabled = false
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.medium(size:ViewAlert.Constants.fontSize)
-        label.textColor = UIColor.white
-        label.textAlignment = NSTextAlignment.center
-        label.numberOfLines = 0
-        label.backgroundColor = UIColor.clear
-        label.text = message
-        
-        let button:UIButton = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = UIColor.clear
-        button.addTarget(
-            self,
-            action:#selector(self.selectorActionButton(sender:)),
-            for:UIControlEvents.touchUpInside)
+        let label:UILabel = ViewAlert.factoryMessageLabel(message:message)
+        let button:UIButton = ViewAlert.factoryButton()
         
         self.addSubview(label)
         self.addSubview(button)
@@ -91,7 +76,7 @@ final class ViewAlert:UIView
     //MARK: selectors
     
     @objc
-    private func selectorActionButton(sender button:UIButton)
+    func selectorActionButton(sender button:UIButton)
     {
         button.isUserInteractionEnabled = false
         self.timer?.invalidate()
