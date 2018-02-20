@@ -8,13 +8,11 @@ extension UIView
         constant:CGFloat,
         multiplier:CGFloat = 1)
     {
-        NSLayoutConstraint.width(
-            view:self,
+        self.layoutWidth(
             constant:constant,
             multiplier:multiplier)
         
-        NSLayoutConstraint.height(
-            view:self,
+        self.layoutHeight(
             constant:constant,
             multiplier:multiplier)
     }

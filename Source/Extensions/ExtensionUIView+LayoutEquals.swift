@@ -5,51 +5,46 @@ extension UIView
     //MARK: internal
     
     func layoutEquals(
-        toView:UIView,
+        view:UIView,
         margin:CGFloat = 0)
     {
-        NSLayoutConstraint.topToTop(
+        self.layoutTopToTop(
             view:view,
-            toView:toView,
             constant:margin)
-        NSLayoutConstraint.bottomToBottom(
+        self.layoutBottomToBottom(
             view:view,
-            toView:toView,
             constant:-margin)
-        NSLayoutConstraint.leftToLeft(
+        self.layoutLeftToLeft(
             view:view,
-            toView:toView,
             constant:margin)
-        NSLayoutConstraint.rightToRight(
+        self.layoutRightToRight(
             view:view,
-            toView:toView,
             constant:-margin)
     }
     
     func layoutEqualsHorizontal(
-        toView:UIView,
+        view:UIView,
         margin:CGFloat = 0)
     {
-        NSLayoutConstraint.leftToLeft(
+        self.layoutLeftToLeft(
             view:view,
-            toView:toView,
             constant:margin)
-        NSLayoutConstraint.rightToRight(
+        
+        self.layoutRightToRight(
             view:view,
-            toView:toView,
             constant:-margin)
     }
+    
     func layoutEqualsVertical(
-        toView:UIView,
+        view:UIView,
         margin:CGFloat = 0)
     {
-        NSLayoutConstraint.topToTop(
+        self.layoutTopToTop(
             view:view,
-            toView:toView,
             constant:margin)
-        NSLayoutConstraint.bottomToBottom(
+        
+        self.layoutBottomToBottom(
             view:view,
-            toView:toView,
             constant:-margin)
     }
 }
