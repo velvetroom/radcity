@@ -1,16 +1,16 @@
 import UIKit
 
-extension NSLayoutConstraint
+extension UIView
 {
+    //MARK: internal
     
-    @discardableResult class func height(
-        view:UIView,
+    @discardableResult func layoutWidth(
         constant:CGFloat = 0,
         multiplier:CGFloat = 1) -> NSLayoutConstraint
     {
         let constraint:NSLayoutConstraint = NSLayoutConstraint(
-            item:view,
-            attribute:NSLayoutAttribute.height,
+            item:self,
+            attribute:NSLayoutAttribute.width,
             relatedBy:NSLayoutRelation.equal,
             toItem:nil,
             attribute:NSLayoutAttribute.notAnAttribute,
@@ -22,14 +22,13 @@ extension NSLayoutConstraint
         return constraint
     }
     
-    @discardableResult class func heightGreaterOrEqual(
-        view:UIView,
+    @discardableResult func layoutWidthGreaterOrEqual(
         constant:CGFloat = 0,
         multiplier:CGFloat = 1) -> NSLayoutConstraint
     {
         let constraint:NSLayoutConstraint = NSLayoutConstraint(
-            item:view,
-            attribute:NSLayoutAttribute.height,
+            item:self,
+            attribute:NSLayoutAttribute.width,
             relatedBy:NSLayoutRelation.greaterThanOrEqual,
             toItem:nil,
             attribute:NSLayoutAttribute.notAnAttribute,
@@ -41,33 +40,16 @@ extension NSLayoutConstraint
         return constraint
     }
     
-    class func size(
+    @discardableResult func layoutWidth(
         view:UIView,
-        constant:CGFloat,
-        multiplier:CGFloat = 1)
-    {
-        NSLayoutConstraint.width(
-            view:view,
-            constant:constant,
-            multiplier:multiplier)
-        
-        NSLayoutConstraint.height(
-            view:view,
-            constant:constant,
-            multiplier:multiplier)
-    }
-    
-    @discardableResult class func height(
-        view:UIView,
-        toView:UIView,
         multiplier:CGFloat = 1) -> NSLayoutConstraint
     {
         let constraint:NSLayoutConstraint = NSLayoutConstraint(
-            item:view,
-            attribute:NSLayoutAttribute.height,
+            item:self,
+            attribute:NSLayoutAttribute.width,
             relatedBy:NSLayoutRelation.equal,
-            toItem:toView,
-            attribute:NSLayoutAttribute.height,
+            toItem:view,
+            attribute:NSLayoutAttribute.width,
             multiplier:multiplier,
             constant:0)
         
