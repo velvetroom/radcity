@@ -11,14 +11,7 @@ class ViewBar<A>:View<A> where A.C:Controller<A>
         self.backgroundColor = UIColor.white
         
         let viewBorder:ViewBorder = ViewBorder(colour:UIColor.colourBackgroundDark)
-        
-        let labelTitle:UILabel = UILabel()
-        labelTitle.translatesAutoresizingMaskIntoConstraints = false
-        labelTitle.backgroundColor = UIColor.clear
-        labelTitle.isUserInteractionEnabled = false
-        labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.bold(size:ViewGlobal.Constants.barTitleFontSize)
-        labelTitle.textColor = UIColor.colourBackgroundDark
+        let labelTitle:UILabel = ViewBar.factoryLabelTitle()
         self.labelTitle = labelTitle
         
         self.addSubview(viewBorder)
