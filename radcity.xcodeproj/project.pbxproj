@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA4A2781203C01D800F57044 /* ControllerParent+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2780203C01D800F57044 /* ControllerParent+Push.swift */; };
+		DA4A2783203C01F700F57044 /* ControllerParent+Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2782203C01F700F57044 /* ControllerParent+Pop.swift */; };
 		DA8F9FDC203ABC8C00BEA495 /* versioner.sh in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9F54203ABC8C00BEA495 /* versioner.sh */; };
 		DA8FA041203ABC8C00BEA495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9FCC203ABC8C00BEA495 /* LaunchScreen.storyboard */; };
 		DA8FA042203ABC8C00BEA495 /* LocalizableModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9FCF203ABC8C00BEA495 /* LocalizableModel.strings */; };
@@ -97,6 +98,7 @@
 
 /* Begin PBXFileReference section */
 		DA4A2780203C01D800F57044 /* ControllerParent+Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Push.swift"; sourceTree = "<group>"; };
+		DA4A2782203C01F700F57044 /* ControllerParent+Pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Pop.swift"; sourceTree = "<group>"; };
 		DA8F9F54203ABC8C00BEA495 /* versioner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = versioner.sh; sourceTree = "<group>"; };
 		DA8F9FCA203ABC8C00BEA495 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA8F9FCC203ABC8C00BEA495 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				DA8FA052203AD28500BEA495 /* ControllerParent+Menu.swift */,
 				DA8FA053203AD28500BEA495 /* ControllerParent+Transitions.swift */,
 				DA4A2780203C01D800F57044 /* ControllerParent+Push.swift */,
+				DA4A2782203C01F700F57044 /* ControllerParent+Pop.swift */,
 				DA8FA054203AD28500BEA495 /* AppDelegate.swift */,
 				DA8FA06A203B200E00BEA495 /* ControllerTransition+Factory.swift */,
 				DA8FA055203AD28500BEA495 /* ControllerTransition.swift */,
@@ -616,6 +619,7 @@
 				DA8FA0E7203B2A0300BEA495 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA8FA065203AD28500BEA495 /* ControllerHome.swift in Sources */,
 				DA8FA0C4203B2A0300BEA495 /* ViewGradient.swift in Sources */,
+				DA4A2783203C01F700F57044 /* ControllerParent+Pop.swift in Sources */,
 				DA8FA0E9203B2A0300BEA495 /* Model.swift in Sources */,
 				DA8FA0CB203B2A0300BEA495 /* ViewMenu+Synth.swift in Sources */,
 				DA8FA0DF203B2A0300BEA495 /* ExtensionMKAnnotationView.swift in Sources */,
