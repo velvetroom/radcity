@@ -5,6 +5,30 @@ final class ControllerParent:UIViewController
     var orientation:UIInterfaceOrientationMask
     let menu:Menu
     
+    var viewParent:ViewParent?
+    {
+        get
+        {
+            return self.view as? ViewParent
+        }
+    }
+    
+    var currentView:ViewTransitionableProtocol?
+    {
+        get
+        {
+            return self.currentController?.view as? ViewTransitionableProtocol
+        }
+    }
+    
+    var currentController:UIViewController?
+    {
+        get
+        {
+            return self.childViewControllers.last
+        }
+    }
+    
     init()
     {
         self.menu = Menu()
