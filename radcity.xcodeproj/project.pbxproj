@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA268791203C6E6500C2F7A1 /* ViewBar+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA268790203C6E6500C2F7A1 /* ViewBar+Factory.swift */; };
 		DA4A2781203C01D800F57044 /* ControllerParent+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2780203C01D800F57044 /* ControllerParent+Push.swift */; };
 		DA4A2783203C01F700F57044 /* ControllerParent+Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2782203C01F700F57044 /* ControllerParent+Pop.swift */; };
 		DA4A2785203C073200F57044 /* ControllerTransitionPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2784203C073200F57044 /* ControllerTransitionPush.swift */; };
@@ -103,6 +104,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA268790203C6E6500C2F7A1 /* ViewBar+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewBar+Factory.swift"; sourceTree = "<group>"; };
 		DA4A2780203C01D800F57044 /* ControllerParent+Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Push.swift"; sourceTree = "<group>"; };
 		DA4A2782203C01F700F57044 /* ControllerParent+Pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Pop.swift"; sourceTree = "<group>"; };
 		DA4A2784203C073200F57044 /* ControllerTransitionPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerTransitionPush.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 				DA8FA070203B2A0200BEA495 /* ViewBarBack.swift */,
 				DA8FA071203B2A0200BEA495 /* ViewButtonContinue.swift */,
 				DA8FA072203B2A0200BEA495 /* ViewBar.swift */,
+				DA268790203C6E6500C2F7A1 /* ViewBar+Factory.swift */,
 				DA8FA073203B2A0200BEA495 /* ViewButtonContinue+Constants.swift */,
 			);
 			path = Shared;
@@ -662,6 +665,7 @@
 				DA4A2791203C311400F57044 /* ViewParentPopTransition.swift in Sources */,
 				DA8FA05C203AD28500BEA495 /* Controller.swift in Sources */,
 				DA8FA0C8203B2A0300BEA495 /* ViewMenu+Actions.swift in Sources */,
+				DA268791203C6E6500C2F7A1 /* ViewBar+Factory.swift in Sources */,
 				DA8FA05E203AD28500BEA495 /* ControllerParent+Constants.swift in Sources */,
 				DA8FA0B8203B2A0300BEA495 /* ViewButtonContinue.swift in Sources */,
 				DA4A278B203C1BEF00F57044 /* ViewParent+Pop.swift in Sources */,
