@@ -2,17 +2,12 @@ import UIKit
 
 extension UIImage
 {
-    func imageCropping(rect:CGRect) -> UIImage?
+    //MARK: private
+    
+    private func drawingRectForCropping(
+        cgImage:CGImage,
+        rect:CGRect) -> CGRect
     {
-        guard
-            
-            let cgImage:CGImage = self.cgImage
-            
-        else
-        {
-            return nil
-        }
-        
         let width:CGFloat = CGFloat(cgImage.width)
         let height:CGFloat = CGFloat(cgImage.height)
         let posX:CGFloat = -rect.minX
@@ -23,7 +18,15 @@ extension UIImage
             width:width,
             height:height)
         
-        UIGraphicsBeginImageContext(rect.size)
+        return drawingRect
+    }
+    
+    private func cropImage(
+        cgImage:CGImage,
+        drawingRect:CGRect,
+        croppingRect:CGRect) -> CGImage?
+    {
+        UIGraphicsBeginImageContext(croppingRect.size)
         
         guard
             
@@ -36,7 +39,7 @@ extension UIImage
             return nil
         }
         
-        context.translateBy(x:0, y:rect.height)
+        context.translateBy(x:0, y:croppingRect.height)
         context.scaleBy(x:1, y:-1)
         context.draw(cgImage, in:drawingRect)
         
@@ -52,6 +55,38 @@ extension UIImage
         }
         
         UIGraphicsEndImageContext()
+        
+        return newCgImage
+    }
+    
+    //MARK: internal
+    
+    func imageCropping(rect:CGRect) -> UIImage?
+    {
+        guard
+            
+            let cgImage:CGImage = self.cgImage
+            
+        else
+        {
+            return nil
+        }
+        
+        let drawingRect:CGRect = self.drawingRectForCropping(
+            cgImage:cgImage,
+            rect:rect)
+        
+        guard
+        
+            let newCgImage:CGImage = self.cropImage(
+                cgImage:cgImage,
+                drawingRect:drawingRect,
+                croppingRect:rect)
+        
+        else
+        {
+            return nil
+        }
         
         let newImage:UIImage = UIImage(cgImage:newCgImage)
         
