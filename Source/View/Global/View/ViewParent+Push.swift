@@ -270,4 +270,33 @@ extension ViewParent
             newUi?.alpha = 1
         }
     }
+    
+    func centreOver(newView:ViewTransitionableProtocol)
+    {
+        guard
+            
+            let newUi:UIView = newView as? UIView
+            
+        else
+        {
+            return
+        }
+        
+        self.addSubview(newUi)
+        
+        newView.layoutTop = NSLayoutConstraint.topToTop(
+            view:newUi,
+            toView:self)
+        newView.layoutBottom = NSLayoutConstraint.bottomToBottom(
+            view:newUi,
+            toView:self)
+        newView.layoutLeft = NSLayoutConstraint.leftToLeft(
+            view:newUi,
+            toView:self)
+        newView.layoutRight = NSLayoutConstraint.rightToRight(
+            view:newUi,
+            toView:self)
+        
+        self.layoutIfNeeded()
+    }
 }
