@@ -2,6 +2,27 @@ import UIKit
 
 extension UIImage
 {
+    //MARK: private
+    
+    private func drawingRectForCropping(
+        cgImage:CGImage,
+        rect:CGRect) -> CGRect
+    {
+        let width:CGFloat = CGFloat(cgImage.width)
+        let height:CGFloat = CGFloat(cgImage.height)
+        let posX:CGFloat = -rect.minX
+        let posY:CGFloat = rect.maxY - height
+        let drawingRect:CGRect = CGRect(
+            x:posX,
+            y:posY,
+            width:width,
+            height:height)
+        
+        return drawingRect
+    }
+    
+    //MARK: internal
+    
     func imageCropping(rect:CGRect) -> UIImage?
     {
         guard
@@ -13,15 +34,9 @@ extension UIImage
             return nil
         }
         
-        let width:CGFloat = CGFloat(cgImage.width)
-        let height:CGFloat = CGFloat(cgImage.height)
-        let posX:CGFloat = -rect.minX
-        let posY:CGFloat = rect.maxY - height
-        let drawingRect:CGRect = CGRect(
-            x:posX,
-            y:posY,
-            width:width,
-            height:height)
+        let drawingRect:CGRect = self.drawingRectForCropping(
+            cgImage:cgImage,
+            rect:rect)
         
         UIGraphicsBeginImageContext(rect.size)
         
