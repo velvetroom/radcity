@@ -7,11 +7,11 @@ struct ControllerTransitionPush
     var top:CGFloat
     var background:Bool
     let controller:UIViewController
-    let newView:UIView
+    let newView:ViewTransitionableProtocol
     
     init(
         controller:UIViewController,
-        newView:UIView)
+        newView:ViewTransitionableProtocol)
     {
         self.controller = controller
         self.newView = newView

@@ -34,6 +34,26 @@ extension ControllerParent
         }
     }
     
+    private func push(transition:ControllerTransitionPush)
+    {
+        self.addChildViewController(transition.controller)
+        transition.controller.beginAppearanceTransition(true, animated:true)
+        self.currentController?.beginAppearanceTransition(false, animated:true)
+        
+        self.viewParent?.push(
+            newView:transition.newView,
+            left:transition.left,
+            top:transition.top,
+            background:transition.background)
+        { [weak self] in
+            
+            transition.controller.endAppearanceTransition()
+            self?.currentController?.endAppearanceTransition()
+            
+            transition.completion?()
+        }
+    }
+    
     //MARK: internal
     
     func mainController(controller:UIViewController)
@@ -86,13 +106,15 @@ extension ControllerParent
         let left:CGFloat = width * transition.horizontal
         let top:CGFloat = height * transition.vertical
         
-        self.pushController(
+        var transition:ControllerTransitionPush = ControllerTransitionPush(
             controller:controller,
-            newView:newView,
-            left:left,
-            top:top,
-            background:background,
-            completion:completion)
+            newView:newView)
+        transition.left = left
+        transition.top = top
+        transition.background = background
+        transition.completion = completion
+        
+        self.push(transition:transition)
     }
     
     func animateOver(controller:UIViewController)

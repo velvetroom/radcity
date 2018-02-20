@@ -54,32 +54,6 @@ extension ControllerParent
         }
     }
     
-    private func pushController(
-        controller:UIViewController,
-        newView:ViewTransitionableProtocol,
-        left:CGFloat,
-        top:CGFloat,
-        background:Bool,
-        completion:(() -> ())?)
-    {
-        self.addChildViewController(controller)
-        controller.beginAppearanceTransition(true, animated:true)
-        self.currentController?.beginAppearanceTransition(false, animated:true)
-        
-        self.viewParent?.push(
-            newView:newView,
-            left:left,
-            top:top,
-            background:background)
-        { [weak self] in
-            
-            controller.endAppearanceTransition()
-            self?.currentController?.endAppearanceTransition()
-            
-            completion?()
-        }
-    }
-    
     //MARK: internal
     
     func removeBetweenFirstAndLast()
