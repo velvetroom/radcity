@@ -63,14 +63,12 @@ extension ViewParent
         }
     }
     
-    private func push(
-        newView:ViewTransitionableProtocol,
-        background:Bool)
+    private func push(transition:ViewParentPushTransition)
     {
-        if background
+        if transition.background
         {
             let pushBackground:ViewPushBackground = ViewPushBackground()
-            newView.pushBackground = pushBackground
+            transition.newView.pushBackground = pushBackground
             
             self.addSubview(pushBackground)
             
@@ -80,12 +78,11 @@ extension ViewParent
         }
     }
     
-    private func pushLayout(
-        newView:ViewTransitionableProtocol)
+    private func pushLayout(transition:ViewParentPushTransition)
     {
         guard
             
-            let newUi:UIView = newView as? UIView
+            let newUi:UIView = transition.newView as? UIView
             
         else
         {
@@ -94,61 +91,59 @@ extension ViewParent
         
         self.addSubview(newUi)
         
-        newView.layoutTop = NSLayoutConstraint.topToTop(
+        transition.newView.layoutTop = NSLayoutConstraint.topToTop(
             view:newUi,
             toView:self,
-            constant:top)
-        newView.layoutBottom = NSLayoutConstraint.bottomToBottom(
+            constant:transition.top)
+        transition.newView.layoutBottom = NSLayoutConstraint.bottomToBottom(
             view:newUi,
             toView:self,
-            constant:top)
-        newView.layoutLeft = NSLayoutConstraint.leftToLeft(
+            constant:transition.top)
+        transition.newView.layoutLeft = NSLayoutConstraint.leftToLeft(
             view:newUi,
             toView:self,
-            constant:left)
-        newView.layoutRight = NSLayoutConstraint.rightToRight(
+            constant:transition.left)
+        transition.newView.layoutRight = NSLayoutConstraint.rightToRight(
             view:newUi,
             toView:self,
-            constant:left)
+            constant:transition.left)
         
         self.layoutIfNeeded()
     }
     
-    private func pushComplete(
-        newView:ViewTransitionableProtocol,
-        completion:@escaping(() -> ()))
+    private func pushComplete(transition:ViewParentPushTransition)
     {
-        if top >= 0
+        if transition.top >= 0
         {
-            newView.layoutTop.constant = 0
-            newView.layoutBottom.constant = 0
+            transition.newView.layoutTop.constant = 0
+            transition.newView.layoutBottom.constant = 0
         }
         else
         {
-            newView.layoutBottom.constant = 0
-            newView.layoutTop.constant = 0
+            transition.newView.layoutBottom.constant = 0
+            transition.newView.layoutTop.constant = 0
         }
         
-        if left >= 0
+        if transition.left >= 0
         {
-            newView.layoutLeft.constant = 0
-            newView.layoutRight.constant = 0
+            transition.newView.layoutLeft.constant = 0
+            transition.newView.layoutRight.constant = 0
         }
         else
         {
-            newView.layoutRight.constant = 0
-            newView.layoutLeft.constant = 0
+            transition.newView.layoutRight.constant = 0
+            transition.newView.layoutLeft.constant = 0
         }
         
         UIView.animate(withDuration:ViewGlobal.Constants.animationDuration,
                        animations:
         {
             self.layoutIfNeeded()
-            newView.pushBackground?.alpha = 1
+            transition.newView.pushBackground?.alpha = 1
         })
         { (done:Bool) in
             
-            completion()
+            transition.completion?()
         }
     }
     
@@ -224,16 +219,16 @@ extension ViewParent
         left:CGFloat,
         top:CGFloat,
         background:Bool,
-        completion:@escaping(() -> ()))
+        completion:(() -> ())? = nil)
     {
-        self.push(
-            newView:newView,
-            background:background)
+        var transition:ViewParentPushTransition = ViewParentPushTransition(newView:newView)
+        transition.left = left
+        transition.top = top
+        transition.background = background
+        transition.completion = completion
         
-        self.pushLayout(newView:newView)
-        
-        self.pushComplete(
-            newView:newView,
-            completion:completion)
+        self.push(transition:transition)
+        self.pushLayout(transition:transition)
+        self.pushComplete(transition:transition)
     }
 }
