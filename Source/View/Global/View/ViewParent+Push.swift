@@ -63,6 +63,95 @@ extension ViewParent
         }
     }
     
+    private func push(
+        newView:ViewTransitionableProtocol,
+        background:Bool)
+    {
+        if background
+        {
+            let pushBackground:ViewPushBackground = ViewPushBackground()
+            newView.pushBackground = pushBackground
+            
+            self.addSubview(pushBackground)
+            
+            NSLayoutConstraint.equals(
+                view:pushBackground,
+                toView:self)
+        }
+    }
+    
+    private func pushLayout(
+        newView:ViewTransitionableProtocol)
+    {
+        guard
+            
+            let newUi:UIView = newView as? UIView
+            
+        else
+        {
+            return
+        }
+        
+        self.addSubview(newUi)
+        
+        newView.layoutTop = NSLayoutConstraint.topToTop(
+            view:newUi,
+            toView:self,
+            constant:top)
+        newView.layoutBottom = NSLayoutConstraint.bottomToBottom(
+            view:newUi,
+            toView:self,
+            constant:top)
+        newView.layoutLeft = NSLayoutConstraint.leftToLeft(
+            view:newUi,
+            toView:self,
+            constant:left)
+        newView.layoutRight = NSLayoutConstraint.rightToRight(
+            view:newUi,
+            toView:self,
+            constant:left)
+        
+        self.layoutIfNeeded()
+    }
+    
+    private func pushComplete(
+        newView:ViewTransitionableProtocol,
+        completion:@escaping(() -> ()))
+    {
+        if top >= 0
+        {
+            newView.layoutTop.constant = 0
+            newView.layoutBottom.constant = 0
+        }
+        else
+        {
+            newView.layoutBottom.constant = 0
+            newView.layoutTop.constant = 0
+        }
+        
+        if left >= 0
+        {
+            newView.layoutLeft.constant = 0
+            newView.layoutRight.constant = 0
+        }
+        else
+        {
+            newView.layoutRight.constant = 0
+            newView.layoutLeft.constant = 0
+        }
+        
+        UIView.animate(withDuration:ViewGlobal.Constants.animationDuration,
+                       animations:
+        {
+            self.layoutIfNeeded()
+            newView.pushBackground?.alpha = 1
+        })
+        { (done:Bool) in
+            
+            completion()
+        }
+    }
+    
     //MARK: internal
     
     func mainView(view:ViewTransitionableProtocol)
@@ -137,79 +226,14 @@ extension ViewParent
         background:Bool,
         completion:@escaping(() -> ()))
     {
-        if background
-        {
-            let pushBackground:ViewPushBackground = ViewPushBackground()
-            newView.pushBackground = pushBackground
-            
-            self.addSubview(pushBackground)
-            
-            NSLayoutConstraint.equals(
-                view:pushBackground,
-                toView:self)
-        }
+        self.push(
+            newView:newView,
+            background:background)
         
-        guard
-            
-            let newUi:UIView = newView as? UIView
-            
-            else
-        {
-            return
-        }
+        self.pushLayout(newView:newView)
         
-        self.addSubview(newUi)
-        
-        newView.layoutTop = NSLayoutConstraint.topToTop(
-            view:newUi,
-            toView:self,
-            constant:top)
-        newView.layoutBottom = NSLayoutConstraint.bottomToBottom(
-            view:newUi,
-            toView:self,
-            constant:top)
-        newView.layoutLeft = NSLayoutConstraint.leftToLeft(
-            view:newUi,
-            toView:self,
-            constant:left)
-        newView.layoutRight = NSLayoutConstraint.rightToRight(
-            view:newUi,
-            toView:self,
-            constant:left)
-        
-        self.layoutIfNeeded()
-        
-        if top >= 0
-        {
-            newView.layoutTop.constant = 0
-            newView.layoutBottom.constant = 0
-        }
-        else
-        {
-            newView.layoutBottom.constant = 0
-            newView.layoutTop.constant = 0
-        }
-        
-        if left >= 0
-        {
-            newView.layoutLeft.constant = 0
-            newView.layoutRight.constant = 0
-        }
-        else
-        {
-            newView.layoutRight.constant = 0
-            newView.layoutLeft.constant = 0
-        }
-        
-        UIView.animate(withDuration:ViewGlobal.Constants.animationDuration,
-                       animations:
-            {
-                self.layoutIfNeeded()
-                newView.pushBackground?.alpha = 1
-        })
-        { (done:Bool) in
-            
-            completion()
-        }
+        self.pushComplete(
+            newView:newView,
+            completion:completion)
     }
 }
