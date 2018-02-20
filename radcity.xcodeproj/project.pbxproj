@@ -86,7 +86,6 @@
 		DA8FA0DD203B2A0300BEA495 /* ExtensionFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA09B203B2A0200BEA495 /* ExtensionFileManager.swift */; };
 		DA8FA0DE203B2A0300BEA495 /* ExtensionURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA09C203B2A0200BEA495 /* ExtensionURLResponse.swift */; };
 		DA8FA0DF203B2A0300BEA495 /* ExtensionMKAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA09D203B2A0200BEA495 /* ExtensionMKAnnotationView.swift */; };
-		DA8FA0E0203B2A0300BEA495 /* ExtensionNSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA09E203B2A0200BEA495 /* ExtensionNSLayoutConstraint.swift */; };
 		DA8FA0E1203B2A0300BEA495 /* ExtensionUIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA09F203B2A0200BEA495 /* ExtensionUIFont.swift */; };
 		DA8FA0E2203B2A0300BEA495 /* ExtensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA0A0203B2A0200BEA495 /* ExtensionUIImage.swift */; };
 		DA8FA0E3203B2A0300BEA495 /* ExtensionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA0A1203B2A0200BEA495 /* ExtensionData.swift */; };
@@ -190,7 +189,6 @@
 		DA8FA09B203B2A0200BEA495 /* ExtensionFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionFileManager.swift; sourceTree = "<group>"; };
 		DA8FA09C203B2A0200BEA495 /* ExtensionURLResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionURLResponse.swift; sourceTree = "<group>"; };
 		DA8FA09D203B2A0200BEA495 /* ExtensionMKAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionMKAnnotationView.swift; sourceTree = "<group>"; };
-		DA8FA09E203B2A0200BEA495 /* ExtensionNSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionNSLayoutConstraint.swift; sourceTree = "<group>"; };
 		DA8FA09F203B2A0200BEA495 /* ExtensionUIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIFont.swift; sourceTree = "<group>"; };
 		DA8FA0A0203B2A0200BEA495 /* ExtensionUIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIImage.swift; sourceTree = "<group>"; };
 		DA8FA0A1203B2A0200BEA495 /* ExtensionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionData.swift; sourceTree = "<group>"; };
@@ -439,7 +437,6 @@
 				DA8FA09B203B2A0200BEA495 /* ExtensionFileManager.swift */,
 				DA8FA09C203B2A0200BEA495 /* ExtensionURLResponse.swift */,
 				DA8FA09D203B2A0200BEA495 /* ExtensionMKAnnotationView.swift */,
-				DA8FA09E203B2A0200BEA495 /* ExtensionNSLayoutConstraint.swift */,
 				DA8FA09F203B2A0200BEA495 /* ExtensionUIFont.swift */,
 				DA8FA0A0203B2A0200BEA495 /* ExtensionUIImage.swift */,
 				DA8FA0A1203B2A0200BEA495 /* ExtensionData.swift */,
@@ -693,7 +690,6 @@
 				DA8FA05E203AD28500BEA495 /* ControllerParent+Constants.swift in Sources */,
 				DA8FA0B8203B2A0300BEA495 /* ViewButtonContinue.swift in Sources */,
 				DA4A278B203C1BEF00F57044 /* ViewParent+Pop.swift in Sources */,
-				DA8FA0E0203B2A0300BEA495 /* ExtensionNSLayoutConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
