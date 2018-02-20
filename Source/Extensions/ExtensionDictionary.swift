@@ -2,39 +2,43 @@ import Foundation
 
 extension Dictionary
 {
+    //MARK: private
+    
+    private func merge(
+        keys:[Key],
+        dictionary:[Key:Value]) -> Dictionary
+    {
+        var newDictionary:[Key:Value] = [:]
+        
+        for key:Key in keys
+        {
+            if let value:Value = self[key]
+            {
+                newDictionary[key] = value
+            }
+            else if let value:Value = dictionary[key]
+            {
+                newDictionary[key] = value
+            }
+        }
+        
+        return newDictionary
+    }
+    
+    //MARK: internal
+    
     func merge(other:Dictionary) -> Dictionary
     {
-        var dictionary:Dictionary = Dictionary()
-        let dictKeys:[Key] = Array(keys)
+        var keys:[Key] = []
+        let dictKeys:[Key] = Array(self.keys)
         let otherKeys:[Key] = Array(other.keys)
         
-        for dictKey:Key in dictKeys
-        {
-            guard
-                
-                let dictElement:Value = self[dictKey]
-                
-            else
-            {
-                continue
-            }
-            
-            dictionary[dictKey] = dictElement
-        }
+        keys.append(contentsOf:dictKeys)
+        keys.append(contentsOf:otherKeys)
         
-        for dictKey:Key in otherKeys
-        {
-            guard
-                
-                let dictElement:Value = other[dictKey]
-                
-            else
-            {
-                continue
-            }
-            
-            dictionary[dictKey] = dictElement
-        }
+        let dictionary:[Key:Value] = self.merge(
+            keys:keys,
+            dictionary:other)
         
         return dictionary
     }
