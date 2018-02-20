@@ -65,7 +65,6 @@
 		DA8FA0CF203B2A0300BEA495 /* ViewGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA08C203B2A0200BEA495 /* ViewGlobal.swift */; };
 		DA8FA0D0203B2A0300BEA495 /* ViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA08D203B2A0200BEA495 /* ViewMain.swift */; };
 		DA8FA0D1203B2A0300BEA495 /* ViewTransitionableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA08E203B2A0200BEA495 /* ViewTransitionableProtocol.swift */; };
-		DA8FA0D2203B2A0300BEA495 /* ViewParent+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA08F203B2A0200BEA495 /* ViewParent+Transitions.swift */; };
 		DA8FA0D3203B2A0300BEA495 /* ViewParent+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA090203B2A0200BEA495 /* ViewParent+Constants.swift */; };
 		DA8FA0D4203B2A0300BEA495 /* ViewParent+Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA091203B2A0200BEA495 /* ViewParent+Gesture.swift */; };
 		DA8FA0D5203B2A0300BEA495 /* ViewControllableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FA092203B2A0200BEA495 /* ViewControllableProtocol.swift */; };
@@ -162,7 +161,6 @@
 		DA8FA08C203B2A0200BEA495 /* ViewGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewGlobal.swift; sourceTree = "<group>"; };
 		DA8FA08D203B2A0200BEA495 /* ViewMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMain.swift; sourceTree = "<group>"; };
 		DA8FA08E203B2A0200BEA495 /* ViewTransitionableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTransitionableProtocol.swift; sourceTree = "<group>"; };
-		DA8FA08F203B2A0200BEA495 /* ViewParent+Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewParent+Transitions.swift"; sourceTree = "<group>"; };
 		DA8FA090203B2A0200BEA495 /* ViewParent+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewParent+Constants.swift"; sourceTree = "<group>"; };
 		DA8FA091203B2A0200BEA495 /* ViewParent+Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewParent+Gesture.swift"; sourceTree = "<group>"; };
 		DA8FA092203B2A0200BEA495 /* ViewControllableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllableProtocol.swift; sourceTree = "<group>"; };
@@ -398,7 +396,6 @@
 				DA8FA08C203B2A0200BEA495 /* ViewGlobal.swift */,
 				DA8FA08D203B2A0200BEA495 /* ViewMain.swift */,
 				DA8FA08E203B2A0200BEA495 /* ViewTransitionableProtocol.swift */,
-				DA8FA08F203B2A0200BEA495 /* ViewParent+Transitions.swift */,
 				DA4A2788203C1BC400F57044 /* ViewParent+Push.swift */,
 				DA4A278A203C1BEF00F57044 /* ViewParent+Pop.swift */,
 				DA8FA090203B2A0200BEA495 /* ViewParent+Constants.swift */,
@@ -651,7 +648,6 @@
 				DA8FA0B9203B2A0300BEA495 /* ViewBar.swift in Sources */,
 				DA8FA0C7203B2A0300BEA495 /* ViewGradient+Constants.swift in Sources */,
 				DA8FA0BB203B2A0300BEA495 /* ViewAlert+Constants.swift in Sources */,
-				DA8FA0D2203B2A0300BEA495 /* ViewParent+Transitions.swift in Sources */,
 				DA8FA0CE203B2A0300BEA495 /* ViewParent.swift in Sources */,
 				DA8FA066203AD28500BEA495 /* Arch.swift in Sources */,
 				DA8FA0F2203B2A0300BEA495 /* Menu.swift in Sources */,
