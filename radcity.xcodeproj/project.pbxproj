@@ -10,6 +10,7 @@
 		DA268791203C6E6500C2F7A1 /* ViewBar+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA268790203C6E6500C2F7A1 /* ViewBar+Factory.swift */; };
 		DA268793203C795A00C2F7A1 /* ExtensionUIView+ConstraintsEquals.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA268792203C795A00C2F7A1 /* ExtensionUIView+ConstraintsEquals.swift */; };
 		DA268795203C7CC000C2F7A1 /* ExtensionUIView+ConstraintsVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA268794203C7CC000C2F7A1 /* ExtensionUIView+ConstraintsVertical.swift */; };
+		DA268797203C7E3B00C2F7A1 /* ExtensionUIView+ConstraintsHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA268796203C7E3B00C2F7A1 /* ExtensionUIView+ConstraintsHorizontal.swift */; };
 		DA4A2781203C01D800F57044 /* ControllerParent+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2780203C01D800F57044 /* ControllerParent+Push.swift */; };
 		DA4A2783203C01F700F57044 /* ControllerParent+Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2782203C01F700F57044 /* ControllerParent+Pop.swift */; };
 		DA4A2785203C073200F57044 /* ControllerTransitionPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2784203C073200F57044 /* ControllerTransitionPush.swift */; };
@@ -109,6 +110,7 @@
 		DA268790203C6E6500C2F7A1 /* ViewBar+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewBar+Factory.swift"; sourceTree = "<group>"; };
 		DA268792203C795A00C2F7A1 /* ExtensionUIView+ConstraintsEquals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionUIView+ConstraintsEquals.swift"; sourceTree = "<group>"; };
 		DA268794203C7CC000C2F7A1 /* ExtensionUIView+ConstraintsVertical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionUIView+ConstraintsVertical.swift"; sourceTree = "<group>"; };
+		DA268796203C7E3B00C2F7A1 /* ExtensionUIView+ConstraintsHorizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionUIView+ConstraintsHorizontal.swift"; sourceTree = "<group>"; };
 		DA4A2780203C01D800F57044 /* ControllerParent+Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Push.swift"; sourceTree = "<group>"; };
 		DA4A2782203C01F700F57044 /* ControllerParent+Pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Pop.swift"; sourceTree = "<group>"; };
 		DA4A2784203C073200F57044 /* ControllerTransitionPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerTransitionPush.swift; sourceTree = "<group>"; };
@@ -442,6 +444,7 @@
 				DA8FA0A6203B2A0200BEA495 /* ExtensionURL.swift */,
 				DA268792203C795A00C2F7A1 /* ExtensionUIView+ConstraintsEquals.swift */,
 				DA268794203C7CC000C2F7A1 /* ExtensionUIView+ConstraintsVertical.swift */,
+				DA268796203C7E3B00C2F7A1 /* ExtensionUIView+ConstraintsHorizontal.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -673,6 +676,7 @@
 				DA4A2791203C311400F57044 /* ViewParentPopTransition.swift in Sources */,
 				DA8FA05C203AD28500BEA495 /* Controller.swift in Sources */,
 				DA8FA0C8203B2A0300BEA495 /* ViewMenu+Actions.swift in Sources */,
+				DA268797203C7E3B00C2F7A1 /* ExtensionUIView+ConstraintsHorizontal.swift in Sources */,
 				DA268791203C6E6500C2F7A1 /* ViewBar+Factory.swift in Sources */,
 				DA8FA05E203AD28500BEA495 /* ControllerParent+Constants.swift in Sources */,
 				DA8FA0B8203B2A0300BEA495 /* ViewButtonContinue.swift in Sources */,
