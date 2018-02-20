@@ -29,35 +29,27 @@ extension ViewParent
         self.layoutIfNeeded()
     }
     
-    private func slideRight(
-        currentView:ViewTransitionableProtocol,
-        newView:ViewTransitionableProtocol,
-        left:CGFloat,
-        completion:@escaping(() -> ()))
+    private func slideRight(transition:ViewParentTransition)
     {
-        currentView.layoutRight.constant = left
-        currentView.layoutLeft.constant = left
-        newView.layoutRight.constant = 0
-        newView.layoutLeft.constant = 0
+        transition.currentView.layoutRight.constant = transition.left
+        transition.currentView.layoutLeft.constant = transition.left
+        transition.newView.layoutRight.constant = 0
+        transition.newView.layoutLeft.constant = 0
      
-        self.slideCompletion(completion:completion)
+        self.slideCompletion(transition:transition)
     }
     
-    private func slideLeft(
-        currentView:ViewTransitionableProtocol,
-        newView:ViewTransitionableProtocol,
-        left:CGFloat,
-        completion:@escaping(() -> ()))
+    private func slideLeft(transition:ViewParentTransition)
     {
-        currentView.layoutLeft.constant = left
-        currentView.layoutRight.constant = left
-        newView.layoutLeft.constant = 0
-        newView.layoutRight.constant = 0
+        transition.currentView.layoutLeft.constant = transition.left
+        transition.currentView.layoutRight.constant = transition.left
+        transition.newView.layoutLeft.constant = 0
+        transition.newView.layoutRight.constant = 0
         
-        self.slideCompletion(completion:completion)
+        self.slideCompletion(transition:transition)
     }
     
-    private func slideCompletion(completion:@escaping(() -> ()))
+    private func slideCompletion(transition:ViewParentTransition)
     {
         UIView.animate(withDuration:ViewGlobal.Constants.animationDuration,
                        animations:
@@ -66,8 +58,8 @@ extension ViewParent
         })
         { (done:Bool) in
             
-            currentUi.removeFromSuperview()
-            completion()
+            transition.currentUi.removeFromSuperview()
+            transition.completion?()
         }
     }
     
@@ -121,14 +113,20 @@ extension ViewParent
             newUi:newUi,
             left:left)
         
+        var transition:ViewParentTransition = ViewParentTransition(
+            currentView:currentView,
+            newView:newView,
+            currentUi:currentUi)
+        transition.left = left
+        transition.completion = completion
+        
         if left >= 0
         {
-            
+            self.slideRight(transition:transition)
         }
         else
         {
-            self.slideLeft(
-                currentView:currentUi, newView: <#T##ViewTransitionableProtocol#>, left: <#T##CGFloat#>, completion: <#T##(() -> ())##(() -> ())##() -> ()#>)
+            self.slideLeft(transition:transition)
         }
     }
 }
