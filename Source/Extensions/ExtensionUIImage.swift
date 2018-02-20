@@ -21,6 +21,44 @@ extension UIImage
         return drawingRect
     }
     
+    private func cropImage(
+        cgImage:CGImage,
+        drawingRect:CGRect,
+        croppingRect:CGRect) -> CGImage?
+    {
+        UIGraphicsBeginImageContext(croppingRect.size)
+        
+        guard
+            
+            let context:CGContext = UIGraphicsGetCurrentContext()
+            
+        else
+        {
+            UIGraphicsEndImageContext()
+            
+            return nil
+        }
+        
+        context.translateBy(x:0, y:croppingRect.height)
+        context.scaleBy(x:1, y:-1)
+        context.draw(cgImage, in:drawingRect)
+        
+        guard
+            
+            let newCgImage:CGImage = context.makeImage()
+            
+        else
+        {
+            UIGraphicsEndImageContext()
+            
+            return nil
+        }
+        
+        UIGraphicsEndImageContext()
+        
+        return newCgImage
+    }
+    
     //MARK: internal
     
     func imageCropping(rect:CGRect) -> UIImage?
@@ -38,35 +76,17 @@ extension UIImage
             cgImage:cgImage,
             rect:rect)
         
-        UIGraphicsBeginImageContext(rect.size)
-        
         guard
-            
-            let context:CGContext = UIGraphicsGetCurrentContext()
-            
+        
+            let newCgImage:CGImage = self.cropImage(
+                cgImage:cgImage,
+                drawingRect:drawingRect,
+                croppingRect:rect)
+        
         else
         {
-            UIGraphicsEndImageContext()
-            
             return nil
         }
-        
-        context.translateBy(x:0, y:rect.height)
-        context.scaleBy(x:1, y:-1)
-        context.draw(cgImage, in:drawingRect)
-        
-        guard
-            
-            let newCgImage:CGImage = context.makeImage()
-            
-        else
-        {
-            UIGraphicsEndImageContext()
-            
-            return nil
-        }
-        
-        UIGraphicsEndImageContext()
         
         let newImage:UIImage = UIImage(cgImage:newCgImage)
         
