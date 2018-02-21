@@ -14,6 +14,7 @@
 		DAD5421F203DCA0F0003402F /* LocalizableController.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54216203DCA0E0003402F /* LocalizableController.strings */; };
 		DAD54225203DCACC0003402F /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD54224203DCACC0003402F /* Application.swift */; };
 		DAD54227203DCB9D0003402F /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD54226203DCB9D0003402F /* Controller.swift */; };
+		DAD54229203DCCE30003402F /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD54228203DCCE30003402F /* ControllerParent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DAD54219203DCA0F0003402F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAD54224203DCACC0003402F /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		DAD54226203DCB9D0003402F /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		DAD54228203DCCE30003402F /* ControllerParent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
 		DAE5F65620370A930023E75B /* radcity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radcity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 		DAD54222203DCABE0003402F /* Parent */ = {
 			isa = PBXGroup;
 			children = (
+				DAD54228203DCCE30003402F /* ControllerParent.swift */,
 			);
 			path = Parent;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAD54225203DCACC0003402F /* Application.swift in Sources */,
+				DAD54229203DCCE30003402F /* ControllerParent.swift in Sources */,
 				DAD54227203DCB9D0003402F /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
