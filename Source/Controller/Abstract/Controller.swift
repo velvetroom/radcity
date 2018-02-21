@@ -3,7 +3,7 @@ import UIKit
 class Controller<A>:UIViewController where A.M:Model<A>
 {
     let model:A.M
-    private(set) weak var viewMain:A.V!
+    private(set) weak var viewMain:A.V?
     
     var parentController:ControllerParent?
     {

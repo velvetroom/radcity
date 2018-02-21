@@ -68,6 +68,16 @@ extension ViewParent
         }
     }
     
+    func push<A>(
+        transition:ControllerTransitionPush<A>,
+        completion:@escaping(() -> ()))
+    {
+        self.pushBackground(transition:transition)
+        
+        self.pushLayout(transition:transition)
+        self.pushComplete(transition:transition)
+    }
+    
     func push(
         newView:ViewTransitionableProtocol,
         left:CGFloat,
@@ -204,12 +214,21 @@ extension ViewParent
         }
     }
     
-    private func push(transition:ViewParentPushTransition)
+    private func pushBackground<A>(transition:ControllerTransitionPush<A>)
     {
         if transition.background
         {
+            guard
+                
+                let view:ViewMain<A> = transition.controller.viewMain as? ViewMain<A>
+                
+            else
+            {
+                return
+            }
+            
             let pushBackground:ViewPushBackground = ViewPushBackground()
-            transition.newView.pushBackground = pushBackground
+            view.pushBackground = pushBackground
             
             self.addSubview(pushBackground)
             
@@ -217,11 +236,11 @@ extension ViewParent
         }
     }
     
-    private func pushLayout(transition:ViewParentPushTransition)
+    private func pushView<A>(transition:ControllerTransitionPush<A>)
     {
         guard
             
-            let view:UIView = transition.newView.view
+            let view:ViewMain<A> = transition.controller.viewMain as? ViewMain<A>
             
         else
         {
@@ -230,29 +249,35 @@ extension ViewParent
         
         self.addSubview(view)
         
-        transition.newView.layoutTop = NSLayoutConstraint
-        
-        transition.newView.layoutTop = NSLayoutConstraint.topToTop(
-            view:newUi,
-            toView:self,
-            constant:transition.top)
-        transition.newView.layoutBottom = NSLayoutConstraint.bottomToBottom(
-            view:newUi,
-            toView:self,
-            constant:transition.top)
-        transition.newView.layoutLeft = NSLayoutConstraint.leftToLeft(
-            view:newUi,
-            toView:self,
-            constant:transition.left)
-        transition.newView.layoutRight = NSLayoutConstraint.rightToRight(
-            view:newUi,
-            toView:self,
-            constant:transition.left)
+        self.layoutViewPushed(
+            view:view,
+            transition:transition)
         
         self.layoutIfNeeded()
     }
     
-    private func pushComplete(transition:ViewParentPushTransition)
+    private func layoutViewPushed<A>(
+        view:ViewMain<A>,
+        transition:ControllerTransitionPush<A>)
+    {
+        view.layoutTop = view.layoutTopToTop(
+            view:self,
+            constant:transition.vertical)
+        
+        view.layoutBottom = view.layoutBottomToBottom(
+            view:self,
+            constant:transition.vertical)
+        
+        view.layoutLeft = view.layoutLeftToLeft(
+            view:self,
+            constant:transition.horizontal)
+        
+        view.layoutRight = view.layoutRightToRight(
+            view:self,
+            constant:transition.horizontal)
+    }
+    
+    private func pushAlignViews<A>(transition:ControllerTransitionPush<A>)
     {
         if transition.top >= 0
         {

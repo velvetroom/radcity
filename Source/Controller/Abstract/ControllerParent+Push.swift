@@ -32,6 +32,26 @@ extension ControllerParent
             left:left)
     }
     
+    func push<A>(transition:ControllerTransitionPush<A>)
+    {
+        self.addChildViewController(transition.controller)
+        transition.controller.beginAppearanceTransition(true, animated:true)
+        self.currentController?.beginAppearanceTransition(false, animated:true)
+        
+        self.viewParent?.push(
+            newView:transition.newView,
+            left:transition.left,
+            top:transition.top,
+            background:transition.background)
+        { [weak self] in
+            
+            transition.controller.endAppearanceTransition()
+            self?.currentController?.endAppearanceTransition()
+            
+            transition.completion?()
+        }
+    }
+    
     func push<A>(
         controller:Controller<A>,
         transition:ControllerTransition,
@@ -139,26 +159,5 @@ extension ControllerParent
             self?.currentController?.endAppearanceTransition()
         }
     }
-    
-    private func push(transition:ControllerTransitionPush)
-    {
-        self.addChildViewController(transition.controller)
-        transition.controller.beginAppearanceTransition(true, animated:true)
-        self.currentController?.beginAppearanceTransition(false, animated:true)
-        
-        self.viewParent?.push(
-            newView:transition.newView,
-            left:transition.left,
-            top:transition.top,
-            background:transition.background)
-        { [weak self] in
-            
-            transition.controller.endAppearanceTransition()
-            self?.currentController?.endAppearanceTransition()
-            
-            transition.completion?()
-        }
-    }
-    
     
 }
