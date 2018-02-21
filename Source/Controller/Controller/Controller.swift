@@ -1,6 +1,6 @@
 import UIKit
 
-class Controller:UIViewController
+class Controller<SpecialisedArchitecture>:UIViewController, ArchitectureMember where SpecialisedArchitecture:Architecture
 {
-    
+    typealias GenericArchitecture = SpecialisedArchitecture
 }

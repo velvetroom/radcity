@@ -2,5 +2,5 @@ import Foundation
 
 protocol ArchitectureMember
 {
-    associatedtype A:Architecture
+    associatedtype GenericArchitecture:Architecture
 }
