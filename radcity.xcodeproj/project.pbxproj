@@ -202,6 +202,7 @@
 		DA8FA0B3203B2A0300BEA495 /* MenuItemGenericProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemGenericProtocol.swift; sourceTree = "<group>"; };
 		DA8FA0B4203B2A0300BEA495 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		DA8FA0B5203B2A0300BEA495 /* Menu+Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Menu+Order.swift"; sourceTree = "<group>"; };
+		DA9F430D203DB747001D4C55 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DAE5F65620370A930023E75B /* radcity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radcity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE5F66B203737380023E75B /* .codebeatsettings */ = {isa = PBXFileReference; lastKnownFileType = text; path = .codebeatsettings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -499,6 +500,7 @@
 				DA8F9F53203ABC8C00BEA495 /* Scripts */,
 				DA8FA04B203AD28500BEA495 /* Source */,
 				DA8F9FDA203ABC8C00BEA495 /* LICENSE */,
+				DA9F430D203DB747001D4C55 /* .gitignore */,
 				DA8F9FDB203ABC8C00BEA495 /* README.md */,
 				DAE5F66B203737380023E75B /* .codebeatsettings */,
 				DAE5F65720370A930023E75B /* Products */,
