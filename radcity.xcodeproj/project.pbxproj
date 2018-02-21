@@ -13,6 +13,7 @@
 		DAD5421E203DCA0F0003402F /* LocalizableView.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54214203DCA0E0003402F /* LocalizableView.strings */; };
 		DAD5421F203DCA0F0003402F /* LocalizableController.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54216203DCA0E0003402F /* LocalizableController.strings */; };
 		DAD54225203DCACC0003402F /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD54224203DCACC0003402F /* Application.swift */; };
+		DAD54227203DCB9D0003402F /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD54226203DCB9D0003402F /* Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DAD54217203DCA0F0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableController.strings; sourceTree = "<group>"; };
 		DAD54219203DCA0F0003402F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAD54224203DCACC0003402F /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		DAD54226203DCB9D0003402F /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DAE5F65620370A930023E75B /* radcity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radcity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 		DAD54221203DCABE0003402F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DAD54226203DCB9D0003402F /* Controller.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -208,7 +211,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = DAE5F64D20370A930023E75B;
 			productRefGroup = DAE5F65720370A930023E75B /* Products */;
@@ -241,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAD54225203DCACC0003402F /* Application.swift in Sources */,
+				DAD54227203DCB9D0003402F /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +347,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -394,6 +398,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -410,6 +415,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.radcity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -427,6 +433,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.radcity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
