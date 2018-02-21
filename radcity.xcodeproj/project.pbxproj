@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		DA1D8507203DB86D008BAFE1 /* .codebeatsettings */ = {isa = PBXFileReference; lastKnownFileType = text; path = .codebeatsettings; sourceTree = "<group>"; };
+		DA1D8508203DB86D008BAFE1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		DA1D8509203DB86D008BAFE1 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DA1D850A203DB86D008BAFE1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DAE5F65620370A930023E75B /* radcity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radcity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -24,6 +28,10 @@
 		DAE5F64D20370A930023E75B = {
 			isa = PBXGroup;
 			children = (
+				DA1D8509203DB86D008BAFE1 /* LICENSE */,
+				DA1D850A203DB86D008BAFE1 /* README.md */,
+				DA1D8507203DB86D008BAFE1 /* .codebeatsettings */,
+				DA1D8508203DB86D008BAFE1 /* .gitignore */,
 				DAE5F65720370A930023E75B /* Products */,
 			);
 			sourceTree = "<group>";
