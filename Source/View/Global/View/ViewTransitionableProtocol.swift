@@ -2,7 +2,7 @@ import UIKit
 
 protocol ViewTransitionableProtocol:class
 {
-    weak var view:UIView? { get }
+    var view:UIView? { get }
     
     weak var layoutLeft:NSLayoutConstraint? { get set }
     weak var layoutRight:NSLayoutConstraint? { get set }
