@@ -2,110 +2,107 @@ import UIKit
 
 final class ViewAlert:UIView
 {
-    private weak var layoutTop:NSLayoutConstraint!
+    private weak var layoutTop:NSLayoutConstraint?
     private weak var timer:Timer?
+    
+    private class var topView:UIView?
+    {
+        get
+        {
+            return UIApplication.shared.keyWindow?.rootViewController?.view
+        }
+    }
+    
+    //MARK: internal
     
     class func messageFail(message:String)
     {
-        ViewAlert.message(message:message, color:UIColor.colourFail)
+        ViewAlert.message(
+            message:message,
+            color:UIColor.colourFail)
     }
     
     class func messageSuccess(message:String)
     {
-        ViewAlert.message(message:message, color:UIColor.colourSuccess)
+        ViewAlert.threadSafeMessage(
+            message:message,
+            color:UIColor.colourSuccess)
     }
     
-    private class func message(message:String, color:UIColor)
+    //MARK: private
+    
+    private class func threadSafeMessage(
+        message:String,
+        color:UIColor)
     {
         DispatchQueue.main.async
         {
-            ViewAlert.asyncMessage(message:message, color:color)
+            ViewAlert.message(
+                message:message,
+                color:color)
         }
     }
     
-    private class func asyncMessage(message:String, color:UIColor)
+    private class func message(
+        message:String,
+        color:UIColor)
     {
         let alert:ViewAlert = ViewAlert(
             message:message,
             color:color)
         
-        let rootView:UIView = UIApplication.shared.keyWindow!.rootViewController!.view
-        rootView.addSubview(alert)
-        
-        alert.layoutTop = NSLayoutConstraint.topToTop(
-            view:alert,
-            toView:rootView,
-            constant:-ViewAlert.Constants.height)
-        NSLayoutConstraint.equalsHorizontal(
-            view:alert,
-            toView:rootView)
-        NSLayoutConstraint.height(
-            view:alert,
-            constant:ViewAlert.Constants.height)
-        
-        rootView.layoutIfNeeded()
-        alert.animate(open:true)
+        ViewAlert.topView?.addSubview(alert)
+        ViewAlert.messageLayout(alert:alert)
+        alert.animateOpen()
     }
     
-    private convenience init(message:String, color:UIColor)
+    private class func messageLayout(alert:ViewAlert)
+    {
+        guard
+            
+            let topView:UIView = ViewAlert.topView
+        
+        else
+        {
+            return
+        }
+        
+        alert.layoutTop = alert.layoutTopToTop(
+            view:topView,
+            constant:-ViewAlert.Constants.height)
+        alert.layoutEqualsHorizontal(view:topView)
+        alert.layoutHeight(constant:ViewAlert.Constants.height)
+        
+        topView.layoutIfNeeded()
+    }
+    
+    private convenience init(
+        message:String,
+        color:UIColor)
     {
         self.init()
         self.clipsToBounds = true
         self.backgroundColor = color
         self.translatesAutoresizingMaskIntoConstraints = false
         
-        let label:UILabel = UILabel()
-        label.isUserInteractionEnabled = false
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.medium(size:ViewAlert.Constants.fontSize)
-        label.textColor = UIColor.white
-        label.textAlignment = NSTextAlignment.center
-        label.numberOfLines = 0
-        label.backgroundColor = UIColor.clear
-        label.text = message
-        
-        let button:UIButton = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = UIColor.clear
-        button.addTarget(
-            self,
-            action:#selector(self.selectorActionButton(sender:)),
-            for:UIControlEvents.touchUpInside)
+        let label:UILabel = ViewAlert.factoryMessageLabel(message:message)
+        let button:UIButton = ViewAlert.factoryButton()
         
         self.addSubview(label)
         self.addSubview(button)
-        
-        NSLayoutConstraint.topToTop(
-            view:label,
-            toView:self,
+        self.layoutMessage(label:label)
+    }
+    
+    private func layoutMessage(label:UILabel)
+    {
+        label.layoutTopToTop(
+            view:self,
             constant:ViewAlert.Constants.labelTop)
-        NSLayoutConstraint.bottomToBottom(
-            view:label,
-            toView:self)
-        NSLayoutConstraint.equalsHorizontal(
-            view:label,
-            toView:self,
+        label.layoutBottomToBottom(view:self)
+        label.layoutEqualsHorizontal(
+            view:self,
             margin:ViewAlert.Constants.labelMargin)
     }
-    
-    //MARK: selectors
-    
-    @objc
-    private func selectorActionButton(sender button:UIButton)
-    {
-        button.isUserInteractionEnabled = false
-        self.timer?.invalidate()
-        self.selectorAlertTimeOut(sender:timer)
-    }
-    
-    @objc
-    private func selectorAlertTimeOut(sender timer:Timer?)
-    {
-        timer?.invalidate()
-        self.animate(open:false)
-    }
-    
-    //MARK: private
     
     private func scheduleTimer()
     {
@@ -117,33 +114,56 @@ final class ViewAlert:UIView
             repeats:false)
     }
     
-    private func animate(open:Bool)
+    private func animateOpen()
     {
-        if open
-        {
-            self.layoutTop.constant = 0
-        }
-        else
-        {
-            self.layoutTop.constant = -ViewAlert.Constants.height
-        }
+        self.layoutTop?.constant = 0
         
+        self.animateLayout
+        { [weak self] in
+            
+            self?.scheduleTimer()
+        }
+    }
+    
+    private func animateClose()
+    {
+        self.layoutTop?.constant = -ViewAlert.Constants.height
+        
+        self.animateLayout
+        { [weak self] in
+            
+            self?.removeFromSuperview()
+        }
+    }
+    
+    private func animateLayout(completion:@escaping(() -> ()))
+    {
         UIView.animate(withDuration:ViewAlert.Constants.animationDuration,
-            animations:
+                       animations:
         { [weak self] in
             
             self?.superview?.layoutIfNeeded()
         })
-        { [weak self] (done:Bool) in
-        
-            if open
-            {
-                self?.scheduleTimer()
-            }
-            else
-            {
-                self?.removeFromSuperview()
-            }
+        { (done:Bool) in
+           
+            completion()
         }
+    }
+    
+    //MARK: selectors
+    
+    @objc
+    func selectorActionButton(sender button:UIButton)
+    {
+        button.isUserInteractionEnabled = false
+        self.timer?.invalidate()
+        self.selectorAlertTimeOut(sender:timer)
+    }
+    
+    @objc
+    private func selectorAlertTimeOut(sender timer:Timer?)
+    {
+        timer?.invalidate()
+        self.animateClose()
     }
 }

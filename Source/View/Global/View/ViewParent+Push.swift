@@ -2,151 +2,6 @@ import UIKit
 
 extension ViewParent
 {
-    //MARK: private
-    
-    private func alignSlidingView(
-        newView:ViewTransitionableProtocol,
-        newUi:UIView,
-        left:CGFloat)
-    {
-        self.insertSubview(newUi, belowSubview:self.viewMenu)
-        
-        newView.layoutTop = NSLayoutConstraint.topToTop(
-            view:newUi,
-            toView:self)
-        newView.layoutBottom = NSLayoutConstraint.bottomToBottom(
-            view:newUi,
-            toView:self)
-        newView.layoutRight = NSLayoutConstraint.rightToRight(
-            view:newUi,
-            toView:self,
-            constant:-left)
-        newView.layoutLeft = NSLayoutConstraint.leftToLeft(
-            view:newUi,
-            toView:self,
-            constant:-left)
-        
-        self.layoutIfNeeded()
-    }
-    
-    private func slideRight(transition:ViewParentSlideTransition)
-    {
-        transition.currentView.layoutRight.constant = transition.left
-        transition.currentView.layoutLeft.constant = transition.left
-        transition.newView.layoutRight.constant = 0
-        transition.newView.layoutLeft.constant = 0
-     
-        self.slideCompletion(transition:transition)
-    }
-    
-    private func slideLeft(transition:ViewParentSlideTransition)
-    {
-        transition.currentView.layoutLeft.constant = transition.left
-        transition.currentView.layoutRight.constant = transition.left
-        transition.newView.layoutLeft.constant = 0
-        transition.newView.layoutRight.constant = 0
-        
-        self.slideCompletion(transition:transition)
-    }
-    
-    private func slideCompletion(transition:ViewParentSlideTransition)
-    {
-        UIView.animate(withDuration:ViewGlobal.Constants.animationDuration,
-                       animations:
-        {
-            self.layoutIfNeeded()
-        })
-        { (done:Bool) in
-            
-            transition.currentUi.removeFromSuperview()
-            transition.completion?()
-        }
-    }
-    
-    private func push(transition:ViewParentPushTransition)
-    {
-        if transition.background
-        {
-            let pushBackground:ViewPushBackground = ViewPushBackground()
-            transition.newView.pushBackground = pushBackground
-            
-            self.addSubview(pushBackground)
-            
-            NSLayoutConstraint.equals(
-                view:pushBackground,
-                toView:self)
-        }
-    }
-    
-    private func pushLayout(transition:ViewParentPushTransition)
-    {
-        guard
-            
-            let newUi:UIView = transition.newView as? UIView
-            
-        else
-        {
-            return
-        }
-        
-        self.addSubview(newUi)
-        
-        transition.newView.layoutTop = NSLayoutConstraint.topToTop(
-            view:newUi,
-            toView:self,
-            constant:transition.top)
-        transition.newView.layoutBottom = NSLayoutConstraint.bottomToBottom(
-            view:newUi,
-            toView:self,
-            constant:transition.top)
-        transition.newView.layoutLeft = NSLayoutConstraint.leftToLeft(
-            view:newUi,
-            toView:self,
-            constant:transition.left)
-        transition.newView.layoutRight = NSLayoutConstraint.rightToRight(
-            view:newUi,
-            toView:self,
-            constant:transition.left)
-        
-        self.layoutIfNeeded()
-    }
-    
-    private func pushComplete(transition:ViewParentPushTransition)
-    {
-        if transition.top >= 0
-        {
-            transition.newView.layoutTop.constant = 0
-            transition.newView.layoutBottom.constant = 0
-        }
-        else
-        {
-            transition.newView.layoutBottom.constant = 0
-            transition.newView.layoutTop.constant = 0
-        }
-        
-        if transition.left >= 0
-        {
-            transition.newView.layoutLeft.constant = 0
-            transition.newView.layoutRight.constant = 0
-        }
-        else
-        {
-            transition.newView.layoutRight.constant = 0
-            transition.newView.layoutLeft.constant = 0
-        }
-        
-        UIView.animate(withDuration:ViewGlobal.Constants.animationDuration,
-                       animations:
-        {
-            self.layoutIfNeeded()
-            transition.newView.pushBackground?.alpha = 1
-        })
-        { (done:Bool) in
-            
-            transition.completion?()
-        }
-    }
-    
     //MARK: internal
     
     func mainView(view:ViewTransitionableProtocol)
@@ -155,7 +10,7 @@ extension ViewParent
             
             let ui:UIView = view as? UIView
             
-        else
+            else
         {
             return
         }
@@ -187,14 +42,13 @@ extension ViewParent
             let currentUi:UIView = currentView as? UIView,
             let newUi:UIView = newView as? UIView
             
-        else
+            else
         {
             return
         }
         
         self.alignSlidingView(
             newView:newView,
-            newUi:newUi,
             left:left)
         
         var transition:ViewParentSlideTransition = ViewParentSlideTransition(
@@ -212,6 +66,16 @@ extension ViewParent
         {
             self.slideLeft(transition:transition)
         }
+    }
+    
+    func push<A>(
+        transition:ControllerTransitionPush<A>,
+        completion:@escaping(() -> ()))
+    {
+        self.pushBackground(transition:transition)
+        
+        self.pushLayout(transition:transition)
+        self.pushComplete(transition:transition)
     }
     
     func push(
@@ -240,7 +104,7 @@ extension ViewParent
             
             let newUi:UIView = newView as? UIView
             
-        else
+            else
         {
             return
         }
@@ -277,7 +141,7 @@ extension ViewParent
             
             let newUi:UIView = newView as? UIView
             
-        else
+            else
         {
             return
         }
@@ -298,5 +162,154 @@ extension ViewParent
             toView:self)
         
         self.layoutIfNeeded()
+    }
+    
+    //MARK: private
+    
+    private func alignSlidingView<A>(
+        newView:ViewMain<A>,
+        left:CGFloat)
+    {
+        self.insertSubview(newView, belowSubview:self.viewMenu)
+        
+        newView.layoutTop = newView.layoutTopToTop(view:self)
+        newView.layoutBottom = newView.layoutBottomToBottom(view:self)
+        newView.layoutRight = newView.layoutRightToRight(view:self)
+        newView.layoutLeft = newView.layoutLeftToLeft(view:self)
+        
+        self.layoutIfNeeded()
+    }
+    
+    private func slideRight(transition:ViewParentSlideTransition)
+    {
+        transition.currentView.layoutRight?.constant = transition.left
+        transition.currentView.layoutLeft?.constant = transition.left
+        transition.newView.layoutRight?.constant = 0
+        transition.newView.layoutLeft?.constant = 0
+     
+        self.slideCompletion(transition:transition)
+    }
+    
+    private func slideLeft(transition:ViewParentSlideTransition)
+    {
+        transition.currentView.layoutLeft?.constant = transition.left
+        transition.currentView.layoutRight?.constant = transition.left
+        transition.newView.layoutLeft?.constant = 0
+        transition.newView.layoutRight?.constant = 0
+        
+        self.slideCompletion(transition:transition)
+    }
+    
+    private func slideCompletion(transition:ViewParentSlideTransition)
+    {
+        UIView.animate(withDuration:ViewGlobal.Constants.animationDuration,
+                       animations:
+        {
+            self.layoutIfNeeded()
+        })
+        { (done:Bool) in
+            
+            transition.currentUi.removeFromSuperview()
+            transition.completion?()
+        }
+    }
+    
+    private func pushBackground<A>(transition:ControllerTransitionPush<A>)
+    {
+        if transition.background
+        {
+            guard
+                
+                let view:ViewMain<A> = transition.controller.viewMain as? ViewMain<A>
+                
+            else
+            {
+                return
+            }
+            
+            let pushBackground:ViewPushBackground = ViewPushBackground()
+            view.pushBackground = pushBackground
+            
+            self.addSubview(pushBackground)
+            
+            pushBackground.layoutEquals(view:self)
+        }
+    }
+    
+    private func pushView<A>(transition:ControllerTransitionPush<A>)
+    {
+        guard
+            
+            let view:ViewMain<A> = transition.controller.viewMain as? ViewMain<A>
+            
+        else
+        {
+            return
+        }
+        
+        self.addSubview(view)
+        
+        self.layoutViewPushed(
+            view:view,
+            transition:transition)
+        
+        self.layoutIfNeeded()
+    }
+    
+    private func layoutViewPushed<A>(
+        view:ViewMain<A>,
+        transition:ControllerTransitionPush<A>)
+    {
+        view.layoutTop = view.layoutTopToTop(
+            view:self,
+            constant:transition.vertical)
+        
+        view.layoutBottom = view.layoutBottomToBottom(
+            view:self,
+            constant:transition.vertical)
+        
+        view.layoutLeft = view.layoutLeftToLeft(
+            view:self,
+            constant:transition.horizontal)
+        
+        view.layoutRight = view.layoutRightToRight(
+            view:self,
+            constant:transition.horizontal)
+    }
+    
+    private func pushAlignViews<A>(transition:ControllerTransitionPush<A>)
+    {
+        if transition.top >= 0
+        {
+            transition.newView.layoutTop.constant = 0
+            transition.newView.layoutBottom.constant = 0
+        }
+        else
+        {
+            transition.newView.layoutBottom.constant = 0
+            transition.newView.layoutTop.constant = 0
+        }
+        
+        if transition.left >= 0
+        {
+            transition.newView.layoutLeft.constant = 0
+            transition.newView.layoutRight.constant = 0
+        }
+        else
+        {
+            transition.newView.layoutRight.constant = 0
+            transition.newView.layoutLeft.constant = 0
+        }
+        
+        UIView.animate(withDuration:ViewGlobal.Constants.animationDuration,
+                       animations:
+        {
+            self.layoutIfNeeded()
+            transition.newView.pushBackground?.alpha = 1
+        })
+        { (done:Bool) in
+            
+            transition.completion?()
+        }
     }
 }

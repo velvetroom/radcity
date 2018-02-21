@@ -13,14 +13,6 @@ final class ControllerParent:UIViewController
         }
     }
     
-    var currentView:ViewTransitionableProtocol?
-    {
-        get
-        {
-            return self.currentController?.view as? ViewTransitionableProtocol
-        }
-    }
-    
     var currentController:UIViewController?
     {
         get
