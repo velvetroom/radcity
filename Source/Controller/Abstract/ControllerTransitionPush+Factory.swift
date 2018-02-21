@@ -7,8 +7,11 @@ extension ControllerTransitionPush
     static func factoryPushFromRight<A>(
         controller:Controller<A>) -> ControllerTransitionPush<A> where A.C:Controller<A>
     {
-        let transition:ControllerTransitionPush<A> = ControllerTransitionPush<A>(controller:controller)
+        var push:ControllerTransitionPush<A> = ControllerTransitionPush<A>(controller:controller)
+        let transition:ControllerTransition = ControllerTransition.right
         
-        return transition
+        push.addTransition(transition:transition)
+        
+        return push
     }
 }
