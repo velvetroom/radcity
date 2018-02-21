@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 build=$(($(git rev-list HEAD --count) + 1))
 version=$(git describe --tags $(git rev-list --tags --max-count=1))
 

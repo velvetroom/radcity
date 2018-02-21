@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DAD5421A203DCA0F0003402F /* versioner.sh in Resources */ = {isa = PBXBuildFile; fileRef = DAD54206203DCA0E0003402F /* versioner.sh */; };
 		DAD5421B203DCA0F0003402F /* LocalizableModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD5420E203DCA0E0003402F /* LocalizableModel.strings */; };
 		DAD5421C203DCA0F0003402F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54210203DCA0E0003402F /* InfoPlist.strings */; };
 		DAD5421D203DCA0F0003402F /* LocalizableError.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54212203DCA0E0003402F /* LocalizableError.strings */; };
 		DAD5421E203DCA0F0003402F /* LocalizableView.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54214203DCA0E0003402F /* LocalizableView.strings */; };
 		DAD5421F203DCA0F0003402F /* LocalizableController.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54216203DCA0E0003402F /* LocalizableController.strings */; };
+		DAD54225203DCACC0003402F /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD54224203DCACC0003402F /* Application.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +27,7 @@
 		DAD54215203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableView.strings; sourceTree = "<group>"; };
 		DAD54217203DCA0F0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableController.strings; sourceTree = "<group>"; };
 		DAD54219203DCA0F0003402F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAD54224203DCACC0003402F /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		DAE5F65620370A930023E75B /* radcity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radcity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -71,6 +72,9 @@
 		DAD54209203DCA0E0003402F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DAD54223203DCABE0003402F /* Application */,
+				DAD54221203DCABE0003402F /* Controller */,
+				DAD54222203DCABE0003402F /* Parent */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -114,6 +118,28 @@
 				DAD54219203DCA0F0003402F /* Info.plist */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		DAD54221203DCABE0003402F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAD54222203DCABE0003402F /* Parent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Parent;
+			sourceTree = "<group>";
+		};
+		DAD54223203DCABE0003402F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DAD54224203DCACC0003402F /* Application.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		DAE5F64D20370A930023E75B = {
@@ -171,6 +197,7 @@
 				TargetAttributes = {
 					DAE5F65520370A930023E75B = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -200,7 +227,6 @@
 			files = (
 				DAD5421E203DCA0F0003402F /* LocalizableView.strings in Resources */,
 				DAD5421D203DCA0F0003402F /* LocalizableError.strings in Resources */,
-				DAD5421A203DCA0F0003402F /* versioner.sh in Resources */,
 				DAD5421C203DCA0F0003402F /* InfoPlist.strings in Resources */,
 				DAD5421B203DCA0F0003402F /* LocalizableModel.strings in Resources */,
 				DAD5421F203DCA0F0003402F /* LocalizableController.strings in Resources */,
@@ -214,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD54225203DCACC0003402F /* Application.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,12 +403,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = "$(SRCROOT)/Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.radcity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -391,6 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = "$(SRCROOT)/Configuration/Info.plist";
