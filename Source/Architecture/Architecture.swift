@@ -2,7 +2,7 @@ import Foundation
 
 protocol Architecture
 {
-    associatedtype M
-    associatedtype C
-    associatedtype V
+    associatedtype Model
+    associatedtype Controller
+    associatedtype View
 }
