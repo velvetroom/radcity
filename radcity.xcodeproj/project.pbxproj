@@ -24,6 +24,7 @@
 		DA4A278F203C2A9C00F57044 /* ViewParentPushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A278E203C2A9C00F57044 /* ViewParentPushTransition.swift */; };
 		DA4A2791203C311400F57044 /* ViewParentPopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2790203C311400F57044 /* ViewParentPopTransition.swift */; };
 		DA4A2793203C584000F57044 /* ViewAlert+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A2792203C584000F57044 /* ViewAlert+Factory.swift */; };
+		DA6AC056203D543E00D9AB80 /* ViewTransitionableProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AC055203D543E00D9AB80 /* ViewTransitionableProtocol+Default.swift */; };
 		DA8F9FDC203ABC8C00BEA495 /* versioner.sh in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9F54203ABC8C00BEA495 /* versioner.sh */; };
 		DA8FA041203ABC8C00BEA495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9FCC203ABC8C00BEA495 /* LaunchScreen.storyboard */; };
 		DA8FA042203ABC8C00BEA495 /* LocalizableModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8F9FCF203ABC8C00BEA495 /* LocalizableModel.strings */; };
@@ -126,6 +127,7 @@
 		DA4A278E203C2A9C00F57044 /* ViewParentPushTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewParentPushTransition.swift; sourceTree = "<group>"; };
 		DA4A2790203C311400F57044 /* ViewParentPopTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewParentPopTransition.swift; sourceTree = "<group>"; };
 		DA4A2792203C584000F57044 /* ViewAlert+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewAlert+Factory.swift"; sourceTree = "<group>"; };
+		DA6AC055203D543E00D9AB80 /* ViewTransitionableProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewTransitionableProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA8F9F54203ABC8C00BEA495 /* versioner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = versioner.sh; sourceTree = "<group>"; };
 		DA8F9FCA203ABC8C00BEA495 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA8F9FCC203ABC8C00BEA495 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 				DA8FA08C203B2A0200BEA495 /* ViewGlobal.swift */,
 				DA8FA08D203B2A0200BEA495 /* ViewMain.swift */,
 				DA8FA08E203B2A0200BEA495 /* ViewTransitionableProtocol.swift */,
+				DA6AC055203D543E00D9AB80 /* ViewTransitionableProtocol+Default.swift */,
 				DA4A2788203C1BC400F57044 /* ViewParent+Push.swift */,
 				DA4A278A203C1BEF00F57044 /* ViewParent+Pop.swift */,
 				DA8FA090203B2A0200BEA495 /* ViewParent+Constants.swift */,
@@ -658,6 +661,7 @@
 				DA8FA0F3203B2A0300BEA495 /* Menu+Order.swift in Sources */,
 				DA8FA0C2203B2A0300BEA495 /* ViewBlur.swift in Sources */,
 				DA4A278D203C1F1D00F57044 /* ViewParentSlideTransition.swift in Sources */,
+				DA6AC056203D543E00D9AB80 /* ViewTransitionableProtocol+Default.swift in Sources */,
 				DA268795203C7CC000C2F7A1 /* ExtensionUIView+LayoutVertical.swift in Sources */,
 				DA4A2785203C073200F57044 /* ControllerTransitionPush.swift in Sources */,
 				DA8FA0D1203B2A0300BEA495 /* ViewTransitionableProtocol.swift in Sources */,
