@@ -4,25 +4,16 @@ extension ViewParent
 {
     //MARK: private
     
-    private func alignSlidingView(
-        newView:ViewTransitionableProtocol,
+    private func alignSlidingView<A>(
+        newView:ViewMain<A>,
         left:CGFloat)
     {
-        guard
-            
-            let view:UIView = newView.view
-            
-        else
-        {
-            return
-        }
+        self.insertSubview(newView, belowSubview:self.viewMenu)
         
-        self.insertSubview(view, belowSubview:self.viewMenu)
-        
-        newView.layoutTop = view.layoutTopToTop(view:self)
-        newView.layoutBottom = view.layoutBottomToBottom(view:self)
-        newView.layoutRight = view.layoutRightToRight(view:self)
-        newView.layoutLeft = view.layoutLeftToLeft(view:self)
+        newView.layoutTop = newView.layoutTopToTop(view:self)
+        newView.layoutBottom = newView.layoutBottomToBottom(view:self)
+        newView.layoutRight = newView.layoutRightToRight(view:self)
+        newView.layoutLeft = newView.layoutLeftToLeft(view:self)
         
         self.layoutIfNeeded()
     }
