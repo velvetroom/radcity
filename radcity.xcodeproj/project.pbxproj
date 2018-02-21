@@ -16,6 +16,7 @@
 		DAD54227203DCB9D0003402F /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD54226203DCB9D0003402F /* Controller.swift */; };
 		DAD54229203DCCE30003402F /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD54228203DCCE30003402F /* ControllerParent.swift */; };
 		DAD5422B203DCE540003402F /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5422A203DCE540003402F /* ExtensionUIColor.swift */; };
+		DAD5422D203DCFE50003402F /* Architecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5422C203DCFE50003402F /* Architecture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		DAD54226203DCB9D0003402F /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DAD54228203DCCE30003402F /* ControllerParent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
 		DAD5422A203DCE540003402F /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
+		DAD5422C203DCFE50003402F /* Architecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Architecture.swift; sourceTree = "<group>"; };
 		DAE5F65620370A930023E75B /* radcity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radcity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 		DAD5420A203DCA0E0003402F /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				DAD5422C203DCFE50003402F /* Architecture.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				DAD54229203DCCE30003402F /* ControllerParent.swift in Sources */,
 				DAD54227203DCB9D0003402F /* Controller.swift in Sources */,
 				DAD5422B203DCE540003402F /* ExtensionUIColor.swift in Sources */,
+				DAD5422D203DCFE50003402F /* Architecture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
