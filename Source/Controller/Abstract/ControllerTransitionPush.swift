@@ -1,20 +1,16 @@
 import UIKit
 
-struct ControllerTransitionPush
+struct ControllerTransitionPush<A> where A:Arch, A.V:View<A>
 {
     var completion:(() -> ())?
     var left:CGFloat
     var top:CGFloat
     var background:Bool
-    let controller:UIViewController
-    let newView:ViewTransitionableProtocol
+    let controller:Controller<A>
     
-    init(
-        controller:UIViewController,
-        newView:ViewTransitionableProtocol)
+    init(controller:Controller<A>)
     {
         self.controller = controller
-        self.newView = newView
         self.top = 0
         self.left = 0
         self.background = false

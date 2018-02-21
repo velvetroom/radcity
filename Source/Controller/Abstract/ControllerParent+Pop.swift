@@ -28,7 +28,7 @@ extension ControllerParent
         
         guard
             
-            let currentView:ViewTransitionableProtocol = currentController.view as? ViewTransitionableProtocol
+            let currentView:ViewMain = currentController.view as? ViewMain
             
         else
         {
