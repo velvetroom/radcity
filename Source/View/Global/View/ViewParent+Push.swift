@@ -10,39 +10,39 @@ extension ViewParent
     {
         guard
             
-            let newUi:UIView = newView as? UIView
+            let view:UIView = newView.view
             
         else
         {
             return
         }
         
-        self.insertSubview(newUi, belowSubview:self.viewMenu)
+        self.insertSubview(view, belowSubview:self.viewMenu)
         
-        newView.layoutTop = newUi.layoutTopToTop(view:self)
-        newView.layoutBottom = newUi.layoutBottomToBottom(view:self)
-        newView.layoutRight = newUi.layoutRightToRight(view:self)
-        newView.layoutLeft = newUi.layoutLeftToLeft(view:self)
+        newView.layoutTop = view.layoutTopToTop(view:self)
+        newView.layoutBottom = view.layoutBottomToBottom(view:self)
+        newView.layoutRight = view.layoutRightToRight(view:self)
+        newView.layoutLeft = view.layoutLeftToLeft(view:self)
         
         self.layoutIfNeeded()
     }
     
     private func slideRight(transition:ViewParentSlideTransition)
     {
-        transition.currentView.layoutRight.constant = transition.left
-        transition.currentView.layoutLeft.constant = transition.left
-        transition.newView.layoutRight.constant = 0
-        transition.newView.layoutLeft.constant = 0
+        transition.currentView.layoutRight?.constant = transition.left
+        transition.currentView.layoutLeft?.constant = transition.left
+        transition.newView.layoutRight?.constant = 0
+        transition.newView.layoutLeft?.constant = 0
      
         self.slideCompletion(transition:transition)
     }
     
     private func slideLeft(transition:ViewParentSlideTransition)
     {
-        transition.currentView.layoutLeft.constant = transition.left
-        transition.currentView.layoutRight.constant = transition.left
-        transition.newView.layoutLeft.constant = 0
-        transition.newView.layoutRight.constant = 0
+        transition.currentView.layoutLeft?.constant = transition.left
+        transition.currentView.layoutRight?.constant = transition.left
+        transition.newView.layoutLeft?.constant = 0
+        transition.newView.layoutRight?.constant = 0
         
         self.slideCompletion(transition:transition)
     }
@@ -70,9 +70,7 @@ extension ViewParent
             
             self.addSubview(pushBackground)
             
-            NSLayoutConstraint.equals(
-                view:pushBackground,
-                toView:self)
+            pushBackground.layoutEquals(view:self)
         }
     }
     
@@ -80,14 +78,16 @@ extension ViewParent
     {
         guard
             
-            let newUi:UIView = transition.newView as? UIView
+            let view:UIView = transition.newView.view
             
         else
         {
             return
         }
         
-        self.addSubview(newUi)
+        self.addSubview(view)
+        
+        transition.newView.layoutTop = NSLayoutConstraint
         
         transition.newView.layoutTop = NSLayoutConstraint.topToTop(
             view:newUi,
