@@ -22,18 +22,7 @@ extension ViewParent
         newView.layoutTop = newUi.layoutTopToTop(view:self)
         newView.layoutBottom = newUi.layoutBottomToBottom(view:self)
         newView.layoutRight = newUi.layoutRightToRight(view:self)
-        
-        newView.layoutBottom = NSLayoutConstraint.bottomToBottom(
-            view:newUi,
-            toView:self)
-        newView.layoutRight = NSLayoutConstraint.rightToRight(
-            view:newUi,
-            toView:self,
-            constant:-left)
-        newView.layoutLeft = NSLayoutConstraint.leftToLeft(
-            view:newUi,
-            toView:self,
-            constant:-left)
+        newView.layoutLeft = newUi.layoutLeftToLeft(view:self)
         
         self.layoutIfNeeded()
     }
