@@ -53,7 +53,7 @@ final class ViewAlert:UIView
         
         ViewAlert.topView?.addSubview(alert)
         ViewAlert.messageLayout(alert:alert)
-        alert.animate(open:true)
+        alert.animateOpen()
     }
     
     private class func messageLayout(alert:ViewAlert)
@@ -76,7 +76,9 @@ final class ViewAlert:UIView
         topView.layoutIfNeeded()
     }
     
-    private convenience init(message:String, color:UIColor)
+    private convenience init(
+        message:String,
+        color:UIColor)
     {
         self.init()
         self.clipsToBounds = true
@@ -88,17 +90,17 @@ final class ViewAlert:UIView
         
         self.addSubview(label)
         self.addSubview(button)
-        
-        NSLayoutConstraint.topToTop(
-            view:label,
-            toView:self,
+        self.layoutMessage(label:label)
+    }
+    
+    private func layoutMessage(label:UILabel)
+    {
+        label.layoutTopToTop(
+            view:self,
             constant:ViewAlert.Constants.labelTop)
-        NSLayoutConstraint.bottomToBottom(
-            view:label,
-            toView:self)
-        NSLayoutConstraint.equalsHorizontal(
-            view:label,
-            toView:self,
+        label.layoutBottomToBottom(view:self)
+        label.layoutEqualsHorizontal(
+            view:self,
             margin:ViewAlert.Constants.labelMargin)
     }
     
@@ -112,33 +114,39 @@ final class ViewAlert:UIView
             repeats:false)
     }
     
-    private func animate(open:Bool)
+    private func animateOpen()
     {
-        if open
-        {
-            self.layoutTop.constant = 0
-        }
-        else
-        {
-            self.layoutTop.constant = -ViewAlert.Constants.height
-        }
+        self.layoutTop?.constant = 0
         
+        self.animateLayout
+        { [weak self] in
+            
+            self?.scheduleTimer()
+        }
+    }
+    
+    private func animateClose()
+    {
+        self.layoutTop?.constant = -ViewAlert.Constants.height
+        
+        self.animateLayout
+        { [weak self] in
+            
+            self?.removeFromSuperview()
+        }
+    }
+    
+    private func animateLayout(completion:@escaping(() -> ()))
+    {
         UIView.animate(withDuration:ViewAlert.Constants.animationDuration,
                        animations:
-            { [weak self] in
-                
-                self?.superview?.layoutIfNeeded()
-            })
-        { [weak self] (done:Bool) in
+        { [weak self] in
             
-            if open
-            {
-                self?.scheduleTimer()
-            }
-            else
-            {
-                self?.removeFromSuperview()
-            }
+            self?.superview?.layoutIfNeeded()
+        })
+        { (done:Bool) in
+           
+            completion()
         }
     }
     
@@ -156,6 +164,6 @@ final class ViewAlert:UIView
     private func selectorAlertTimeOut(sender timer:Timer?)
     {
         timer?.invalidate()
-        self.animate(open:false)
+        self.animateClose()
     }
 }
