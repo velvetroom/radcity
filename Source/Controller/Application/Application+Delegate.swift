@@ -12,8 +12,6 @@ internal extension Application
         self.window = Application.factoryWindow()
         self.window?.rootViewController = presenter
         
-        presenter.presentCentered(controller: <#T##Controller<Architecture>#>)
-        
         return true
     }
     

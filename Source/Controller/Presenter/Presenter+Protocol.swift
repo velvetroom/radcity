@@ -4,8 +4,7 @@ internal extension Presenter
 {
     //MARK: internal
     
-    internal func presentCentered<PresentingArchitecture>(controller:Controller<PresentingArchitecture>)
+    internal func present(presentation:PresentationProtocol)
     {
-        self.addChildViewController(controller)
     }
 }
