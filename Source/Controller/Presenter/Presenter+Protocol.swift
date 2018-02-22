@@ -6,6 +6,8 @@ internal extension Presenter
     
     internal func present(presentation:PresentationProtocol)
     {
-        let model:ModelProtocol = presentation.model
+        let controllerType:ControllerProtocol.Type = presentation.model.controllerType
+        
+        
     }
 }

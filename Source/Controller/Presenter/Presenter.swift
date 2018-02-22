@@ -10,7 +10,7 @@ internal final class Presenter:UIViewController, PresenterProtocol
     internal init()
     {
         self.orientation = UIInterfaceOrientationMask.portrait
-        
+     
         super.init(
             nibName:nil,
             bundle:nil)
