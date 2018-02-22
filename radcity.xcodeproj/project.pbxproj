@@ -19,6 +19,7 @@
 		DA468B36203EBAD500D3BCC2 /* Application+Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B35203EBAD500D3BCC2 /* Application+Presenter.swift */; };
 		DA468B41203EC1F900D3BCC2 /* ModelHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B40203EC1F900D3BCC2 /* ModelHome.swift */; };
 		DA468B46203EC76E00D3BCC2 /* ControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B45203EC76E00D3BCC2 /* ControllerHome.swift */; };
+		DA468B4B203ECE8C00D3BCC2 /* PresentationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B4A203ECE8C00D3BCC2 /* PresentationProtocol.swift */; };
 		DAD5421B203DCA0F0003402F /* LocalizableModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD5420E203DCA0E0003402F /* LocalizableModel.strings */; };
 		DAD5421C203DCA0F0003402F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54210203DCA0E0003402F /* InfoPlist.strings */; };
 		DAD5421D203DCA0F0003402F /* LocalizableError.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54212203DCA0E0003402F /* LocalizableError.strings */; };
@@ -48,6 +49,7 @@
 		DA468B35203EBAD500D3BCC2 /* Application+Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Presenter.swift"; sourceTree = "<group>"; };
 		DA468B40203EC1F900D3BCC2 /* ModelHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelHome.swift; sourceTree = "<group>"; };
 		DA468B45203EC76E00D3BCC2 /* ControllerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerHome.swift; sourceTree = "<group>"; };
+		DA468B4A203ECE8C00D3BCC2 /* PresentationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationProtocol.swift; sourceTree = "<group>"; };
 		DAD54206203DCA0E0003402F /* versioner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = versioner.sh; sourceTree = "<group>"; };
 		DAD5420F203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableModel.strings; sourceTree = "<group>"; };
 		DAD54211203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		DA468B49203ECDB900D3BCC2 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DA468B4A203ECE8C00D3BCC2 /* PresentationProtocol.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		DAD54205203DCA0E0003402F /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +196,7 @@
 			children = (
 				DA468B16203EA28100D3BCC2 /* Model */,
 				DA468B3F203EC1F900D3BCC2 /* Home */,
+				DA468B49203ECDB900D3BCC2 /* Presentation */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,6 +349,7 @@
 				DA468B46203EC76E00D3BCC2 /* ControllerHome.swift in Sources */,
 				DA468B18203EA28A00D3BCC2 /* Model.swift in Sources */,
 				DA468B32203EB52300D3BCC2 /* ViewPresenter.swift in Sources */,
+				DA468B4B203ECE8C00D3BCC2 /* PresentationProtocol.swift in Sources */,
 				DAD54225203DCACC0003402F /* Application.swift in Sources */,
 				DA468B30203EB51800D3BCC2 /* View.swift in Sources */,
 				DA468B41203EC1F900D3BCC2 /* ModelHome.swift in Sources */,
