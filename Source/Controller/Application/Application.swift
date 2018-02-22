@@ -15,8 +15,8 @@ final class Application:UIResponder, UIApplicationDelegate
         window.makeKeyAndVisible()
         self.window = window
         
-        let parent:ControllerParent = ControllerParent()
-        window.rootViewController = parent
+        let presenter:Presenter = Presenter()
+        window.rootViewController = presenter
         
         return true
     }

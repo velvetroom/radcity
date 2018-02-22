@@ -3,6 +3,7 @@ import UIKit
 final class Presenter:UIViewController, PresenterProtocol
 {
     var orientation:UIInterfaceOrientationMask
+    weak var viewPresenter:ViewPresenter?
     
     init()
     {
@@ -16,5 +17,12 @@ final class Presenter:UIViewController, PresenterProtocol
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func loadView()
+    {
+        let viewPresenter:ViewPresenter = ViewPresenter()
+        self.viewPresenter = viewPresenter
+        self.view = viewPresenter
     }
 }
