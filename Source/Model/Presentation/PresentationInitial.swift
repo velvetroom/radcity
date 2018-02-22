@@ -1,6 +1,6 @@
 import UIKit
 
-struct PresentationInitial:PresentationProtocol
+internal struct PresentationInitial:PresentationProtocol
 {
-    let controller:UIViewController
+    internal let controller:UIViewController
 }

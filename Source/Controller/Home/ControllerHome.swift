@@ -2,14 +2,14 @@ import Foundation
 
 internal final class ControllerHome:Controller<ArchitectureHome>
 {
-    init()
+    internal init()
     {
         super.init(
             nibName:nil,
             bundle:nil)
     }
     
-    required init?(coder:NSCoder)
+    internal required init?(coder:NSCoder)
     {
         return nil
     }
