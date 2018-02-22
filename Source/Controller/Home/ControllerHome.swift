@@ -2,6 +2,8 @@ import Foundation
 
 internal final class ControllerHome:Controller<ArchitectureHome>
 {
+    //MARK: internal
+    
     internal init()
     {
         super.init(

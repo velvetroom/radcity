@@ -5,6 +5,8 @@ internal final class Presenter:UIViewController, PresenterProtocol
     internal var orientation:UIInterfaceOrientationMask
     internal weak var viewPresenter:ViewPresenter?
     
+    //MARK: internal
+    
     internal init()
     {
         self.orientation = UIInterfaceOrientationMask.portrait
