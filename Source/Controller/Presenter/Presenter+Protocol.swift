@@ -6,6 +6,8 @@ internal extension Presenter
     
     internal func present(presentation:PresentationProtocol)
     {
+        var presentation:PresentationProtocol = presentation
+        
         guard
             
             let controller:UIViewController = Presenter.factoryController(presentation:presentation)
@@ -16,5 +18,8 @@ internal extension Presenter
         }
         
         self.addController(controller:controller)
+        presentation.view = controller.view
+        
+        presentation.presentation(self)(presentation)
     }
 }
