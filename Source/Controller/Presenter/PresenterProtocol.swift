@@ -2,5 +2,5 @@ import Foundation
 
 protocol PresenterProtocol
 {
-    func presentCentered<PresentingArchitecture>(architecture:PresentingArchitecture.Type)
+    func presentCentered<PresentingArchitecture>(controller:Controller<PresentingArchitecture>)
 }
