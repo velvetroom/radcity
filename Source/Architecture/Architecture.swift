@@ -4,5 +4,5 @@ internal protocol Architecture
 {
     associatedtype GenericModel:ModelProtocol
     associatedtype GenericView
-    associatedtype GenericController
+    associatedtype GenericController:ControllerProtocol
 }

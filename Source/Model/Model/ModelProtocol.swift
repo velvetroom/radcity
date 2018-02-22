@@ -2,5 +2,5 @@ import Foundation
 
 protocol ModelProtocol
 {
-    func factoryController<SpecialisedArchitecture:Architecture>() -> Controller.ty<SpecialisedArchitecture>
+    var controllerType:ControllerProtocol.Type { get }
 }
