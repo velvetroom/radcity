@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		DA3C5BB2203F1D8C00EAF14D /* PresentationLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C5BB1203F1D8C00EAF14D /* PresentationLayout.swift */; };
+		DA3C5BB9203F1FB400EAF14D /* ExtensionUIView+LayoutHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C5BB3203F1FB400EAF14D /* ExtensionUIView+LayoutHeight.swift */; };
+		DA3C5BBA203F1FB400EAF14D /* ExtensionUIView+LayoutVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C5BB4203F1FB400EAF14D /* ExtensionUIView+LayoutVertical.swift */; };
+		DA3C5BBB203F1FB400EAF14D /* ExtensionUIView+LayoutHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C5BB5203F1FB400EAF14D /* ExtensionUIView+LayoutHorizontal.swift */; };
+		DA3C5BBC203F1FB400EAF14D /* ExtensionUIView+LayoutWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C5BB6203F1FB400EAF14D /* ExtensionUIView+LayoutWidth.swift */; };
+		DA3C5BBD203F1FB400EAF14D /* ExtensionUIView+LayoutSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C5BB7203F1FB400EAF14D /* ExtensionUIView+LayoutSize.swift */; };
+		DA3C5BBE203F1FB400EAF14D /* ExtensionUIView+LayoutEquals.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C5BB8203F1FB400EAF14D /* ExtensionUIView+LayoutEquals.swift */; };
 		DA468B18203EA28A00D3BCC2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B17203EA28A00D3BCC2 /* Model.swift */; };
 		DA468B1C203EA43200D3BCC2 /* ArchitectureHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B1B203EA43200D3BCC2 /* ArchitectureHome.swift */; };
 		DA468B25203EA78F00D3BCC2 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B24203EA78F00D3BCC2 /* Presenter.swift */; };
@@ -49,6 +55,12 @@
 		DA1D8509203DB86D008BAFE1 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DA1D850A203DB86D008BAFE1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DA3C5BB1203F1D8C00EAF14D /* PresentationLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationLayout.swift; sourceTree = "<group>"; };
+		DA3C5BB3203F1FB400EAF14D /* ExtensionUIView+LayoutHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtensionUIView+LayoutHeight.swift"; sourceTree = "<group>"; };
+		DA3C5BB4203F1FB400EAF14D /* ExtensionUIView+LayoutVertical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtensionUIView+LayoutVertical.swift"; sourceTree = "<group>"; };
+		DA3C5BB5203F1FB400EAF14D /* ExtensionUIView+LayoutHorizontal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtensionUIView+LayoutHorizontal.swift"; sourceTree = "<group>"; };
+		DA3C5BB6203F1FB400EAF14D /* ExtensionUIView+LayoutWidth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtensionUIView+LayoutWidth.swift"; sourceTree = "<group>"; };
+		DA3C5BB7203F1FB400EAF14D /* ExtensionUIView+LayoutSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtensionUIView+LayoutSize.swift"; sourceTree = "<group>"; };
+		DA3C5BB8203F1FB400EAF14D /* ExtensionUIView+LayoutEquals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtensionUIView+LayoutEquals.swift"; sourceTree = "<group>"; };
 		DA468B17203EA28A00D3BCC2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DA468B1B203EA43200D3BCC2 /* ArchitectureHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureHome.swift; sourceTree = "<group>"; };
 		DA468B24203EA78F00D3BCC2 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
@@ -203,6 +215,12 @@
 		DAD54208203DCA0E0003402F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				DA3C5BB8203F1FB400EAF14D /* ExtensionUIView+LayoutEquals.swift */,
+				DA3C5BB3203F1FB400EAF14D /* ExtensionUIView+LayoutHeight.swift */,
+				DA3C5BB5203F1FB400EAF14D /* ExtensionUIView+LayoutHorizontal.swift */,
+				DA3C5BB7203F1FB400EAF14D /* ExtensionUIView+LayoutSize.swift */,
+				DA3C5BB4203F1FB400EAF14D /* ExtensionUIView+LayoutVertical.swift */,
+				DA3C5BB6203F1FB400EAF14D /* ExtensionUIView+LayoutWidth.swift */,
 				DAD5422A203DCE540003402F /* ExtensionUIColor.swift */,
 			);
 			path = Extension;
@@ -390,6 +408,7 @@
 			files = (
 				DA468B46203EC76E00D3BCC2 /* ControllerHome.swift in Sources */,
 				DA468B58203EFC9900D3BCC2 /* ControllerProtocol.swift in Sources */,
+				DA3C5BBD203F1FB400EAF14D /* ExtensionUIView+LayoutSize.swift in Sources */,
 				DA468B18203EA28A00D3BCC2 /* Model.swift in Sources */,
 				DA468B32203EB52300D3BCC2 /* ViewPresenter.swift in Sources */,
 				DA468B4B203ECE8C00D3BCC2 /* PresentationProtocol.swift in Sources */,
@@ -403,10 +422,14 @@
 				DA468B27203EA7CE00D3BCC2 /* PresenterProtocol.swift in Sources */,
 				DA3C5BB2203F1D8C00EAF14D /* PresentationLayout.swift in Sources */,
 				DA468B36203EBAD500D3BCC2 /* Application+Presenter.swift in Sources */,
+				DA3C5BB9203F1FB400EAF14D /* ExtensionUIView+LayoutHeight.swift in Sources */,
+				DA3C5BBA203F1FB400EAF14D /* ExtensionUIView+LayoutVertical.swift in Sources */,
+				DA3C5BBC203F1FB400EAF14D /* ExtensionUIView+LayoutWidth.swift in Sources */,
 				DA468B5C203F002100D3BCC2 /* Presenter+Controller.swift in Sources */,
 				DA468B4D203ECEF500D3BCC2 /* PresentationInitial.swift in Sources */,
 				DAD54227203DCB9D0003402F /* Controller.swift in Sources */,
 				DAD5422B203DCE540003402F /* ExtensionUIColor.swift in Sources */,
+				DA3C5BBB203F1FB400EAF14D /* ExtensionUIView+LayoutHorizontal.swift in Sources */,
 				DA468B25203EA78F00D3BCC2 /* Presenter.swift in Sources */,
 				DAD5422F203DD0230003402F /* ArchitectureMember.swift in Sources */,
 				DA468B62203F085500D3BCC2 /* PresentationProtocol+Default.swift in Sources */,
@@ -416,6 +439,7 @@
 				DA468B29203EA89200D3BCC2 /* Presenter+Protocol.swift in Sources */,
 				DA468B34203EBA6700D3BCC2 /* Application+Delegate.swift in Sources */,
 				DA468B60203F045D00D3BCC2 /* Presenter+Strategies.swift in Sources */,
+				DA3C5BBE203F1FB400EAF14D /* ExtensionUIView+LayoutEquals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
