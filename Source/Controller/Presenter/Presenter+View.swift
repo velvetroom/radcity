@@ -4,10 +4,17 @@ internal extension Presenter
 {
     //MARK: internal
     
-    internal func presentView(
-        controller:UIViewController,
-        presentation:PresentationProtocol)
+    internal func addView(presentation:PresentationProtocol)
     {
+        guard
+            
+            let view:UIView = presentation.view
+            
+        else
+        {
+            return
+        }
         
+        self.view.addSubview(view)
     }
 }

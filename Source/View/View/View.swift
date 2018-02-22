@@ -1,7 +1,7 @@
 import UIKit
 
 internal class View<SpecialisedArchitecture>:UIView,
-    ArchitectureMember where SpecialisedArchitecture:Architecture
+    ArchitectureMember, ViewProtocol where SpecialisedArchitecture:Architecture
 {
     internal typealias GenericArchitecture = SpecialisedArchitecture
 }
