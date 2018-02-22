@@ -18,6 +18,7 @@
 		DA468B30203EB51800D3BCC2 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B2E203EB51800D3BCC2 /* View.swift */; };
 		DA468B32203EB52300D3BCC2 /* ViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B31203EB52300D3BCC2 /* ViewPresenter.swift */; };
 		DA468B34203EBA6700D3BCC2 /* Application+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B33203EBA6700D3BCC2 /* Application+Delegate.swift */; };
+		DA468B36203EBAD500D3BCC2 /* Application+Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B35203EBAD500D3BCC2 /* Application+Presenter.swift */; };
 		DAD5421B203DCA0F0003402F /* LocalizableModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD5420E203DCA0E0003402F /* LocalizableModel.strings */; };
 		DAD5421C203DCA0F0003402F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54210203DCA0E0003402F /* InfoPlist.strings */; };
 		DAD5421D203DCA0F0003402F /* LocalizableError.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54212203DCA0E0003402F /* LocalizableError.strings */; };
@@ -46,6 +47,7 @@
 		DA468B2E203EB51800D3BCC2 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DA468B31203EB52300D3BCC2 /* ViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresenter.swift; sourceTree = "<group>"; };
 		DA468B33203EBA6700D3BCC2 /* Application+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Delegate.swift"; sourceTree = "<group>"; };
+		DA468B35203EBAD500D3BCC2 /* Application+Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Presenter.swift"; sourceTree = "<group>"; };
 		DAD54206203DCA0E0003402F /* versioner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = versioner.sh; sourceTree = "<group>"; };
 		DAD5420F203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableModel.strings; sourceTree = "<group>"; };
 		DAD54211203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			children = (
 				DAD54224203DCACC0003402F /* Application.swift */,
 				DA468B33203EBA6700D3BCC2 /* Application+Delegate.swift */,
+				DA468B35203EBAD500D3BCC2 /* Application+Presenter.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				DA468B22203EA54B00D3BCC2 /* ModelHome.swift in Sources */,
 				DA468B2F203EB51800D3BCC2 /* ViewHome.swift in Sources */,
 				DA468B27203EA7CE00D3BCC2 /* PresenterProtocol.swift in Sources */,
+				DA468B36203EBAD500D3BCC2 /* Application+Presenter.swift in Sources */,
 				DAD54227203DCB9D0003402F /* Controller.swift in Sources */,
 				DA468B1E203EA4B300D3BCC2 /* ControllerHome.swift in Sources */,
 				DAD5422B203DCE540003402F /* ExtensionUIColor.swift in Sources */,
