@@ -6,5 +6,6 @@ internal extension Presenter
     
     internal func present(presentation:PresentationProtocol)
     {
+        let model = presentation.factoryModel()
     }
 }
