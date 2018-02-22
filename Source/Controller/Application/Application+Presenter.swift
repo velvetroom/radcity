@@ -10,4 +10,12 @@ internal extension Application
         
         return presenter
     }
+    
+    internal class func factoryInitialPresentation() -> PresentationProtocol
+    {
+        let controller:ControllerHome = ControllerHome()
+        let presentation:PresentationInitial = PresentationInitial(controller:controller)
+        
+        return presentation
+    }
 }
