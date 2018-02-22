@@ -11,6 +11,7 @@
 		DA468B1A203EA32200D3BCC2 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B19203EA32200D3BCC2 /* View.swift */; };
 		DA468B1C203EA43200D3BCC2 /* ArchitectureHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B1B203EA43200D3BCC2 /* ArchitectureHome.swift */; };
 		DA468B1E203EA4B300D3BCC2 /* ControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B1D203EA4B300D3BCC2 /* ControllerHome.swift */; };
+		DA468B20203EA51400D3BCC2 /* ViewHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B1F203EA51400D3BCC2 /* ViewHome.swift */; };
 		DAD5421B203DCA0F0003402F /* LocalizableModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD5420E203DCA0E0003402F /* LocalizableModel.strings */; };
 		DAD5421C203DCA0F0003402F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54210203DCA0E0003402F /* InfoPlist.strings */; };
 		DAD5421D203DCA0F0003402F /* LocalizableError.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54212203DCA0E0003402F /* LocalizableError.strings */; };
@@ -33,6 +34,7 @@
 		DA468B19203EA32200D3BCC2 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DA468B1B203EA43200D3BCC2 /* ArchitectureHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureHome.swift; sourceTree = "<group>"; };
 		DA468B1D203EA4B300D3BCC2 /* ControllerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerHome.swift; sourceTree = "<group>"; };
+		DA468B1F203EA51400D3BCC2 /* ViewHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHome.swift; sourceTree = "<group>"; };
 		DAD54206203DCA0E0003402F /* versioner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = versioner.sh; sourceTree = "<group>"; };
 		DAD5420F203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableModel.strings; sourceTree = "<group>"; };
 		DAD54211203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				DA468B19203EA32200D3BCC2 /* View.swift */,
+				DA468B1F203EA51400D3BCC2 /* ViewHome.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				DAD54229203DCCE30003402F /* ControllerParent.swift in Sources */,
 				DAD54227203DCB9D0003402F /* Controller.swift in Sources */,
 				DA468B1E203EA4B300D3BCC2 /* ControllerHome.swift in Sources */,
+				DA468B20203EA51400D3BCC2 /* ViewHome.swift in Sources */,
 				DAD5422B203DCE540003402F /* ExtensionUIColor.swift in Sources */,
 				DAD5422F203DD0230003402F /* ArchitectureMember.swift in Sources */,
 				DAD5422D203DCFE50003402F /* Architecture.swift in Sources */,
