@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 internal extension Presenter
 {
@@ -6,20 +6,7 @@ internal extension Presenter
     
     internal func present(presentation:PresentationProtocol)
     {
-        var presentation:PresentationProtocol = presentation
-        
-        guard
-            
-            let controller:UIViewController = Presenter.factoryController(presentation:presentation)
-        
-        else
-        {
-            return
-        }
-        
-        self.addController(controller:controller)
-        presentation.view = controller.view
-        
-        presentation.presentation(self)(presentation)
+        self.addController(presentation:presentation)
+        presentation.presentationStrategy(self)(presentation)
     }
 }

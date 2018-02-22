@@ -4,24 +4,17 @@ internal extension Presenter
 {
     //MARK: internal
     
-    internal class func factoryController(presentation:PresentationProtocol) -> UIViewController?
+    internal func addController(presentation:PresentationProtocol)
     {
-        let controllerType:ControllerProtocol.Type = presentation.model.controllerType
-        
         guard
             
-            let controller:UIViewController = controllerType.viewController
-            
+            let controller:UIViewController = presentation.controller
+        
         else
         {
-            return nil
+            return
         }
         
-        return controller
-    }
-    
-    internal func addController(controller:UIViewController)
-    {
         self.addChildViewController(controller)
     }
 }

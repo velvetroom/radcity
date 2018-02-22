@@ -4,7 +4,7 @@ internal extension Presenter
 {
     //MARK: internal
     
-    internal func presentationInitial(presentation:PresentationProtocol)
+    internal func strategyInitial(presentation:PresentationProtocol)
     {
         
     }
