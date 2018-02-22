@@ -1,10 +1,10 @@
 import UIKit
 
-extension UIView
+public extension UIView
 {
-    //MARK: internal
+    //MARK: public
     
-    @discardableResult func layoutTopToTop(
+    @discardableResult public func layoutTopToTop(
         view:UIView,
         constant:CGFloat = 0,
         multiplier:CGFloat = 1) -> NSLayoutConstraint
@@ -23,7 +23,7 @@ extension UIView
         return constraint
     }
     
-    @discardableResult func layoutTopToBottom(
+    @discardableResult public func layoutTopToBottom(
         view:UIView,
         constant:CGFloat = 0,
         multiplier:CGFloat = 1) -> NSLayoutConstraint
@@ -42,7 +42,7 @@ extension UIView
         return constraint
     }
     
-    @discardableResult func layoutBottomToBottom(
+    @discardableResult public func layoutBottomToBottom(
         view:UIView,
         constant:CGFloat = 0,
         multiplier:CGFloat = 1) -> NSLayoutConstraint
@@ -61,7 +61,7 @@ extension UIView
         return constraint
     }
     
-    @discardableResult func layoutBottomToTop(
+    @discardableResult public func layoutBottomToTop(
         view:UIView,
         constant:CGFloat = 0,
         multiplier:CGFloat = 1) -> NSLayoutConstraint

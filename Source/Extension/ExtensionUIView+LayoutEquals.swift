@@ -1,10 +1,10 @@
 import UIKit
 
-extension UIView
+public extension UIView
 {
-    //MARK: internal
+    //MARK: public
     
-    func layoutEquals(
+    public func layoutEquals(
         view:UIView,
         margin:CGFloat = 0)
     {
@@ -22,7 +22,7 @@ extension UIView
             constant:-margin)
     }
     
-    func layoutEqualsHorizontal(
+    public func layoutEqualsHorizontal(
         view:UIView,
         margin:CGFloat = 0)
     {
@@ -35,7 +35,7 @@ extension UIView
             constant:-margin)
     }
     
-    func layoutEqualsVertical(
+    public func layoutEqualsVertical(
         view:UIView,
         margin:CGFloat = 0)
     {

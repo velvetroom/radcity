@@ -1,10 +1,10 @@
 import UIKit
 
-extension UIView
+public extension UIView
 {
     //MARK: internal
     
-    @discardableResult func layoutHeight(
+    @discardableResult public func layoutHeight(
         constant:CGFloat = 0,
         multiplier:CGFloat = 1) -> NSLayoutConstraint
     {
@@ -22,7 +22,7 @@ extension UIView
         return constraint
     }
     
-    @discardableResult func layoutHeightGreaterOrEqual(
+    @discardableResult public func layoutHeightGreaterOrEqual(
         constant:CGFloat = 0,
         multiplier:CGFloat = 1) -> NSLayoutConstraint
     {
@@ -40,7 +40,7 @@ extension UIView
         return constraint
     }
     
-    @discardableResult func layoutHeight(
+    @discardableResult public func layoutHeight(
         view:UIView,
         multiplier:CGFloat = 1) -> NSLayoutConstraint
     {

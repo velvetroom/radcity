@@ -1,10 +1,10 @@
 import UIKit
 
-extension UIView
+public extension UIView
 {
     //MARK: internal
     
-    @discardableResult func layoutWidth(
+    @discardableResult public func layoutWidth(
         constant:CGFloat = 0,
         multiplier:CGFloat = 1) -> NSLayoutConstraint
     {
@@ -22,7 +22,7 @@ extension UIView
         return constraint
     }
     
-    @discardableResult func layoutWidthGreaterOrEqual(
+    @discardableResult public func layoutWidthGreaterOrEqual(
         constant:CGFloat = 0,
         multiplier:CGFloat = 1) -> NSLayoutConstraint
     {
@@ -40,7 +40,7 @@ extension UIView
         return constraint
     }
     
-    @discardableResult func layoutWidth(
+    @discardableResult public func layoutWidth(
         view:UIView,
         multiplier:CGFloat = 1) -> NSLayoutConstraint
     {

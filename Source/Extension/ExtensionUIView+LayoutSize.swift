@@ -1,10 +1,10 @@
 import UIKit
 
-extension UIView
+public extension UIView
 {
-    //MARK: internal
+    //MARK: public
     
-    func layoutSize(
+    public func layoutSize(
         constant:CGFloat,
         multiplier:CGFloat = 1)
     {

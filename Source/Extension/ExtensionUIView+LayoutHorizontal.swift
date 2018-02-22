@@ -1,10 +1,10 @@
 import UIKit
 
-extension UIView
+public extension UIView
 {
-    //MARK: internal
+    //MARK: public
     
-    @discardableResult func layoutLeftToLeft(
+    @discardableResult public func layoutLeftToLeft(
         view:UIView,
         constant:CGFloat = 0,
         multiplier:CGFloat = 1) -> NSLayoutConstraint
@@ -23,7 +23,7 @@ extension UIView
         return constraint
     }
     
-    @discardableResult func layoutLeftToRight(
+    @discardableResult public func layoutLeftToRight(
         view:UIView,
         constant:CGFloat = 0,
         multiplier:CGFloat = 1) -> NSLayoutConstraint
@@ -42,7 +42,7 @@ extension UIView
         return constraint
     }
     
-    @discardableResult func layoutRightToRight(
+    @discardableResult public func layoutRightToRight(
         view:UIView,
         constant:CGFloat = 0,
         multiplier:CGFloat = 1) -> NSLayoutConstraint
@@ -61,7 +61,7 @@ extension UIView
         return constraint
     }
     
-    @discardableResult func layoutRightToLeft(
+    @discardableResult public func layoutRightToLeft(
         view:UIView,
         constant:CGFloat = 0,
         multiplier:CGFloat = 1) -> NSLayoutConstraint
