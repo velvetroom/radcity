@@ -8,8 +8,11 @@ internal extension Application
         _ application:UIApplication,
         didFinishLaunchingWithOptions launchOptions:[UIApplicationLaunchOptionsKey:Any]?) -> Bool
     {
+        
+        
+        let presenter:Presenter = Application.factoryPresenter()
         self.window = Application.factoryWindow()
-        self.window?.rootViewController = Application.factoryPresenter()
+        self.window?.rootViewController = presenter
         
         return true
     }
