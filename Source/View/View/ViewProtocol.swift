@@ -1,6 +1,6 @@
-import UIKit
+import Foundation
 
-protocol ViewProtocol
+internal protocol ViewProtocol
 {
-    
+    var presentationLayout:PresentationLayout { get set }
 }
