@@ -1,6 +1,6 @@
 import UIKit
 
-final class Presenter:UIViewController
+final class Presenter:UIViewController, PresenterProtocol
 {
     
 }
