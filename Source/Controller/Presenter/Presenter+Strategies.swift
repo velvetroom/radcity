@@ -16,13 +16,13 @@ internal extension Presenter
     {
         guard
             
-            let view:ViewProtocol = presentation.view as? ViewProtocol
+            var view:ViewProtocol = presentation.view as? ViewProtocol
             
         else
         {
             return
         }
         
-        view.presentationLayout.layoutTop =
+        view.presentationLayout.layoutTop = presentation.view?.layoutTopToTop(view:self.view)
     }
 }

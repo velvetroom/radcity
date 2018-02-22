@@ -2,7 +2,7 @@ import UIKit
 
 public extension UIView
 {
-    //MARK: internal
+    //MARK: public
     
     @discardableResult public func layoutHeight(
         constant:CGFloat = 0,
