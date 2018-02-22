@@ -7,8 +7,20 @@ internal class Controller<SpecialisedArchitecture>:UIViewController,
     
     //MARK: internal
     
+    internal init()
+    {
+        super.init(
+            nibName:nil,
+            bundle:nil)
+    }
+    
+    internal required init?(coder:NSCoder)
+    {
+        return nil
+    }
+    
     internal override func viewDidLoad()
     {
-        
+        super.viewDidLoad()
     }
 }
