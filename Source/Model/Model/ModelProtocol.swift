@@ -1,6 +1,6 @@
 import Foundation
 
-protocol ModelProtocol
+internal protocol ModelProtocol
 {
     var controllerType:ControllerProtocol.Type { get }
 }

@@ -1,6 +1,6 @@
 import UIKit
 
-protocol PresentationProtocol
+internal protocol PresentationProtocol
 {
     var model:ModelProtocol { get }
 }
