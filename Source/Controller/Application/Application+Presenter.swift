@@ -4,7 +4,7 @@ extension Application
 {
     //MARK: internal
     
-    func factoryPresenter() -> Presenter
+    class func factoryPresenter() -> Presenter
     {
         let presenter:Presenter = Presenter()
         

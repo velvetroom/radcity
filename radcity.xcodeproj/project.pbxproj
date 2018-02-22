@@ -20,6 +20,7 @@
 		DA468B34203EBA6700D3BCC2 /* Application+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B33203EBA6700D3BCC2 /* Application+Delegate.swift */; };
 		DA468B36203EBAD500D3BCC2 /* Application+Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B35203EBAD500D3BCC2 /* Application+Presenter.swift */; };
 		DA468B39203EBC6A00D3BCC2 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B38203EBC6A00D3BCC2 /* Main.swift */; };
+		DA468B3B203EBCAF00D3BCC2 /* Application+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B3A203EBCAF00D3BCC2 /* Application+Main.swift */; };
 		DAD5421B203DCA0F0003402F /* LocalizableModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD5420E203DCA0E0003402F /* LocalizableModel.strings */; };
 		DAD5421C203DCA0F0003402F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54210203DCA0E0003402F /* InfoPlist.strings */; };
 		DAD5421D203DCA0F0003402F /* LocalizableError.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54212203DCA0E0003402F /* LocalizableError.strings */; };
@@ -50,6 +51,7 @@
 		DA468B33203EBA6700D3BCC2 /* Application+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Delegate.swift"; sourceTree = "<group>"; };
 		DA468B35203EBAD500D3BCC2 /* Application+Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Presenter.swift"; sourceTree = "<group>"; };
 		DA468B38203EBC6A00D3BCC2 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		DA468B3A203EBCAF00D3BCC2 /* Application+Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Main.swift"; sourceTree = "<group>"; };
 		DAD54206203DCA0E0003402F /* versioner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = versioner.sh; sourceTree = "<group>"; };
 		DAD5420F203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableModel.strings; sourceTree = "<group>"; };
 		DAD54211203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				DAD54224203DCACC0003402F /* Application.swift */,
 				DA468B33203EBA6700D3BCC2 /* Application+Delegate.swift */,
 				DA468B35203EBAD500D3BCC2 /* Application+Presenter.swift */,
+				DA468B3A203EBCAF00D3BCC2 /* Application+Main.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				DA468B25203EA78F00D3BCC2 /* Presenter.swift in Sources */,
 				DAD5422F203DD0230003402F /* ArchitectureMember.swift in Sources */,
 				DAD5422D203DCFE50003402F /* Architecture.swift in Sources */,
+				DA468B3B203EBCAF00D3BCC2 /* Application+Main.swift in Sources */,
 				DA468B29203EA89200D3BCC2 /* Presenter+Protocol.swift in Sources */,
 				DA468B34203EBA6700D3BCC2 /* Application+Delegate.swift in Sources */,
 			);

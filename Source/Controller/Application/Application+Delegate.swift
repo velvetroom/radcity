@@ -6,18 +6,17 @@ extension Application
     
     func application(
         _ application:UIApplication,
-        didFinishLaunchingWithOptions launchOptions:
-        [UIApplicationLaunchOptionsKey:Any]?) -> Bool
+        didFinishLaunchingWithOptions launchOptions:[UIApplicationLaunchOptionsKey:Any]?) -> Bool
     {
-        self.window = self.factoryWindow()
-        self.window?.rootViewController = self.factoryPresenter()
+        self.window = Application.factoryWindow()
+        self.window?.rootViewController = Application.factoryPresenter()
         
         return true
     }
     
     //MARK: private
     
-    private func factoryWindow() -> UIWindow
+    private class func factoryWindow() -> UIWindow
     {
         let window:UIWindow = UIWindow(frame:UIScreen.main.bounds)
         window.backgroundColor = UIColor.white
