@@ -1,6 +1,6 @@
 import Foundation
 
-extension Application
+internal extension Application
 {
     //MARK: internal
     /*

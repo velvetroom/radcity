@@ -1,11 +1,11 @@
 import UIKit
 
-final class Presenter:UIViewController, PresenterProtocol
+internal final class Presenter:UIViewController, PresenterProtocol
 {
-    var orientation:UIInterfaceOrientationMask
-    weak var viewPresenter:ViewPresenter?
+    internal var orientation:UIInterfaceOrientationMask
+    internal weak var viewPresenter:ViewPresenter?
     
-    init()
+    internal init()
     {
         self.orientation = UIInterfaceOrientationMask.portrait
         
@@ -14,12 +14,12 @@ final class Presenter:UIViewController, PresenterProtocol
             bundle:nil)
     }
     
-    required init?(coder:NSCoder)
+    internal required init?(coder:NSCoder)
     {
         return nil
     }
     
-    override func loadView()
+    internal override func loadView()
     {
         let viewPresenter:ViewPresenter = ViewPresenter()
         self.viewPresenter = viewPresenter

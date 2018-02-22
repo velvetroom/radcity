@@ -1,6 +1,6 @@
 import Foundation
 
-final class ControllerHome:Controller<ArchitectureHome>
+internal final class ControllerHome:Controller<ArchitectureHome>
 {
     
 }

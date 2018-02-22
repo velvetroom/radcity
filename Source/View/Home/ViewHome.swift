@@ -1,6 +1,6 @@
 import Foundation
 
-final class ViewHome:View<ArchitectureHome>
+internal final class ViewHome:View<ArchitectureHome>
 {
     
 }

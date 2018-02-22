@@ -1,10 +1,10 @@
 import UIKit
 
-extension Application
+internal extension Application
 {
     //MARK: internal
     
-    func application(
+    internal func application(
         _ application:UIApplication,
         didFinishLaunchingWithOptions launchOptions:[UIApplicationLaunchOptionsKey:Any]?) -> Bool
     {

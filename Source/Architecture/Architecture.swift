@@ -1,6 +1,6 @@
 import Foundation
 
-protocol Architecture
+internal protocol Architecture
 {
     associatedtype GenericModel
     associatedtype GenericView

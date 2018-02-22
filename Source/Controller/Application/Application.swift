@@ -1,7 +1,7 @@
 import UIKit
 
 @UIApplicationMain
-final class Application:UIResponder, UIApplicationDelegate
+internal final class Application:UIResponder, UIApplicationDelegate
 {
     var window:UIWindow?
 }

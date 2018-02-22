@@ -1,6 +1,6 @@
 import Foundation
 
-protocol PresenterProtocol
+internal protocol PresenterProtocol
 {
     func presentCentered<PresentingArchitecture>(controller:Controller<PresentingArchitecture>)
 }

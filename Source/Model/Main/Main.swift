@@ -1,6 +1,6 @@
 import Foundation
 
-final class Main
+internal final class Main
 {
     
 }

@@ -1,8 +1,8 @@
 import Foundation
 
-struct ArchitectureHome:Architecture
+internal struct ArchitectureHome:Architecture
 {
-    typealias GenericModel = ModelHome
-    typealias GenericView = ViewHome
-    typealias GenericController = ControllerHome
+    internal typealias GenericModel = ModelHome
+    internal typealias GenericView = ViewHome
+    internal typealias GenericController = ControllerHome
 }

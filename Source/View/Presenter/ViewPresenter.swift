@@ -1,15 +1,15 @@
 import UIKit
 
-final class ViewPresenter:UIView
+internal final class ViewPresenter:UIView
 {
-    init()
+    internal init()
     {
         super.init(frame:CGRect.zero)
         self.clipsToBounds = true
         self.backgroundColor = UIColor.sharedBackgroundColour
     }
     
-    required init?(coder:NSCoder)
+    internal required init?(coder:NSCoder)
     {
         return nil
     }

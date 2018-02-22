@@ -1,10 +1,10 @@
 import Foundation
 
-extension Application
+internal extension Application
 {
     //MARK: internal
     
-    class func factoryPresenter() -> Presenter
+    internal class func factoryPresenter() -> Presenter
     {
         let presenter:Presenter = Presenter()
         
