@@ -2,5 +2,5 @@ import UIKit
 
 protocol PresentationProtocol
 {
-    var controller:UIViewController { get }
+    func factoryModel<PresentedArchitecture:Architecture>() -> Model<PresentedArchitecture>
 }

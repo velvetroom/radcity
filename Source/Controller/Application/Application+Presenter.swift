@@ -13,8 +13,7 @@ internal extension Application
     
     internal class func factoryInitialPresentation() -> PresentationProtocol
     {
-        let controller:ControllerHome = ControllerHome()
-        let presentation:PresentationInitial = PresentationInitial(controller:controller)
+        let presentation:PresentationInitial<ArchitectureHome> = PresentationInitial<ArchitectureHome>()
         
         return presentation
     }
