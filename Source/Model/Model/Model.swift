@@ -1,6 +1,6 @@
 import Foundation
 
-internal class Model<SpecialisedArchitecture>:ArchitectureMember where SpecialisedArchitecture:Architecture
+internal class Model<SpecialisedArchitecture>:ArchitectureMember, ModelProtocol where SpecialisedArchitecture:Architecture
 {
     internal typealias GenericArchitecture = SpecialisedArchitecture
 }

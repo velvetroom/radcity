@@ -2,7 +2,7 @@ import Foundation
 
 internal protocol Architecture
 {
-    associatedtype GenericModel
+    associatedtype GenericModel:ModelProtocol
     associatedtype GenericView
     associatedtype GenericController
 }

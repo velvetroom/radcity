@@ -1,11 +1,6 @@
 import UIKit
 
-internal struct PresentationInitial<PresentedArchitecture:Architecture>:PresentationProtocol
+internal struct PresentationInitial:PresentationProtocol
 {
-    internal func factoryModel<PresentedArchitecture>() -> Model<PresentedArchitecture>
-    {
-        let model:Model<PresentedArchitecture> = Model<PresentedArchitecture>()
-        
-        return model
-    }
+    internal let model:ModelProtocol
 }

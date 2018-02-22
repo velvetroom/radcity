@@ -13,8 +13,18 @@ internal extension Application
     
     internal class func factoryInitialPresentation() -> PresentationProtocol
     {
-        let presentation:PresentationInitial<ArchitectureHome> = PresentationInitial<ArchitectureHome>()
+        let model:ModelHome = Application.factoryModelHome()
+        let presentation:PresentationInitial = PresentationInitial(model:model)
         
         return presentation
+    }
+    
+    //MARK: private
+    
+    private class func factoryModelHome() -> ModelHome
+    {
+        let model:ModelHome = ModelHome()
+        
+        return model
     }
 }
