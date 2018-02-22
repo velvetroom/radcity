@@ -4,7 +4,7 @@ internal extension ControllerProtocol
 {
     //MARK: internal
     
-    static var viewController:UIViewController?
+    internal static var viewController:UIViewController?
     {
         get
         {

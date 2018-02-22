@@ -25,6 +25,8 @@
 		DA468B56203EF61A00D3BCC2 /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B55203EF61A00D3BCC2 /* ModelProtocol.swift */; };
 		DA468B58203EFC9900D3BCC2 /* ControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B57203EFC9900D3BCC2 /* ControllerProtocol.swift */; };
 		DA468B5A203EFF1800D3BCC2 /* ControllerProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B59203EFF1800D3BCC2 /* ControllerProtocol+Default.swift */; };
+		DA468B5C203F002100D3BCC2 /* Presenter+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B5B203F002100D3BCC2 /* Presenter+Controller.swift */; };
+		DA468B5E203F01F700D3BCC2 /* Presenter+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B5D203F01F700D3BCC2 /* Presenter+View.swift */; };
 		DAD5421B203DCA0F0003402F /* LocalizableModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD5420E203DCA0E0003402F /* LocalizableModel.strings */; };
 		DAD5421C203DCA0F0003402F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54210203DCA0E0003402F /* InfoPlist.strings */; };
 		DAD5421D203DCA0F0003402F /* LocalizableError.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54212203DCA0E0003402F /* LocalizableError.strings */; };
@@ -60,6 +62,8 @@
 		DA468B55203EF61A00D3BCC2 /* ModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
 		DA468B57203EFC9900D3BCC2 /* ControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerProtocol.swift; sourceTree = "<group>"; };
 		DA468B59203EFF1800D3BCC2 /* ControllerProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerProtocol+Default.swift"; sourceTree = "<group>"; };
+		DA468B5B203F002100D3BCC2 /* Presenter+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Presenter+Controller.swift"; sourceTree = "<group>"; };
+		DA468B5D203F01F700D3BCC2 /* Presenter+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Presenter+View.swift"; sourceTree = "<group>"; };
 		DAD54206203DCA0E0003402F /* versioner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = versioner.sh; sourceTree = "<group>"; };
 		DAD5420F203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableModel.strings; sourceTree = "<group>"; };
 		DAD54211203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 			children = (
 				DA468B24203EA78F00D3BCC2 /* Presenter.swift */,
 				DA468B28203EA89200D3BCC2 /* Presenter+Protocol.swift */,
+				DA468B5B203F002100D3BCC2 /* Presenter+Controller.swift */,
+				DA468B5D203F01F700D3BCC2 /* Presenter+View.swift */,
 				DA468B26203EA7CE00D3BCC2 /* PresenterProtocol.swift */,
 			);
 			path = Presenter;
@@ -383,6 +389,7 @@
 				DA468B2F203EB51800D3BCC2 /* ViewHome.swift in Sources */,
 				DA468B27203EA7CE00D3BCC2 /* PresenterProtocol.swift in Sources */,
 				DA468B36203EBAD500D3BCC2 /* Application+Presenter.swift in Sources */,
+				DA468B5C203F002100D3BCC2 /* Presenter+Controller.swift in Sources */,
 				DA468B4D203ECEF500D3BCC2 /* PresentationInitial.swift in Sources */,
 				DAD54227203DCB9D0003402F /* Controller.swift in Sources */,
 				DAD5422B203DCE540003402F /* ExtensionUIColor.swift in Sources */,
@@ -390,6 +397,7 @@
 				DAD5422F203DD0230003402F /* ArchitectureMember.swift in Sources */,
 				DAD5422D203DCFE50003402F /* Architecture.swift in Sources */,
 				DA468B56203EF61A00D3BCC2 /* ModelProtocol.swift in Sources */,
+				DA468B5E203F01F700D3BCC2 /* Presenter+View.swift in Sources */,
 				DA468B29203EA89200D3BCC2 /* Presenter+Protocol.swift in Sources */,
 				DA468B34203EBA6700D3BCC2 /* Application+Delegate.swift in Sources */,
 			);
