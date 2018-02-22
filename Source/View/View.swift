@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewMain<SpecialisedArchitecture>:UIView,
+class View<SpecialisedArchitecture>:UIView,
     ArchitectureMember where SpecialisedArchitecture:Architecture
 {
     typealias GenericArchitecture = SpecialisedArchitecture
