@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DA468B18203EA28A00D3BCC2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B17203EA28A00D3BCC2 /* Model.swift */; };
 		DA468B1C203EA43200D3BCC2 /* ArchitectureHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B1B203EA43200D3BCC2 /* ArchitectureHome.swift */; };
-		DA468B1E203EA4B300D3BCC2 /* ControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B1D203EA4B300D3BCC2 /* ControllerHome.swift */; };
 		DA468B25203EA78F00D3BCC2 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B24203EA78F00D3BCC2 /* Presenter.swift */; };
 		DA468B27203EA7CE00D3BCC2 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B26203EA7CE00D3BCC2 /* PresenterProtocol.swift */; };
 		DA468B29203EA89200D3BCC2 /* Presenter+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B28203EA89200D3BCC2 /* Presenter+Protocol.swift */; };
@@ -20,6 +19,7 @@
 		DA468B36203EBAD500D3BCC2 /* Application+Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B35203EBAD500D3BCC2 /* Application+Presenter.swift */; };
 		DA468B41203EC1F900D3BCC2 /* ModelHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B40203EC1F900D3BCC2 /* ModelHome.swift */; };
 		DA468B43203EC58C00D3BCC2 /* Application+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B42203EC58C00D3BCC2 /* Application+Model.swift */; };
+		DA468B46203EC76E00D3BCC2 /* ControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B45203EC76E00D3BCC2 /* ControllerHome.swift */; };
 		DAD5421B203DCA0F0003402F /* LocalizableModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD5420E203DCA0E0003402F /* LocalizableModel.strings */; };
 		DAD5421C203DCA0F0003402F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54210203DCA0E0003402F /* InfoPlist.strings */; };
 		DAD5421D203DCA0F0003402F /* LocalizableError.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54212203DCA0E0003402F /* LocalizableError.strings */; };
@@ -39,7 +39,6 @@
 		DA1D850A203DB86D008BAFE1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DA468B17203EA28A00D3BCC2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DA468B1B203EA43200D3BCC2 /* ArchitectureHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureHome.swift; sourceTree = "<group>"; };
-		DA468B1D203EA4B300D3BCC2 /* ControllerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerHome.swift; sourceTree = "<group>"; };
 		DA468B24203EA78F00D3BCC2 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		DA468B26203EA7CE00D3BCC2 /* PresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
 		DA468B28203EA89200D3BCC2 /* Presenter+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Presenter+Protocol.swift"; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		DA468B35203EBAD500D3BCC2 /* Application+Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Presenter.swift"; sourceTree = "<group>"; };
 		DA468B40203EC1F900D3BCC2 /* ModelHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelHome.swift; sourceTree = "<group>"; };
 		DA468B42203EC58C00D3BCC2 /* Application+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Model.swift"; sourceTree = "<group>"; };
+		DA468B45203EC76E00D3BCC2 /* ControllerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerHome.swift; sourceTree = "<group>"; };
 		DAD54206203DCA0E0003402F /* versioner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = versioner.sh; sourceTree = "<group>"; };
 		DAD5420F203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableModel.strings; sourceTree = "<group>"; };
 		DAD54211203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -126,6 +126,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		DA468B44203EC76E00D3BCC2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DA468B45203EC76E00D3BCC2 /* ControllerHome.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		DAD54205203DCA0E0003402F /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +168,7 @@
 				DA468B23203EA78600D3BCC2 /* Presenter */,
 				DAD54223203DCABE0003402F /* Application */,
 				DAD54221203DCABE0003402F /* Controller */,
+				DA468B44203EC76E00D3BCC2 /* Home */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -217,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				DAD54226203DCB9D0003402F /* Controller.swift */,
-				DA468B1D203EA4B300D3BCC2 /* ControllerHome.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -330,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA468B46203EC76E00D3BCC2 /* ControllerHome.swift in Sources */,
 				DA468B18203EA28A00D3BCC2 /* Model.swift in Sources */,
 				DA468B32203EB52300D3BCC2 /* ViewPresenter.swift in Sources */,
 				DAD54225203DCACC0003402F /* Application.swift in Sources */,
@@ -341,7 +350,6 @@
 				DA468B36203EBAD500D3BCC2 /* Application+Presenter.swift in Sources */,
 				DAD54227203DCB9D0003402F /* Controller.swift in Sources */,
 				DA468B43203EC58C00D3BCC2 /* Application+Model.swift in Sources */,
-				DA468B1E203EA4B300D3BCC2 /* ControllerHome.swift in Sources */,
 				DAD5422B203DCE540003402F /* ExtensionUIColor.swift in Sources */,
 				DA468B25203EA78F00D3BCC2 /* Presenter.swift in Sources */,
 				DAD5422F203DD0230003402F /* ArchitectureMember.swift in Sources */,
