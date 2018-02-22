@@ -29,6 +29,7 @@
 		DA468B5E203F01F700D3BCC2 /* Presenter+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B5D203F01F700D3BCC2 /* Presenter+View.swift */; };
 		DA468B60203F045D00D3BCC2 /* Presenter+Strategies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B5F203F045D00D3BCC2 /* Presenter+Strategies.swift */; };
 		DA468B62203F085500D3BCC2 /* PresentationProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B61203F085500D3BCC2 /* PresentationProtocol+Default.swift */; };
+		DA468B64203F0B9E00D3BCC2 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B63203F0B9E00D3BCC2 /* ViewProtocol.swift */; };
 		DAD5421B203DCA0F0003402F /* LocalizableModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD5420E203DCA0E0003402F /* LocalizableModel.strings */; };
 		DAD5421C203DCA0F0003402F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54210203DCA0E0003402F /* InfoPlist.strings */; };
 		DAD5421D203DCA0F0003402F /* LocalizableError.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54212203DCA0E0003402F /* LocalizableError.strings */; };
@@ -68,6 +69,7 @@
 		DA468B5D203F01F700D3BCC2 /* Presenter+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Presenter+View.swift"; sourceTree = "<group>"; };
 		DA468B5F203F045D00D3BCC2 /* Presenter+Strategies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Presenter+Strategies.swift"; sourceTree = "<group>"; };
 		DA468B61203F085500D3BCC2 /* PresentationProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresentationProtocol+Default.swift"; sourceTree = "<group>"; };
+		DA468B63203F0B9E00D3BCC2 /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		DAD54206203DCA0E0003402F /* versioner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = versioner.sh; sourceTree = "<group>"; };
 		DAD5420F203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableModel.strings; sourceTree = "<group>"; };
 		DAD54211203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				DA468B2E203EB51800D3BCC2 /* View.swift */,
+				DA468B63203F0B9E00D3BCC2 /* ViewProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				DA468B4B203ECE8C00D3BCC2 /* PresentationProtocol.swift in Sources */,
 				DAD54225203DCACC0003402F /* Application.swift in Sources */,
 				DA468B5A203EFF1800D3BCC2 /* ControllerProtocol+Default.swift in Sources */,
+				DA468B64203F0B9E00D3BCC2 /* ViewProtocol.swift in Sources */,
 				DA468B30203EB51800D3BCC2 /* View.swift in Sources */,
 				DA468B41203EC1F900D3BCC2 /* ModelHome.swift in Sources */,
 				DA468B1C203EA43200D3BCC2 /* ArchitectureHome.swift in Sources */,

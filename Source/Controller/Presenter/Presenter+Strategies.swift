@@ -6,6 +6,10 @@ internal extension Presenter
     
     internal func strategyInitial(presentation:PresentationProtocol)
     {
+        guard
+            
+            let presentation.view: as? view
         
+        self.view.addSubview()
     }
 }
