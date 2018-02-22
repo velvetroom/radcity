@@ -24,7 +24,6 @@
 		DAD5421F203DCA0F0003402F /* LocalizableController.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54216203DCA0E0003402F /* LocalizableController.strings */; };
 		DAD54225203DCACC0003402F /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD54224203DCACC0003402F /* Application.swift */; };
 		DAD54227203DCB9D0003402F /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD54226203DCB9D0003402F /* Controller.swift */; };
-		DAD54229203DCCE30003402F /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD54228203DCCE30003402F /* ControllerParent.swift */; };
 		DAD5422B203DCE540003402F /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5422A203DCE540003402F /* ExtensionUIColor.swift */; };
 		DAD5422D203DCFE50003402F /* Architecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5422C203DCFE50003402F /* Architecture.swift */; };
 		DAD5422F203DD0230003402F /* ArchitectureMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5422E203DD0230003402F /* ArchitectureMember.swift */; };
@@ -54,7 +53,6 @@
 		DAD54219203DCA0F0003402F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAD54224203DCACC0003402F /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		DAD54226203DCB9D0003402F /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
-		DAD54228203DCCE30003402F /* ControllerParent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
 		DAD5422A203DCE540003402F /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		DAD5422C203DCFE50003402F /* Architecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Architecture.swift; sourceTree = "<group>"; };
 		DAD5422E203DD0230003402F /* ArchitectureMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureMember.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				DA468B23203EA78600D3BCC2 /* Presenter */,
 				DAD54223203DCABE0003402F /* Application */,
 				DAD54221203DCABE0003402F /* Controller */,
-				DAD54222203DCABE0003402F /* Parent */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -209,14 +206,6 @@
 				DA468B1D203EA4B300D3BCC2 /* ControllerHome.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		DAD54222203DCABE0003402F /* Parent */ = {
-			isa = PBXGroup;
-			children = (
-				DAD54228203DCCE30003402F /* ControllerParent.swift */,
-			);
-			path = Parent;
 			sourceTree = "<group>";
 		};
 		DAD54223203DCABE0003402F /* Application */ = {
@@ -330,7 +319,6 @@
 				DA468B30203EB51800D3BCC2 /* View.swift in Sources */,
 				DA468B1C203EA43200D3BCC2 /* ArchitectureHome.swift in Sources */,
 				DA468B22203EA54B00D3BCC2 /* ModelHome.swift in Sources */,
-				DAD54229203DCCE30003402F /* ControllerParent.swift in Sources */,
 				DA468B2F203EB51800D3BCC2 /* ViewHome.swift in Sources */,
 				DA468B27203EA7CE00D3BCC2 /* PresenterProtocol.swift in Sources */,
 				DAD54227203DCB9D0003402F /* Controller.swift in Sources */,

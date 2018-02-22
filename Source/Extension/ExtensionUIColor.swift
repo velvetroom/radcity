@@ -2,5 +2,5 @@ import UIKit
 
 extension UIColor
 {
-    static var backgroundColor:UIColor = UIColor.white
+    static var sharedBackgroundColour:UIColor = UIColor.white
 }
