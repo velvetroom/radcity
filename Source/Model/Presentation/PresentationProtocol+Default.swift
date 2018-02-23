@@ -11,16 +11,8 @@ internal extension PresentationProtocol
     }
     
     //MARK: internal
-    
-    init(model:ModelProtocol)
-    {
-        self.init(model:model)
-        self.factoryUI()
-    }
-    
-    //MARK: private
-    
-    mutating private func factoryUI()
+
+    mutating internal func factoryUI()
     {
         let controllerType:ControllerProtocol.Type = self.model.controllerType
         

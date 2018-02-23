@@ -2,8 +2,8 @@ import UIKit
 
 internal protocol PresentationProtocol
 {
-    weak var controller:UIViewController? { get set }
     weak var view:UIView? { get }
+    var controller:UIViewController? { get set }
     var model:ModelProtocol { get }
     var presentationStrategy:((Presenter) -> (PresentationProtocol) -> ()) { get }
     
