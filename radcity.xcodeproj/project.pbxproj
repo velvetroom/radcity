@@ -37,6 +37,7 @@
 		DA468B60203F045D00D3BCC2 /* Presenter+Strategies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B5F203F045D00D3BCC2 /* Presenter+Strategies.swift */; };
 		DA468B62203F085500D3BCC2 /* PresentationProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B61203F085500D3BCC2 /* PresentationProtocol+Default.swift */; };
 		DA468B64203F0B9E00D3BCC2 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B63203F0B9E00D3BCC2 /* ViewProtocol.swift */; };
+		DAC96B06203FFC90004C9CE0 /* ViewProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC96B05203FFC90004C9CE0 /* ViewProtocol+Default.swift */; };
 		DAD5421B203DCA0F0003402F /* LocalizableModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD5420E203DCA0E0003402F /* LocalizableModel.strings */; };
 		DAD5421C203DCA0F0003402F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54210203DCA0E0003402F /* InfoPlist.strings */; };
 		DAD5421D203DCA0F0003402F /* LocalizableError.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54212203DCA0E0003402F /* LocalizableError.strings */; };
@@ -84,6 +85,7 @@
 		DA468B5F203F045D00D3BCC2 /* Presenter+Strategies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Presenter+Strategies.swift"; sourceTree = "<group>"; };
 		DA468B61203F085500D3BCC2 /* PresentationProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresentationProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA468B63203F0B9E00D3BCC2 /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
+		DAC96B05203FFC90004C9CE0 /* ViewProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAD54206203DCA0E0003402F /* versioner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = versioner.sh; sourceTree = "<group>"; };
 		DAD5420F203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableModel.strings; sourceTree = "<group>"; };
 		DAD54211203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				DA468B2E203EB51800D3BCC2 /* View.swift */,
 				DA468B63203F0B9E00D3BCC2 /* ViewProtocol.swift */,
+				DAC96B05203FFC90004C9CE0 /* ViewProtocol+Default.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				DA468B30203EB51800D3BCC2 /* View.swift in Sources */,
 				DA468B41203EC1F900D3BCC2 /* ModelHome.swift in Sources */,
 				DA468B1C203EA43200D3BCC2 /* ArchitectureHome.swift in Sources */,
+				DAC96B06203FFC90004C9CE0 /* ViewProtocol+Default.swift in Sources */,
 				DA468B2F203EB51800D3BCC2 /* ViewHome.swift in Sources */,
 				DA468B27203EA7CE00D3BCC2 /* PresenterProtocol.swift in Sources */,
 				DA3C5BB2203F1D8C00EAF14D /* PresentationLayout.swift in Sources */,
