@@ -7,15 +7,23 @@ internal class View<SpecialisedArchitecture>:UIView,
     
     internal var presentationLayout:PresentationLayout
     
-    override init(frame:CGRect)
+    //MARK: internal
+    
+    internal override init(frame:CGRect)
     {
         self.presentationLayout = PresentationLayout()
             
         super.init(frame:frame)
+        self.clipsToBounds = true
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.backgroundColor = UIColor.sharedBackgroundColour
+        self.factoryViews()
     }
     
-    required init?(coder:NSCoder)
+    internal required init?(coder:NSCoder)
     {
         return nil
     }
+    
+    internal func factoryViews() {  }
 }
