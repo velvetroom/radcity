@@ -16,4 +16,15 @@ internal final class Application:UIResponder, UIApplicationDelegate
         
         presenter.present(presentation:initialPresentation)
     }
+    
+    //MARK: private
+    
+    private class func factoryWindow() -> UIWindow
+    {
+        let window:UIWindow = UIWindow(frame:UIScreen.main.bounds)
+        window.backgroundColor = UIColor.white
+        window.makeKeyAndVisible()
+        
+        return  window
+    }
 }
