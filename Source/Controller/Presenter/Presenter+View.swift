@@ -1,20 +1,12 @@
 import UIKit
 
-internal extension Presenter
-{
-    //MARK: internal
-    
-    internal func addView(presentation:PresentationProtocol)
-    {
+internal extension Presenter {
+    internal func addView(presentation:PresentationProtocol) {
         guard
-            
             let view:UIView = presentation.view
-            
-        else
-        {
+        else {
             return
         }
-        
         self.view.addSubview(view)
     }
 }
