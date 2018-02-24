@@ -273,8 +273,8 @@
 		DAD5420D203DCA0E0003402F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DAD5420E203DCA0E0003402F /* LocalizableModel.strings */,
 				DAD54210203DCA0E0003402F /* InfoPlist.strings */,
+				DAD5420E203DCA0E0003402F /* LocalizableModel.strings */,
 				DAD54212203DCA0E0003402F /* LocalizableError.strings */,
 				DAD54214203DCA0E0003402F /* LocalizableView.strings */,
 				DAD54216203DCA0E0003402F /* LocalizableController.strings */,
