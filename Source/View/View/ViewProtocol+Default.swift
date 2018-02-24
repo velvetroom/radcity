@@ -1,23 +1,10 @@
 import UIKit
 
-internal extension ViewProtocol
-{
-    //MARK: internal
-    
-    internal static var view:UIView?
-    {
-        get
-        {
-            guard
-                
-                let type:UIView.Type = self as? UIView.Type
-                
-            else
-            {
-                return nil
-            }
-            
-            let view:UIView = type.init()
+internal extension ViewProtocol {
+    internal static var view:UIView? {
+        get {
+            let type:UIView.Type? = self as? UIView.Type
+            let view:UIView? = type?.init()
             
             return view
         }
