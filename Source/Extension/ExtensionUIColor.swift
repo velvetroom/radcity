@@ -1,8 +1,5 @@
 import UIKit
 
-public extension UIColor
-{
-    //MARK: public
-    
+public extension UIColor {
     public static var sharedBackgroundColour:UIColor = UIColor.white
 }
