@@ -1,13 +1,8 @@
 import UIKit
 
-internal extension Application
-{
-    //MARK: internal
-    
+internal extension Application {
     internal func application(
-        _ application:UIApplication,
-        didFinishLaunchingWithOptions launchOptions:[UIApplicationLaunchOptionsKey:Any]?) -> Bool
-    {
+        _:UIApplication, didFinishLaunchingWithOptions:[UIApplicationLaunchOptionsKey:Any]?) -> Bool {
         self.startPresentation()
         
         return true
