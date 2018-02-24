@@ -1,13 +1,8 @@
 import UIKit
 
-public extension UIView
-{
-    //MARK: public
-    
-    @discardableResult public func layoutHeight(
-        constant:CGFloat = 0,
-        multiplier:CGFloat = 1) -> NSLayoutConstraint
-    {
+public extension UIView {
+    @discardableResult
+    public func layoutHeight(constant:CGFloat = 0, multiplier:CGFloat = 1) -> NSLayoutConstraint {
         let constraint:NSLayoutConstraint = NSLayoutConstraint(
             item:self,
             attribute:NSLayoutAttribute.height,
@@ -22,10 +17,8 @@ public extension UIView
         return constraint
     }
     
-    @discardableResult public func layoutHeightGreaterOrEqual(
-        constant:CGFloat = 0,
-        multiplier:CGFloat = 1) -> NSLayoutConstraint
-    {
+    @discardableResult
+    public func layoutHeightGreaterOrEqual(constant:CGFloat = 0, multiplier:CGFloat = 1) -> NSLayoutConstraint {
         let constraint:NSLayoutConstraint = NSLayoutConstraint(
             item:self,
             attribute:NSLayoutAttribute.height,
@@ -40,10 +33,8 @@ public extension UIView
         return constraint
     }
     
-    @discardableResult public func layoutHeight(
-        view:UIView,
-        multiplier:CGFloat = 1) -> NSLayoutConstraint
-    {
+    @discardableResult
+    public func layoutHeight(view:UIView, multiplier:CGFloat = 1) -> NSLayoutConstraint {
         let constraint:NSLayoutConstraint = NSLayoutConstraint(
             item:self,
             attribute:NSLayoutAttribute.height,
