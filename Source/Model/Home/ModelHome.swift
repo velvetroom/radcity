@@ -1,6 +1,4 @@
 import Foundation
 
-internal final class ModelHome:Model<ArchitectureHome>
-{
-    
+internal final class ModelHome:Model<ArchitectureHome> {
 }
