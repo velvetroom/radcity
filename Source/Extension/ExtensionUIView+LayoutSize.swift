@@ -1,19 +1,8 @@
 import UIKit
 
-public extension UIView
-{
-    //MARK: public
-    
-    public func layoutSize(
-        constant:CGFloat,
-        multiplier:CGFloat = 1)
-    {
-        self.layoutWidth(
-            constant:constant,
-            multiplier:multiplier)
-        
-        self.layoutHeight(
-            constant:constant,
-            multiplier:multiplier)
+public extension UIView {
+    public func layoutSize(constant:CGFloat) {
+        self.layoutWidth(constant:constant)
+        self.layoutHeight(constant:constant)
     }
 }
