@@ -1,6 +1,5 @@
 import Foundation
 
-internal protocol PresenterProtocol
-{
+internal protocol PresenterProtocol {
     func present(presentation:PresentationProtocol)
 }
