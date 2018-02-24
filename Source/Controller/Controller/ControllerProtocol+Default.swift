@@ -1,23 +1,10 @@
 import UIKit
 
-internal extension ControllerProtocol
-{
-    //MARK: internal
-    
-    internal static var viewController:UIViewController?
-    {
-        get
-        {
-            guard
-            
-                let type:UIViewController.Type = self as? UIViewController.Type
-            
-            else
-            {
-                return nil
-            }
-            
-            let viewController:UIViewController = type.init()
+internal extension ControllerProtocol {
+    internal static var viewController:UIViewController? {
+        get {
+            let type:UIViewController.Type? = self as? UIViewController.Type
+            let viewController:UIViewController? = type?.init()
             
             return viewController
         }
