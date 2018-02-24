@@ -1,80 +1,61 @@
 import UIKit
 
-public extension UIView
-{
-    //MARK: public
-    
-    @discardableResult public func layoutLeftToLeft(
-        view:UIView,
-        constant:CGFloat = 0,
-        multiplier:CGFloat = 1) -> NSLayoutConstraint
-    {
+public extension UIView {
+    @discardableResult
+    public func layoutLeftToLeft(view:UIView, constant:CGFloat = 0) -> NSLayoutConstraint {
         let constraint:NSLayoutConstraint = NSLayoutConstraint(
             item:self,
             attribute:NSLayoutAttribute.left,
             relatedBy:NSLayoutRelation.equal,
             toItem:view,
             attribute:NSLayoutAttribute.left,
-            multiplier:multiplier,
+            multiplier:1,
             constant:constant)
-        
         constraint.isActive = true
         
         return constraint
     }
     
-    @discardableResult public func layoutLeftToRight(
-        view:UIView,
-        constant:CGFloat = 0,
-        multiplier:CGFloat = 1) -> NSLayoutConstraint
-    {
+    @discardableResult
+    public func layoutLeftToRight(view:UIView, constant:CGFloat = 0) -> NSLayoutConstraint {
         let constraint:NSLayoutConstraint = NSLayoutConstraint(
             item:self,
             attribute:NSLayoutAttribute.left,
             relatedBy:NSLayoutRelation.equal,
             toItem:view,
             attribute:NSLayoutAttribute.right,
-            multiplier:multiplier,
+            multiplier:1,
             constant:constant)
-        
         constraint.isActive = true
         
         return constraint
     }
     
-    @discardableResult public func layoutRightToRight(
-        view:UIView,
-        constant:CGFloat = 0,
-        multiplier:CGFloat = 1) -> NSLayoutConstraint
-    {
+    @discardableResult
+    public func layoutRightToRight(view:UIView, constant:CGFloat = 0) -> NSLayoutConstraint {
         let constraint:NSLayoutConstraint = NSLayoutConstraint(
             item:self,
             attribute:NSLayoutAttribute.right,
             relatedBy:NSLayoutRelation.equal,
             toItem:view,
             attribute:NSLayoutAttribute.right,
-            multiplier:multiplier,
+            multiplier:1,
             constant:constant)
-        
         constraint.isActive = true
         
         return constraint
     }
     
-    @discardableResult public func layoutRightToLeft(
-        view:UIView,
-        constant:CGFloat = 0,
-        multiplier:CGFloat = 1) -> NSLayoutConstraint
-    {
+    @discardableResult
+    public func layoutRightToLeft(view:UIView, constant:CGFloat = 0) -> NSLayoutConstraint {
         let constraint:NSLayoutConstraint = NSLayoutConstraint(
             item:self,
             attribute:NSLayoutAttribute.right,
             relatedBy:NSLayoutRelation.equal,
             toItem:view,
             attribute:NSLayoutAttribute.left,
-            multiplier:multiplier,
+            multiplier:1,
             constant:constant)
-        
         constraint.isActive = true
         
         return constraint
