@@ -1,7 +1,6 @@
 import UIKit
 
-struct PresentationLayout
-{
+internal struct PresentationLayout {
     weak var layoutTop:NSLayoutConstraint?
     weak var layoutBottom:NSLayoutConstraint?
     weak var layoutLeft:NSLayoutConstraint?
