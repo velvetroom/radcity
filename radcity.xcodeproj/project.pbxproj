@@ -37,6 +37,7 @@
 		DA468B60203F045D00D3BCC2 /* Presenter+Strategies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B5F203F045D00D3BCC2 /* Presenter+Strategies.swift */; };
 		DA468B62203F085500D3BCC2 /* PresentationProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B61203F085500D3BCC2 /* PresentationProtocol+Default.swift */; };
 		DA468B64203F0B9E00D3BCC2 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA468B63203F0B9E00D3BCC2 /* ViewProtocol.swift */; };
+		DA9F545D2041711D006DC851 /* Scripts in Resources */ = {isa = PBXBuildFile; fileRef = DA9F545C2041711D006DC851 /* Scripts */; };
 		DAC96B06203FFC90004C9CE0 /* ViewProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC96B05203FFC90004C9CE0 /* ViewProtocol+Default.swift */; };
 		DAD5421B203DCA0F0003402F /* LocalizableModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD5420E203DCA0E0003402F /* LocalizableModel.strings */; };
 		DAD5421C203DCA0F0003402F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD54210203DCA0E0003402F /* InfoPlist.strings */; };
@@ -85,8 +86,8 @@
 		DA468B5F203F045D00D3BCC2 /* Presenter+Strategies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Presenter+Strategies.swift"; sourceTree = "<group>"; };
 		DA468B61203F085500D3BCC2 /* PresentationProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresentationProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA468B63203F0B9E00D3BCC2 /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
+		DA9F545C2041711D006DC851 /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
 		DAC96B05203FFC90004C9CE0 /* ViewProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewProtocol+Default.swift"; sourceTree = "<group>"; };
-		DAD54206203DCA0E0003402F /* versioner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = versioner.sh; sourceTree = "<group>"; };
 		DAD5420F203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableModel.strings; sourceTree = "<group>"; };
 		DAD54211203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DAD54213203DCA0E0003402F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableError.strings; sourceTree = "<group>"; };
@@ -193,14 +194,6 @@
 				DA468B4F203ED37400D3BCC2 /* LaunchScreen.storyboard */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		DAD54205203DCA0E0003402F /* Scripts */ = {
-			isa = PBXGroup;
-			children = (
-				DAD54206203DCA0E0003402F /* versioner.sh */,
-			);
-			path = Scripts;
 			sourceTree = "<group>";
 		};
 		DAD54207203DCA0E0003402F /* Source */ = {
@@ -316,12 +309,12 @@
 				DA468B4E203ED36400D3BCC2 /* Assets */,
 				DAD54218203DCA0F0003402F /* Configuration */,
 				DAD5420D203DCA0E0003402F /* Resources */,
-				DAD54205203DCA0E0003402F /* Scripts */,
 				DAD54207203DCA0E0003402F /* Source */,
 				DA1D8509203DB86D008BAFE1 /* LICENSE */,
 				DA1D850A203DB86D008BAFE1 /* README.md */,
 				DA1D8507203DB86D008BAFE1 /* .codebeatsettings */,
 				DA1D8508203DB86D008BAFE1 /* .gitignore */,
+				DA9F545C2041711D006DC851 /* Scripts */,
 				DAE5F65720370A930023E75B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -396,6 +389,7 @@
 				DAD5421E203DCA0F0003402F /* LocalizableView.strings in Resources */,
 				DAD5421D203DCA0F0003402F /* LocalizableError.strings in Resources */,
 				DAD5421C203DCA0F0003402F /* InfoPlist.strings in Resources */,
+				DA9F545D2041711D006DC851 /* Scripts in Resources */,
 				DA468B50203ED37400D3BCC2 /* LaunchScreen.storyboard in Resources */,
 				DAD5421B203DCA0F0003402F /* LocalizableModel.strings in Resources */,
 				DAD5421F203DCA0F0003402F /* LocalizableController.strings in Resources */,
