@@ -1,6 +1,5 @@
 import Foundation
 
-internal protocol ArchitectureMember
-{
+internal protocol ArchitectureMember {
     associatedtype GenericArchitecture:Architecture
 }

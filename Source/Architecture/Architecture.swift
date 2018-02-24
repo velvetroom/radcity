@@ -1,7 +1,6 @@
 import Foundation
 
-internal protocol Architecture
-{
+internal protocol Architecture {
     associatedtype GenericModel:ModelProtocol
     associatedtype GenericView:ViewProtocol
     associatedtype GenericController:ControllerProtocol
