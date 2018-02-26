@@ -1,5 +1,4 @@
-import UIKit
+import Foundation
 
-final class ControllerHome:Controller<ArchHome>, UISearchBarDelegate
-{
+internal final class ControllerHome:Controller<ArchitectureHome> {
 }
